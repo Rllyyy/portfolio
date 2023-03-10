@@ -21,6 +21,11 @@ export const Skills = () => {
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
+  // Change showName state
+  const handleShowNameChange = (checked: boolean) => {
+    setShowName(checked);
+  };
+
   // Make sure the component mounts on the client
   useEffect(() => setMounted(true), []);
 
@@ -32,14 +37,15 @@ export const Skills = () => {
         <h2 className='text-4xl font-semibold'>Skills</h2>
         {/* Switch to turn on or off the name of a skill */}
         <label
-          className='flex items-end gap-x-4 border-[1px] bg-slate-100 dark:bg-zinc-800 rounded-lg border-slate-300 dark:border-zinc-900 py-3 px-4 '
+          className='flex items-end gap-x-4 border-[1px] bg-slate-100 dark:bg-zinc-800 rounded-lg border-slate-300 dark:border-zinc-900 py-3 px-4'
           htmlFor='switch'
+          /* TODO add aria-label */
         >
-          <span className='text-lg '>Display names</span>
+          <span className='text-lg'>Display names</span>
           {/* https://github.com/markusenglund/react-switch */}
           <Switch
             checked={showName}
-            onChange={() => setShowName(!showName)}
+            onChange={handleShowNameChange}
             onColor='#2563eb'
             onHandleColor='#fff'
             handleDiameter={26}
@@ -49,6 +55,7 @@ export const Skills = () => {
             activeBoxShadow='0px 0px 1px 8px rgba(0, 0, 0, 0.2)'
             height={20}
             width={44}
+            aria-label={`Switch to ${!showName ? "display" : "hide"} names of skills`}
             id='switch'
             className='z-10'
           />
