@@ -37,7 +37,7 @@ export const Skills = () => {
         <h2 className='text-4xl font-semibold'>Skills</h2>
         {/* Switch to turn on or off the name of a skill */}
         <label
-          className='flex items-end gap-x-4 border-[1px] bg-slate-100 dark:bg-zinc-800 rounded-lg border-slate-300 dark:border-zinc-900 py-3 px-4'
+          className='flex items-end px-4 py-3 border rounded-lg gap-x-4 bg-slate-100 dark:bg-zinc-800 border-slate-300 dark:border-zinc-900'
           htmlFor='switch'
           /* TODO add aria-label */
         >
