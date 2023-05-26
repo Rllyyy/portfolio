@@ -26,7 +26,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section className='px-4 py-16 bg-slate-50 dark:bg-zinc-600' id='projects'>
+    <section className='px-4 py-16 bg-slate-50 dark:bg-zinc-700' id='projects'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1200px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Projects</h2>
         <div className='w-12 h-[2px] bg-blue-700 dark:bg-blue-800' />

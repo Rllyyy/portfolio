@@ -1,11 +1,11 @@
 export const LandingPage = () => {
   return (
-    <section className='min-h-[75vh] flex flex-col md:flex-row justify-center gap-y-20 md:gap-x-10 lg:gap-x-40 lg:p-8 p-6 py-32'>
+    <section className='min-h-[75vh] flex flex-col md:flex-row justify-center gap-y-20 md:gap-x-10 lg:gap-x-40 lg:px-6 px-4 py-32 md:mt-24 mt-20'>
       <div className='flex flex-col items-start justify-center w-full max-w-4xl space-y-4 md:space-y-8'>
         <h2 className='text-base md:text-xl text-zinc-700 dark:text-zinc-300'>Niklas Fischer | Portfolio </h2>
         <h1 className='text-5xl font-semibold md:text-7xl'>Developing Solutions</h1>
         <p className='text-base md:text-xl'>
-          Hi, I am an aspiring <b> Web Developer </b> looking for my first real job experience :)
+          Hi, I am an aspiring <b>Web Developer</b> looking for my first real job experience :)
         </p>
         <div className='flex flex-row flex-wrap w-full gap-x-4 gap-y-2'>
           <a
@@ -20,7 +20,6 @@ export const LandingPage = () => {
           >
             <EMailIcon />
             <span className=''>Let&apos;s Talk</span>
-            {/* or Get in touch */}
           </a>
         </div>
       </div>

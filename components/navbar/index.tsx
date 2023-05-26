@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { BurgerIcon, ThemeSwitchIcon, XMarkIcon } from "./icons";
-import Head from "next/head";
 
 export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [showNav, setShowNav] = useState(false);
+  const isTop = useScrollY();
 
   // Get current theme to be either system or dark/light if the user clicked on the theme switcher (and saved the state to local storage)
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -52,45 +52,72 @@ export function Navbar() {
   if (!mounted) return null;
 
   return (
-    <nav className='sticky top-0 left-0 right-0 flex items-center justify-between w-full max-w-full p-2 md:px-4 md:py-3 duration-200 border-b-zinc-300 dark:border-b-zinc-900 border-b-[1px] bg-zinc-50 dark:bg-zinc-900 z-50'>
-      <Link href={{ pathname: "/" }}>
-        <h1 className='text-xl font-semibold md:text-2xl'>Niklas Fischer</h1>
-      </Link>
-      {/* Trying to use the same list for the mobile and desktop version for the menu items. Might delete this if mobile gets special fade-in animation */}
-      <ul
-        className={`flex flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-6 text-lg md:relative top-full bg-zinc-50 dark:bg-zinc-900 md:bg-transparent md:dark:bg-transparent md:w-auto w-full left-0 right-0 px-6 py-2 md:p-0 text-center ${
-          showNav ? "absolute" : "hidden"
-        } border-b-[1px] md:border-b-0 border-b-zinc-300 dark:border-b-zinc-900`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full duration-200 ${
+        isTop
+          ? "bg-zinc-100 dark:bg-zinc-800 "
+          : "bg-zinc-50 dark:bg-zinc-900 border-b-zinc-300 dark:border-b-zinc-900 border-b dark:border-none"
+      }`}
+    >
+      <div
+        className={`flex items-center justify-between w-full px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 ${
+          isTop ? "py-8 md:py-16" : "py-3"
+        }`}
       >
-        <li>
-          <span>Home</span>
-        </li>
-        <li>
-          <span>Projects</span>
-        </li>
-        <li>
-          <span>Skills</span>
-        </li>
-        <li>
-          <span>Contact</span>
-        </li>
-      </ul>
-      <div className='flex flex-row items-center gap-x-4'>
-        <button
-          className='cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800  rounded-lg hover:text-orange-600 transition-[background] p-1'
-          onClick={handleThemeSwitch}
-          aria-label={currentTheme === "light" ? "Use dark mode" : "Use light mode"}
+        <Link href={{ pathname: "/" }}>
+          <h1 className='text-xl font-semibold'>Niklas Fischer</h1>
+        </Link>
+        {/* Trying to use the same list for the mobile and desktop version for the menu items. Might delete this if mobile gets special fade-in animation */}
+        <ul
+          className={`flex flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-6 text-lg md:relative top-full md:w-auto w-full left-0 right-0 px-6 py-2 md:p-0 text-center duration-200 ${
+            showNav ? "absolute" : "hidden"
+          } border-b-[1px] md:border-b-0 border-b-zinc-300 dark:border-b-zinc-900 ${
+            isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-zinc-900 "
+          }`}
         >
-          <ThemeSwitchIcon currentTheme={currentTheme} className='w-6 h-6 ' />
-        </button>
-        <button
-          onClick={handleNavClick}
-          className='md:hidden'
-          aria-label={!showNav ? "Show navigation" : "Hide navigation"}
-        >
-          {!showNav ? <BurgerIcon /> : <XMarkIcon />}
-        </button>
+          <li>
+            <span>Home</span>
+          </li>
+          <li>
+            <span>Projects</span>
+          </li>
+          <li>
+            <span>Skills</span>
+          </li>
+          <li>
+            <span>Contact</span>
+          </li>
+        </ul>
+        <div className='flex flex-row items-center gap-x-4'>
+          <button
+            className='cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-[background] p-1'
+            onClick={handleThemeSwitch}
+            aria-label={currentTheme === "light" ? "Use dark mode" : "Use light mode"}
+          >
+            <ThemeSwitchIcon currentTheme={currentTheme} className='w-6 h-6 ' />
+          </button>
+          <button
+            onClick={handleNavClick}
+            className='md:hidden'
+            aria-label={!showNav ? "Show navigation" : "Hide navigation"}
+          >
+            {!showNav ? <BurgerIcon /> : <XMarkIcon />}
+          </button>
+        </div>
       </div>
     </nav>
+  );
+}
+
+function subscribe(onStoreChange: () => void) {
+  global.window?.addEventListener("scroll", onStoreChange);
+  return () => global.window?.removeEventListener("scroll", onStoreChange);
+}
+
+function useScrollY() {
+  return useSyncExternalStore(
+    subscribe,
+    () => global.window?.scrollY === 0,
+    () => undefined
   );
 }
