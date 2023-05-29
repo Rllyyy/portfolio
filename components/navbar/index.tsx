@@ -6,24 +6,20 @@ import { BurgerIcon, ThemeSwitchIcon, XMarkIcon } from "./icons";
 export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-  const [showNav, setShowNav] = useState(false);
-  const isTop = useScrollY();
+  const [showNav, setShowNav] = useState(typeof window !== "undefined" && window.innerWidth >= 768); // Initially display the navbar if the window rendered and is wider than 768 pixel
+  const isTop = useScrollYPosition();
 
   // Get current theme to be either system or dark/light if the user clicked on the theme switcher (and saved the state to local storage)
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   // Update the theme
   const handleThemeSwitch = () => {
-    if (currentTheme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    setTheme(currentTheme === "light" ? "dark" : "light");
   };
 
   // Update the display of the menu items on mobile
   const handleNavClick = () => {
-    setShowNav(!showNav);
+    setShowNav((prevShowNav) => !prevShowNav);
   };
 
   // Always show the menu items on desktop
@@ -31,14 +27,8 @@ export function Navbar() {
   // the user closed the expanded menu on mobile and resized the window to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
+      setShowNav(window.innerWidth >= 768);
     };
-
-    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -114,7 +104,7 @@ function subscribe(onStoreChange: () => void) {
   return () => global.window?.removeEventListener("scroll", onStoreChange);
 }
 
-function useScrollY() {
+function useScrollYPosition() {
   return useSyncExternalStore(
     subscribe,
     () => global.window?.scrollY === 0,
