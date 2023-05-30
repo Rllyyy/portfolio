@@ -46,7 +46,7 @@ export const Skills = () => {
           <Switch
             checked={showName}
             onChange={handleShowNameChange}
-            onColor='#2563eb'
+            onColor='#4F46E5'
             onHandleColor='#fff'
             handleDiameter={26}
             uncheckedIcon={false}
