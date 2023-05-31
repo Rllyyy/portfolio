@@ -66,13 +66,19 @@ export function Navbar() {
           }`}
         >
           <li>
-            <span>Home</span>
+            <a href='#top' className='hover:no-underline'>
+              Home
+            </a>
           </li>
           <li>
-            <span>Projects</span>
+            <a href='#projects' className='hover:no-underline'>
+              Projects
+            </a>
           </li>
           <li>
-            <span>Skills</span>
+            <a href='#skills' className='hover:no-underline'>
+              Skills
+            </a>
           </li>
           <li>
             <span>Contact</span>

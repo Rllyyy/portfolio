@@ -32,7 +32,7 @@ export const Skills = () => {
   if (!mounted) return null;
 
   return (
-    <section className='px-4 py-16 bg-slate-200 dark:bg-zinc-700'>
+    <section className='px-4 py-16 bg-slate-200 dark:bg-zinc-700' id='skills'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_800px)] m-auto'>
         <h2 className='text-4xl font-semibold'>Skills</h2>
         {/* Switch to turn on or off the name of a skill */}

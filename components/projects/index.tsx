@@ -34,12 +34,12 @@ export const Projects = () => {
           {projects.map((project, index) => {
             return (
               <article
-                className='flex flex-col md:flex-row overflow-hidden shadow-lg rounded-lg md:rounded-xl min-h-[400px]'
+                className='flex flex-col md:flex-row overflow-hidden shadow-lg rounded-md md:rounded-lg min-h-[400px]'
                 key={project.name}
               >
                 <Image
                   src={project.imageSrc}
-                  alt='Repeatio Image'
+                  alt={`${project.name} Image`}
                   width={600}
                   height={400}
                   className={`object-scale-down min-h-full bg-gray-200 dark:bg-zinc-900 w-full md:w-[50%] p-2 md:p-4 ${
@@ -52,7 +52,7 @@ export const Projects = () => {
                     {project.technologies.map((technology) => {
                       return (
                         <span
-                          className='px-3 py-1 text-sm font-semibold leading-none bg-indigo-600 rounded-full text-indigo-50'
+                          className='px-3 py-1 text-sm font-semibold leading-none rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200'
                           key={`${technology}-${project.name}`}
                         >
                           {technology}
