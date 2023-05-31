@@ -1,0 +1,4 @@
+.no_tailwind img {
+  all: unset;
+  height: 355px !important;
+}

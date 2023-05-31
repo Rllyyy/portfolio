@@ -1,4 +1,8 @@
 import Image from "next/image";
+import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+import styles from "./test.module.css";
 
 const projects = [
   {
@@ -24,12 +28,27 @@ const projects = [
   },
 ];
 
+const images: ReactImageGalleryItem[] = [
+  {
+    original: "/images/repeatio-question.png",
+  },
+  {
+    original: "/images/Internet-Check.png",
+  },
+  {
+    original: "/images/Teilnahmebescheinigung.png",
+  },
+];
+
 export const Projects = () => {
   return (
     <section className='px-4 py-16 bg-slate-50 dark:bg-zinc-700' id='projects'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1200px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Projects</h2>
         <div className='w-12 h-[2px] bg-indigo-600 dark:bg-indigo-500' />
+        <div className={`w-full max-w-4xl mx-auto bg-red-700  ${styles.no_tailwind}`}>
+          <ImageGallery items={images} showBullets={true} />
+        </div>
         <div className='space-y-6 md:space-y-12'>
           {projects.map((project, index) => {
             return (
