@@ -22,6 +22,15 @@ export function Navbar() {
     setShowNav((prevShowNav) => !prevShowNav);
   };
 
+  // Minimize the navbar on mobile if clicking on a menuitem
+  const handleNavbarCloseMobile = () => {
+    // Return if the user is not using mobile viewport
+    if (window.innerWidth >= 768) return;
+
+    // Update the state
+    setShowNav(false);
+  };
+
   // Always show the menu items on desktop
   // Fixes an issue where the menu items are no longer visible after
   // the user closed the expanded menu on mobile and resized the window to desktop
@@ -54,8 +63,8 @@ export function Navbar() {
           isTop ? "py-8 md:py-16" : "py-3"
         }`}
       >
-        <Link href={{ pathname: "/" }}>
-          <h1 className='text-xl font-semibold'>Niklas Fischer</h1>
+        <Link href={{ pathname: "/" }} className='hover:no-underline'>
+          <h1 className='text-xl font-semibold '>Niklas Fischer</h1>
         </Link>
         {/* Trying to use the same list for the mobile and desktop version for the menu items. Might delete this if mobile gets special fade-in animation */}
         <ul
@@ -66,17 +75,17 @@ export function Navbar() {
           }`}
         >
           <li>
-            <a href='#top' className='hover:no-underline'>
+            <a href='#top' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
               Home
             </a>
           </li>
           <li>
-            <a href='#projects' className='hover:no-underline'>
+            <a href='#projects' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
               Projects
             </a>
           </li>
           <li>
-            <a href='#skills' className='hover:no-underline'>
+            <a href='#skills' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
               Skills
             </a>
           </li>

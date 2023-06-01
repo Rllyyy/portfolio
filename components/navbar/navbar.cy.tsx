@@ -1,15 +1,27 @@
 /// <reference types="cypress" />
 
 import { Navbar } from ".";
-import { ThemeProvider } from "next-themes";
-import "../../styles/globals.css";
 import Home from "pages";
+import { ThemeProvider } from "next-themes";
+
+import "../../styles/globals.css";
 
 const MockNavbarWithTheme = () => {
   return (
     <ThemeProvider enableSystem={false} attribute='class'>
       <Navbar />
     </ThemeProvider>
+  );
+};
+
+const MockLandingPageWithTheme = () => {
+  return (
+    <>
+      <ThemeProvider enableSystem={false} attribute='class'>
+        <Navbar />
+        <Home />
+      </ThemeProvider>
+    </>
   );
 };
 
@@ -38,27 +50,13 @@ describe("<Navbar />", () => {
   });
 
   it("should expand the navbar when the scroll position at the top of the page ", () => {
-    cy.mount(
-      <>
-        <ThemeProvider enableSystem={false} attribute='class'>
-          <Navbar />
-          <Home />
-        </ThemeProvider>
-      </>
-    );
+    cy.mount(<MockLandingPageWithTheme />);
 
     cy.get("nav").invoke("outerHeight").should("be.greaterThan", 90);
   });
 
   it("should reduce the height of the navbar if scrolling down ", () => {
-    cy.mount(
-      <>
-        <ThemeProvider enableSystem={false} attribute='class'>
-          <Navbar />
-          <Home />
-        </ThemeProvider>
-      </>
-    );
+    cy.mount(<MockLandingPageWithTheme />);
 
     cy.scrollTo(0, 100);
     cy.wait(0);
@@ -131,14 +129,8 @@ describe("<Navbar />", () => {
 
   it("should navigate to projects if clicking on Projects in navbar", () => {
     cy.viewport(850, 500);
-    cy.mount(
-      <>
-        <ThemeProvider enableSystem={false} attribute='class'>
-          <Navbar />
-          <Home />
-        </ThemeProvider>
-      </>
-    );
+    cy.mount(<MockLandingPageWithTheme />);
+
     cy.contains("a", "Projects").click();
 
     cy.contains("h2", "Projects").should("be.visible");
@@ -146,14 +138,8 @@ describe("<Navbar />", () => {
 
   it("should navigate to skills if clicking on Skills in the navbar", () => {
     cy.viewport(850, 500);
-    cy.mount(
-      <>
-        <ThemeProvider enableSystem={false} attribute='class'>
-          <Navbar />
-          <Home />
-        </ThemeProvider>
-      </>
-    );
+    cy.mount(<MockLandingPageWithTheme />);
+
     cy.contains("a", "Skills").click();
 
     cy.contains("h2", "Skills").should("be.visible");
@@ -177,10 +163,34 @@ describe("<Navbar />", () => {
         .then(() => {
           cy.wait(300);
           cy.window().then(($window) => {
-            //cy.wait(1000);
             expect($window.scrollY).to.eq(0);
           });
         });
+    });
+  });
+
+  it("should minimize the navbar on mobile after item click", () => {
+    cy.mount(<MockLandingPageWithTheme />);
+
+    cy.get("button[aria-label='Show navigation']").click();
+
+    cy.contains("a", "Projects").click();
+
+    cy.get("nav").find("ul").should("not.be.visible");
+  });
+
+  it("should keep the navbar items visible on desktop viewport if clicking on item", () => {
+    cy.viewport(850, 500);
+
+    cy.mount(<MockLandingPageWithTheme />);
+
+    cy.contains("a", "Projects").click();
+
+    cy.get("nav").within(() => {
+      cy.contains("li", "Home").should("be.visible");
+      cy.contains("li", "Projects").should("be.visible");
+      cy.contains("li", "Skills").should("be.visible");
+      cy.contains("li", "Contact").should("be.visible");
     });
   });
 });
