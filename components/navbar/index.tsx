@@ -70,7 +70,7 @@ export function Navbar() {
         <ul
           className={`flex flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-6 text-lg md:relative top-full md:w-auto w-full left-0 right-0 px-6 py-2 md:p-0 text-center duration-200 ${
             showNav ? "absolute" : "hidden"
-          } border-b-[1px] md:border-b-0 border-b-zinc-300 dark:border-b-zinc-900 ${
+          } border-b md:border-b-0 border-b-zinc-300 dark:border-b-zinc-900 ${
             isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-zinc-900 "
           }`}
         >
@@ -87,6 +87,11 @@ export function Navbar() {
           <li>
             <a href='#skills' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
               Skills
+            </a>
+          </li>
+          <li>
+            <a href='#assignments' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
+              Assignments
             </a>
           </li>
           <li>
