@@ -74,6 +74,9 @@ describe("<Navbar />", () => {
       cy.contains("li", "Skills").should("be.visible");
       cy.contains("li", "Contact").should("be.visible");
     });
+
+    cy.get("nav").invoke("outerHeight").should("eq", 500);
+    cy.get("nav>.grid").invoke("outerHeight").should("eq", 500);
   });
 
   it("should hide the menuitems on mobile on menu burger click again", () => {

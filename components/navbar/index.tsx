@@ -52,53 +52,52 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 ${
+        showNav ? "h-[100dvh]" : ""
+      } ${
         isTop
-          ? "bg-zinc-100 dark:bg-zinc-800 "
+          ? "bg-zinc-100 dark:bg-zinc-800"
           : "bg-zinc-50 dark:bg-zinc-900 border-b-zinc-300 dark:border-b-zinc-900 border-b dark:border-none"
       }`}
     >
       <div
-        className={`flex items-center justify-between w-full px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 ${
+        className={`grid content-center w-full grid-cols-2 px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto ${
           isTop ? "py-8 md:py-16" : "py-3"
         }`}
       >
         <Link href={{ pathname: "/" }} className='hover:no-underline'>
           <h1 className='text-xl font-semibold '>Niklas Fischer</h1>
         </Link>
-        {/* Trying to use the same list for the mobile and desktop version for the menu items. Might delete this if mobile gets special fade-in animation */}
         <ul
-          className={`flex flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-6 text-lg md:relative top-full md:w-auto w-full left-0 right-0 px-6 py-2 md:p-0 text-center duration-200 ${
-            showNav ? "absolute" : "hidden"
-          } border-b md:border-b-0 border-b-zinc-300 dark:border-b-zinc-900 ${
-            isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-zinc-900 "
-          }`}
+          className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none ${
+            showNav ? "" : "hidden"
+          } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-zinc-900 "}`}
         >
           <li>
-            <a href='#top' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <a href='#top' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Home
             </a>
           </li>
           <li>
-            <a href='#projects' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <a href='#projects' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Projects
             </a>
           </li>
           <li>
-            <a href='#skills' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <a href='#skills' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Skills
             </a>
           </li>
           <li>
-            <a href='#assignments' className='hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <a href='#assignments' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Assignments
             </a>
           </li>
           <li>
-            <span>Contact</span>
+            <span className='text-xl md:text-lg'>Contact</span>
           </li>
         </ul>
-        <div className='flex flex-row items-center gap-x-4'>
+        <div className='flex flex-row items-center order-2 md:order-3 justify-self-end gap-x-4'>
           <button
             className='cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-[background] p-1'
             onClick={handleThemeSwitch}
