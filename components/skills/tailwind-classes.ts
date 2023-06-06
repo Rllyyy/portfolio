@@ -1,13 +1,17 @@
 // Tailwind classes
 
+// Styles for article of skill
+export const skillsArticleStyle =
+  "flex flex-row items-center w-full gap-5 p-4 bg-white border border-gray-300 rounded dark:bg-zinc-700 dark:border-zinc-700";
+
 // Define width and heights of the icon
-export const iconStyle = "w-[90px] h-[90px]";
+export const iconStyle = "min-w-[70px] min-h-[70px] w-[70px] h-[70px]";
 
-// Define the icon wrapper which includes the icon and the name of the skill
-export const iconWrapperStyle = "p-4 rounded-xl bg-slate-100 dark:bg-zinc-800 space-y-2";
+// Style for div that wraps skill heading an text
+export const textWrapperStyle = "h-full flex justify-center gap-2 flex-col";
 
-// Styles for the name of a skill
-export const iconNameStyle = "font-semibold leading-none text-center text-zinc-600 dark:text-zinc-300";
+// Style for heading of skill
+export const skillHeadingStyle = "text-xl leading-none dark:text-zinc-100 text-zinc-800 font-medium";
 
-// Style each column
-export const columnStyle = "flex flex-col items-center md:justify-evenly gap-4 md:gap-6";
+// Style for text of skill
+export const skillTextStyle = "text-gray-600 dark:text-gray-300 text-lg";
