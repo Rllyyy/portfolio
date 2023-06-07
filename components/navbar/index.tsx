@@ -62,10 +62,10 @@ export function Navbar() {
     >
       <div
         className={`grid content-center w-full grid-cols-2 px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto ${
-          isTop ? "py-8 md:py-16" : "py-3"
+          isTop ? "py-8 md:py-16" : "py-2"
         }`}
       >
-        <Link href={{ pathname: "/" }} className='hover:no-underline'>
+        <Link href={{ pathname: "/" }} className='self-center hover:no-underline'>
           <h1 className='text-xl font-semibold '>Niklas Fischer</h1>
         </Link>
         <ul
