@@ -6,7 +6,7 @@ import { Assignments } from "components/assignments";
 export default function Home() {
   return (
     <>
-      <main className='bg-zinc-100 dark:bg-zinc-800 duration-200 [&>section]:scroll-mt-14'>
+      <main className='bg-zinc-100 dark:bg-zinc-800 duration-200 [&>section]:scroll-mt-12'>
         <LandingPage />
         <Projects />
         <Skills />

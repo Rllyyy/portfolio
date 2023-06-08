@@ -74,24 +74,45 @@ export function Navbar() {
           } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-zinc-900 "}`}
         >
           <li>
-            <a href='#top' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
+            {/* smooth scrolling doesn't work: https://github.com/vercel/next.js/issues/44295 */}
+            {/* <a href='/#top' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Home
-            </a>
+            </a> */}
+            <Link
+              className='text-xl md:text-lg hover:no-underline'
+              href={{ pathname: "/", hash: "top" }}
+              onClick={handleNavbarCloseMobile}
+              replace={false}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a href='#projects' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <Link
+              className='text-xl md:text-lg hover:no-underline'
+              href={{ pathname: "/", hash: "projects" }}
+              onClick={handleNavbarCloseMobile}
+            >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='#skills' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <Link
+              className='text-xl md:text-lg hover:no-underline'
+              href={{ pathname: "/", hash: "skills" }}
+              onClick={handleNavbarCloseMobile}
+            >
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='#assignments' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
+            <Link
+              className='text-xl md:text-lg hover:no-underline'
+              href={{ pathname: "/", hash: "assignments" }}
+              onClick={handleNavbarCloseMobile}
+            >
               Assignments
-            </a>
+            </Link>
           </li>
           <li>
             <span className='text-xl md:text-lg'>Contact</span>

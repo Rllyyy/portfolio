@@ -31,6 +31,7 @@ export const LandingPage = () => {
         width={800}
         height={800}
         alt='an isometric home office with a computer desk, lamps and plants, in the style of 2d game art, navy and blue'
+        priority
       />
     </section>
   );

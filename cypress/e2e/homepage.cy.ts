@@ -12,3 +12,5 @@ describe("Homepage", () => {
     cy.contains("h2", "Projects").should("exist");
   });
 });
+
+export {};
