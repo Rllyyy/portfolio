@@ -36,4 +36,24 @@
 //   }
 // }
 
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      /**
+       * Remove the first slash of the href property of an element.
+       * Used for component testing
+       */
+      removeHrefSlash: () => Chainable<JQuery<HTMLElement>>;
+    }
+  }
+}
+
+Cypress.Commands.add("removeHrefSlash", { prevSubject: "element" }, ($el: JQuery<HTMLElement>) => {
+  const href = $el.attr("href");
+  if (typeof href === "string") {
+    $el.attr("href", href.replace("/", ""));
+  }
+  return cy.wrap($el, { log: false });
+});
+
 export {};

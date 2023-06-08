@@ -65,6 +65,7 @@ describe("<Navbar />", () => {
   });
 
   it("should show the menuitems on mobile on menu burger click", () => {
+    cy.viewport(500, 500);
     cy.mount(<MockNavbarWithTheme />);
     cy.get("button[aria-label='Show navigation']").click();
 
@@ -134,7 +135,8 @@ describe("<Navbar />", () => {
     cy.viewport(850, 500);
     cy.mount(<MockLandingPageWithTheme />);
 
-    cy.contains("a", "Projects").click();
+    // Remove the leading slash and click on Projects in navbar
+    cy.get("nav").contains("a", "Projects").removeHrefSlash().click();
 
     cy.contains("h2", "Projects").should("be.visible");
   });
@@ -143,7 +145,8 @@ describe("<Navbar />", () => {
     cy.viewport(850, 500);
     cy.mount(<MockLandingPageWithTheme />);
 
-    cy.contains("a", "Skills").click();
+    // Remove the leading slash and click on Skills in navbar
+    cy.contains("a", "Skills").removeHrefSlash().click();
 
     cy.contains("h2", "Skills").should("be.visible");
   });
@@ -162,6 +165,7 @@ describe("<Navbar />", () => {
     cy.scrollTo(0, 300, { duration: 0 }).then(() => {
       cy.wait(100);
       cy.contains("a", "Home")
+        .invoke("attr", "href", "#top") //replace the href for component testing
         .click()
         .then(() => {
           cy.wait(300);
@@ -177,7 +181,7 @@ describe("<Navbar />", () => {
 
     cy.get("button[aria-label='Show navigation']").click();
 
-    cy.contains("a", "Projects").click();
+    cy.contains("a", "Projects").removeHrefSlash().click();
 
     cy.get("nav").find("ul").should("not.be.visible");
   });
@@ -187,7 +191,7 @@ describe("<Navbar />", () => {
 
     cy.mount(<MockLandingPageWithTheme />);
 
-    cy.contains("a", "Projects").click();
+    cy.get("nav").contains("a", "Projects").removeHrefSlash().click();
 
     cy.get("nav").within(() => {
       cy.contains("li", "Home").should("be.visible");

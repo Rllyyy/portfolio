@@ -80,18 +80,21 @@ export function Navbar() {
             </a> */}
             <Link
               className='text-xl md:text-lg hover:no-underline'
-              href={{ pathname: "/", hash: "top" }}
+              href={{ pathname: "/" }}
               onClick={handleNavbarCloseMobile}
-              replace={false}
             >
               Home
             </Link>
           </li>
           <li>
+            {/* <a href='#projects' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
+              Projects
+            </a> */}
             <Link
               className='text-xl md:text-lg hover:no-underline'
               href={{ pathname: "/", hash: "projects" }}
               onClick={handleNavbarCloseMobile}
+              scroll={false}
             >
               Projects
             </Link>
@@ -101,6 +104,7 @@ export function Navbar() {
               className='text-xl md:text-lg hover:no-underline'
               href={{ pathname: "/", hash: "skills" }}
               onClick={handleNavbarCloseMobile}
+              scroll={false}
             >
               Skills
             </Link>
@@ -110,6 +114,7 @@ export function Navbar() {
               className='text-xl md:text-lg hover:no-underline'
               href={{ pathname: "/", hash: "assignments" }}
               onClick={handleNavbarCloseMobile}
+              scroll={false}
             >
               Assignments
             </Link>

@@ -51,3 +51,5 @@ describe("Theme", () => {
     cy.get("html.light").should("exist").and("have.attr", "style", "color-scheme: light;");
   });
 });
+
+export {};
