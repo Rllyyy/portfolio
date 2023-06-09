@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className='mt-44 duration-200 bg-zinc-100 dark:bg-zinc-800 min-h-[90vh] px-4 py-16'>
+    <main className='mt-10 md:mt-44 duration-200 bg-zinc-100 dark:bg-zinc-800 min-h-[90vh] px-4 py-16'>
       <div className='max-w-5xl mx-auto space-y-8'>
         <section>
           <h1 className='text-3xl'>About</h1>

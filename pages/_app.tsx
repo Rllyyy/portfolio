@@ -1,8 +1,11 @@
-import "styles/globals.css";
 import type { AppProps } from "next/app";
-import { Navbar } from "components/navbar";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
+
+import { Navbar } from "components/navbar";
+import { Footer } from "components/footer";
+
+import "styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider enableSystem={true} attribute='class'>
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );
