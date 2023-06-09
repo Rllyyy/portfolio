@@ -6,7 +6,7 @@ const assignments = [
     text: "Lange Zeit blieben digitale Datenmassen ungenutzt. Wie können Unternehmen Big Data im Geschäftsprozessmanagement nutzen, um daraus Chancen und Erkenntnisse zu gewinnen? Im Fokus dieser Arbeit steht zudem die Beantwortung der Frage, welche Herausforderungen und Risiken mit Big Data verbunden sind.",
     moduleId: "ANS43",
     pdfFileName: "Big_Data_und_Prozessmanagement_im_Unternehmenseinsatz",
-    imageDescription: "",
+    imageDescription: "Illustration of data running down a river like stream into a valley.",
     date: "14.11.2021",
   },
   {
@@ -14,7 +14,7 @@ const assignments = [
     text: "Blockchain war zweifellos das Buzzword des letzten Jahrzehnts, aber wie sieht es tatsächlich in der Praxis aus? In dieser Arbeit werden mögliche Anwendungen untersucht, erfolgreiche Beispiele vorgestellt und potenzielle Gefahren für Nutzer und Unternehmen aufgezeigt.",
     moduleId: "DIT61",
     pdfFileName: "Blockchain_-_eine_erfolgreiche_Technologie_auch_außerhalb_des_FinTech-Sektors",
-    imageDescription: "",
+    imageDescription: "Closeup of computer pcb",
     date: "01.05.2023",
   },
   {
@@ -22,7 +22,7 @@ const assignments = [
     text: "Datenmanagement, Datensicherung und Archivierung sind essentielle Aspekte in der heutigen Informationsgesellschaft. In dieser Arbeit werden Nutzen und Aufwand dieses Prozesses diskutiert. Zudem werden die Vor- und Nachteile verschiedener Datensicherungsmedien für die Langzeitarchivierung untersucht und anhand einer fiktiven Fallstudie ein Datenmanagement- und Archivierungskonzept entwickelt.",
     moduleId: "IMG40",
     pdfFileName: "Datenmanagement",
-    imageDescription: "",
+    imageDescription: "Isometric image of computers and servers circled around a cloud",
     date: "24.03.2021",
   },
   {
@@ -30,7 +30,7 @@ const assignments = [
     text: "Die Digitalisierung bringt einen tiefgreifenden Wandel mit sich, der nicht nur Unternehmen, sondern auch die Personalentwicklung vor neue Herausforderungen stellt. In dieser Arbeit wird einen Blick auf die wachsende Bedeutung der Personalentwicklung geworfen und die mögliche Herausforderungen reflektiert.",
     moduleId: "PER25",
     pdfFileName: "Herausforderungen_der_Personalentwicklung_im_Zeitalter_der_Digitalisierung",
-    imageDescription: "",
+    imageDescription: "Closeup of person typing on laptop",
     date: "31.12.2019",
   },
   {
@@ -38,7 +38,8 @@ const assignments = [
     text: "In Zeiten der Digitalisierung stellen sich Unternehmen die Frage, wie sie sich profitabel und zukunftsorientiert positionieren können. Gleichzeitig rücken die Mitarbeiter als wichtigste Ressource eines Unternehmens in den Fokus. Wie lässt sich des Konzepts Ambidextrie eine Balance zwischen Stabilität und Innovation finden?",
     moduleId: "PER26",
     pdfFileName: "Personalführung_im_digitalen_Zeitalter_Merkmale_und_Bedeutung_der_Ambidextrie",
-    imageDescription: "",
+    imageDescription:
+      "Employees sitting at a conference table. In the background there is a whiteboard with different charts.",
     date: "01.02.2021",
   },
   {
@@ -46,7 +47,8 @@ const assignments = [
     text: "In einer überfluteten Informationslandschaft gewinnt der bewusste Umgang mit Wissen immer mehr an Bedeutung für Unternehmen. Um im Wettbewerb zu bestehen, müssen sie ihr Wissenspotenzial systematisch erschließen und eine ganzheitliche Wissenskultur etablieren. In drei Fallstudien wird aufgezeigt, wie erfolgreiches Wissensmanagement in der Praxis umgesetzt werden kann.",
     moduleId: "PEW62",
     pdfFileName: "Wissensmanagement",
-    imageDescription: "",
+    imageDescription:
+      "2d illustration of people working together and using modern technologies like laptops. The background is made of pcb like connections and gears.",
     date: "26.02.2023",
   },
   {
@@ -54,7 +56,8 @@ const assignments = [
     text: "Eine überzeugende Visualisierung von Inhalten spielt in Präsentationen eine entscheidende Rolle, um Informationen effektiv zu vermitteln. In dieser Arbeit werden die Bedeutung der Visualisierung von Inhalten untersucht und verschiedene Methoden vorstellt, um Präsentationen visuell ansprechend und wirkungsvoll zu gestalten.",
     moduleId: "SQF20",
     pdfFileName: "Visualisierung_in_einer_Praesentation",
-    imageDescription: "",
+    imageDescription:
+      "Modern conference room with four chairs and and round table. Behind the table there is a whiteboard with different kind of charts (e.g. pie chart)",
     date: "21.03.2019",
   },
   {
@@ -62,7 +65,6 @@ const assignments = [
     text: "In einer sich ständig verändernden Geschäftswelt stehen Unternehmen vor immer neuen Herausforderungen. Die SWOT-Analyse hat sich dabei als ein wertvolles Instrument zur Strukturierung und Formulierung strategischer Entscheidungen etabliert. Wie sie zur Steigerung der Wettbewerbsfähigkeit und zur Erreichung der Unternehmensziele beiträgt, wird anhand einer fiktiven Fallstudie erläutert.",
     moduleId: "UFU50",
     pdfFileName: "SWOT-Analyse",
-    image: "/assignments/UFU50/image.png",
     imageDescription: "",
     date: "15.12.2022",
   },
@@ -71,8 +73,7 @@ const assignments = [
     text: "Die Digitalisierung hat die Geschäftswelt revolutioniert und erfordert von Unternehmen eine kontinuierliche Anpassung und Innovation ihrer Geschäftsmodelle, um im Wettbewerb erfolgreich zu sein. In dieser Arbeit werden die Bedeutung der Geschäftsmodell-Innovation im Zeitalter der Digitalisierung untersucht und erfolgreiche Strategien zur Transformation von Unternehmen betrachtet.",
     moduleId: "DIT41",
     pdfFileName: "Digitalisierung_und_Geschaeftsmodell-Innovation",
-    image: "/assignments/DIT41/image.png",
-    imageDescription: "",
+    imageDescription: "Modern phones, tablets and laptops lying on wooden table",
     date: "26.06.2022",
   },
 ];
@@ -89,12 +90,11 @@ export const Assignments = () => {
           }}
         >
           {assignments.map((assignment) => {
-            const { title, image, imageDescription, pdfFileName, text, moduleId, date } = assignment;
+            const { title, imageDescription, pdfFileName, text, moduleId, date } = assignment;
             return (
               <Card
                 key={title}
                 title={title}
-                image={image}
                 imageDescription={imageDescription}
                 moduleId={moduleId}
                 pdfFileName={pdfFileName}
@@ -109,32 +109,22 @@ export const Assignments = () => {
   );
 };
 
-function getFormattedDate(dateString: string): string {
-  const [day, month, year] = dateString.split(".");
-  const date = new Date(Number(year), Number(month) - 1, Number(day));
-
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    year: "numeric",
-  });
-
-  return formatter.format(date);
-}
-
 type TCard = (typeof assignments)[number];
 
-const Card: React.FC<TCard> = ({ title, text, pdfFileName, image, imageDescription, moduleId, date }) => {
+const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, moduleId, date }) => {
   const shortDate = getFormattedDate(date);
 
   return (
     <article className='flex flex-col overflow-hidden bg-white rounded-lg dark:bg-zinc-800'>
-      <Image
-        src={`/assignments/${moduleId}/image.png`}
-        alt={imageDescription}
-        className='object-cover w-full h-64 bg-slate-300'
-        width={900}
-        height={256}
-      />
+      <div className='relative w-full h-64'>
+        <Image
+          src={`/assignments/${moduleId}/image.png`}
+          alt={imageDescription}
+          className='object-cover bg-zinc-200 dark:bg-zinc-700'
+          sizes='100%'
+          fill
+        />
+      </div>
       <div className='flex flex-col self-stretch flex-grow p-4 border-b border-l border-r border-gray-300 rounded-b-lg dark:border-gray-900 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
           <p className='font-bold text-indigo-600 dark:text-indigo-500'>{shortDate}</p>
@@ -145,7 +135,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, image, imageDescripti
             {moduleId}
           </span>
         </div>
-        <h3 className='text-2xl font-semibold text-zinc-800 dark:text-zinc-100'>{title}</h3>
+        <h3 className='text-2xl font-medium text-zinc-800 dark:text-zinc-100'>{title}</h3>
         <p className='text-zinc-800 dark:text-zinc-200'>{text}</p>
         <a
           className='flex flex-row items-center gap-1 mt-auto text-xl font-semibold text-indigo-600 hover:no-underline hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-700 '
@@ -176,3 +166,20 @@ const Chevron = () => {
     </svg>
   );
 };
+
+/**
+ * Converts a date string in the format "day.month.year" to a formatted date string.
+ * @param dateString - The date string in the format "day.month.year".
+ * @returns The formatted date string.
+ */
+function getFormattedDate(dateString: string): string {
+  const [day, month, year] = dateString.split(".");
+  const date = new Date(Number(year), Number(month) - 1, Number(day));
+
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+
+  return formatter.format(date);
+}
