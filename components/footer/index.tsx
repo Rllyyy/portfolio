@@ -17,41 +17,55 @@ export function Footer() {
                 Projects
               </Link>
             </li>
-            <Link className={linkStyle} href={{ pathname: "/", hash: "skills" }} scroll={false}>
-              Skills
-            </Link>
-            <Link className={linkStyle} href={{ pathname: "/", hash: "assignments" }} scroll={false}>
-              Academic Assignments
-            </Link>
+            <li>
+              <Link className={linkStyle} href={{ pathname: "/", hash: "skills" }} scroll={false}>
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link className={linkStyle} href={{ pathname: "/", hash: "assignments" }} scroll={false}>
+                Academic Assignments
+              </Link>
+            </li>
           </ul>
         </div>
         <div className='space-y-2'>
           <h3 className='text-sm text-zinc-400'>Legal</h3>
           <ul className='space-y-2'>
-            <Link className={linkStyle} href={{ pathname: "/about" }}>
-              About
-            </Link>
-            <Link className={linkStyle} href={{ pathname: "/about" }}>
-              Privacy
-            </Link>
+            <li>
+              <Link className={linkStyle} href={{ pathname: "/about" }}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className={linkStyle} href={{ pathname: "/about" }}>
+                Privacy
+              </Link>
+            </li>
           </ul>
         </div>
         <div className='space-y-2'>
           <h3 className='text-sm text-zinc-400'>Links</h3>
           <ul className='space-y-2'>
-            <a className={linkStyle} href='https://github.com/Rllyyy' target='_blank' rel='noopener noreferrer'>
-              Github
-            </a>
+            <li>
+              <a className={linkStyle} href='https://github.com/Rllyyy' target='_blank' rel='noopener noreferrer'>
+                Github
+              </a>
+            </li>
             {/* TODO add LinkedIn */}
-            <a className={linkStyle}>LinkedIn</a>
-            <a
-              className={linkStyle}
-              href='https://stackoverflow.com/users/14602331/rllyyy'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              StackOverflow
-            </a>
+            <li>
+              <a className={linkStyle}>LinkedIn</a>
+            </li>
+            <li>
+              <a
+                className={linkStyle}
+                href='https://stackoverflow.com/users/14602331/rllyyy'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                StackOverflow
+              </a>
+            </li>
           </ul>
         </div>
         <div className='flex flex-col px-6 py-4 border border-gray-700 rounded-lg bg-zinc-800 w-full md:max-w-[300px] justify-self-start'>

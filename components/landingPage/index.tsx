@@ -32,6 +32,7 @@ export const LandingPage = () => {
         height={800}
         alt='an isometric home office with a computer desk, lamps and plants, in the style of 2d game art, navy and blue'
         priority
+        sizes='(max-width: 768px) 290px, 800px'
       />
     </section>
   );

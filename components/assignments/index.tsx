@@ -120,7 +120,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
         <Image
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
-          className='object-cover bg-zinc-200 dark:bg-zinc-700'
+          className='object-cover bg-zinc-200 dark:bg-zinc-900'
           sizes='100%'
           fill
         />
