@@ -5,7 +5,7 @@ export function Footer() {
     <footer className='p-8 bg-zinc-900 text-zinc-200 md:px-12 md:pt-12 md:pb-28'>
       <div className='grid w-full h-full max-w-screen-xl grid-cols-1 gap-y-8 mx-auto gap-x-2 md:grid-cols-2 lg:grid-cols-4 place-items-start grid-rows-[auto] md:grid-rows-2 lg:grid-rows-1'>
         <div className='space-y-3'>
-          <h3 className='text-sm text-zinc-400 '>Navigation</h3>
+          <h3 className='text-sm text-zinc-400'>Navigation</h3>
           <ul className='space-y-2 '>
             <li>
               <Link className={linkStyle} href={{ pathname: "/" }}>

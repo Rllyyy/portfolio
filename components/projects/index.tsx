@@ -26,15 +26,15 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section className='px-4 py-16 bg-slate-50 dark:bg-zinc-700' id='projects'>
-      <div className='flex flex-col items-center gap-10 w-[min(100%,_1200px)] m-auto'>
+    <section className='px-4 py-16 bg-zinc-50 dark:bg-zinc-900' id='projects'>
+      <div className='flex flex-col items-center gap-12 w-[min(100%,_1600px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Projects</h2>
         <div className='w-12 h-[2px] bg-indigo-600 dark:bg-indigo-500' />
-        <div className='space-y-6 md:space-y-12'>
+        <div className='space-y-8 md:space-y-16'>
           {projects.map((project, index) => {
             return (
               <article
-                className='flex flex-col md:flex-row overflow-hidden shadow-lg rounded-md md:rounded-lg min-h-[400px]'
+                className='flex flex-col md:flex-row overflow-hidden rounded-md md:rounded-lg min-h-[600px] border md:border-none dark:border-gray-700 border-gray-300'
                 key={project.name}
               >
                 <Image
@@ -42,11 +42,11 @@ export const Projects = () => {
                   alt={`${project.name} Image`}
                   width={600}
                   height={400}
-                  className={`object-scale-down min-h-full bg-gray-200 dark:bg-zinc-900 w-full md:w-[50%] p-2 md:p-4 ${
-                    index % 2 === 0 ? "md:order-0" : "md:order-1"
+                  className={`object-scale-down min-h-full w-full md:w-[50%] p-6 ${
+                    index % 2 !== 0 ? "md:order-0" : "md:order-1"
                   }`}
                 />
-                <div className='flex flex-col p-4 md:p-6 bg-white dark:bg-zinc-800 md:w-[50%]'>
+                <div className='flex flex-col justify-center md:w-[50%] bg-zinc-100 dark:bg-zinc-800 p-6 md:p-8'>
                   <h3 className='text-3xl font-semibold'>{project.name}</h3>
                   <div className='flex flex-wrap gap-2 mt-2' aria-label='Project tech stack'>
                     {project.technologies.map((technology) => {
@@ -60,8 +60,8 @@ export const Projects = () => {
                       );
                     })}
                   </div>
-                  <p className='my-4 text-lg'>{project.description}</p>
-                  <div className='flex items-stretch mt-auto gap-x-2'>
+                  <p className='my-4 text-lg text-zinc-700 dark:text-zinc-200'>{project.description}</p>
+                  <div className='flex items-stretch gap-x-2'>
                     <a className='p-1 text-lg font-semibold text-white bg-indigo-600 rounded-lg cursor-pointer hover:no-underline hover:bg-indigo-700 border-none w-[min(50%,_150px)] text-center uppercase duration-150 flex items-center justify-center'>
                       View
                     </a>
