@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Carousel } from "./carousel";
 
 const projects = [
   {
@@ -24,6 +25,24 @@ const projects = [
   },
 ];
 
+const items = [
+  {
+    type: "image",
+    resource: "/images/repeatio-question.png",
+    alt: "Multiple Response Question",
+  },
+  {
+    type: "image",
+    resource: "/images/Teilnahmebescheinigung.png",
+    alt: "Interface for software",
+  },
+  {
+    type: "image",
+    resource: "/images/Internet-Check.png",
+    alt: "Simple UI for software reading Start",
+  },
+];
+
 export const Projects = () => {
   return (
     <section className='px-4 py-16 bg-zinc-50 dark:bg-zinc-900' id='projects'>
@@ -34,25 +53,35 @@ export const Projects = () => {
           {projects.map((project, index) => {
             return (
               <article
-                className='flex flex-col md:flex-row overflow-hidden rounded-md md:rounded-lg min-h-[600px] border md:border-none dark:border-gray-700 border-gray-300'
+                className='flex flex-col items-center overflow-hidden border border-gray-300 rounded-md md:flex-row md:rounded-lg md:border-none dark:border-gray-700 min-h-[600px]'
                 key={project.name}
               >
-                <Image
-                  src={project.imageSrc}
-                  alt={`${project.name} Image`}
-                  width={600}
-                  height={400}
-                  className={`object-scale-down min-h-full w-full md:w-[50%] p-6 ${
+                <div
+                  className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 md:p-6 md:w-[50%] md:h-[450px]  ${
                     index % 2 !== 0 ? "md:order-0" : "md:order-1"
                   }`}
-                />
-                <div className='flex flex-col justify-center md:w-[50%] bg-zinc-100 dark:bg-zinc-800 p-6 md:p-8'>
+                >
+                  <Carousel>
+                    {items.map((item, i) => (
+                      <Image
+                        key={i}
+                        draggable='false'
+                        src={item.resource}
+                        width={650}
+                        height={400}
+                        alt={item.alt}
+                        className='object-scale-down w-full max-h-full p-[1px]'
+                      />
+                    ))}
+                  </Carousel>
+                </div>
+                <div className='flex flex-col justify-center md:w-[50%] bg-zinc-100 dark:bg-zinc-800 p-6 md:p-8 flex-grow self-stretch '>
                   <h3 className='text-3xl font-semibold'>{project.name}</h3>
                   <div className='flex flex-wrap gap-2 mt-2' aria-label='Project tech stack'>
                     {project.technologies.map((technology) => {
                       return (
                         <span
-                          className='px-3 py-1 text-sm font-semibold leading-none rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200'
+                          className='px-3 py-1 text-sm font-semibold leading-none rounded-full bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200'
                           key={`${technology}-${project.name}`}
                         >
                           {technology}
