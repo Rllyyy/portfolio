@@ -16,7 +16,8 @@
     "moduleResolution": "node",
     "types": [
       "cypress",
-      "node"
+      "node",
+      "cypress-real-events"
     ],
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,

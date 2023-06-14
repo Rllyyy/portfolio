@@ -14,7 +14,7 @@ const transition: ValueAnimationTransition<number> = {
   bounce: 0,
 };
 
-export const Carousel: React.FC<PropsWithChildren> = ({ children }) => {
+export const Carousel: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const x = useMotionValue(0); // Track the horizontal position of the carousel
   const [index, setIndex] = useState(0);
   let [ref, { width }] = useMeasure(); // Measure the width of the carousel container
@@ -59,7 +59,7 @@ export const Carousel: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       {/* left arrow */}
-      <Arrow onClick={handlePrev}>
+      <Arrow onClick={handlePrev} direction='previous'>
         <ChevronLeft />
       </Arrow>
       <div ref={ref} className='relative flex items-center w-full h-full overflow-x-hidden'>
@@ -70,7 +70,7 @@ export const Carousel: React.FC<PropsWithChildren> = ({ children }) => {
         ))}
       </div>
       {/* right arrow */}
-      <Arrow onClick={handleNext}>
+      <Arrow onClick={handleNext} direction='next'>
         <ChevronRight />
       </Arrow>
       {/* dots */}
