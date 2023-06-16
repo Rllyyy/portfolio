@@ -1,4 +1,4 @@
-import { useState, Children, useEffect, useCallback, PropsWithChildren, useMemo } from "react";
+import { useState, Children, useEffect, useCallback, useMemo } from "react";
 import { animate, PanInfo, useMotionValue, ValueAnimationTransition } from "framer-motion";
 import useMeasure from "react-use-measure";
 
