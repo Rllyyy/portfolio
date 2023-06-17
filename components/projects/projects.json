@@ -39,6 +39,10 @@
         "type": "image",
         "resource": "/projects/repeatio/import-create.png",
         "alt": "Two mockup of phones with a form titled Create or import a Module. On the left mockup the option 'Import Module' is selected'. The user has imported 4 modules. On the right mockup the option 'Create Module' is selected. The user is filled in the following inputs in the form. ID: RW-01. Name: Grundlagen Rechnungswesen. Language: German. Compatibility Version: 0.5.0 ."
+      },
+      {
+        "type": "video",
+        "resource": "https://www.youtube-nocookie.com/embed/GgP1WLHhPMY"
       }
     ]
   },

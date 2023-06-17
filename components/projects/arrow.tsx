@@ -13,6 +13,7 @@ const Arrow: FC<PropsWithChildren<IArrow>> = ({ children, onClick, direction }) 
     onClick={onClick}
     className='flex items-center justify-center p-1 rounded-full md:p-2'
     aria-label={`View ${direction} item`}
+    type='button'
   >
     {children}
   </button>
