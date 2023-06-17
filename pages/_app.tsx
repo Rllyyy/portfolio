@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Niklas Fischer</title>
         <meta name='description' content='The portfolio of Niklas Fischer' />
         <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1' />
+        <meta httpEquiv='Permissions-Policy' content='interest-cohort=()' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <ThemeProvider enableSystem={true} attribute='class'>

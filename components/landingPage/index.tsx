@@ -21,7 +21,7 @@ export const LandingPage = () => {
             href='mailto:niklas.fischer@mail.de'
           >
             <EMailIcon />
-            <span className=''>Let&apos;s Talk</span>
+            <span>Let&apos;s Talk</span>
           </a>
         </div>
       </div>
