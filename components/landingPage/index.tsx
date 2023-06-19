@@ -1,3 +1,4 @@
+import { EMailIcon } from "components/icons";
 import Image from "next/image";
 
 export const LandingPage = () => {
@@ -20,7 +21,7 @@ export const LandingPage = () => {
             className='flex flex-row items-center px-4 space-x-2 text-lg text-center text-indigo-600 duration-100 border border-indigo-600 rounded-lg cursor-pointer md:text-xl dark:text-indigo-100 dark:border-indigo-500 hover:no-underline hover:bg-zinc-200 dark:hover:bg-zinc-700 h-11'
             href='mailto:niklas.fischer@mail.de'
           >
-            <EMailIcon />
+            <EMailIcon classNames='inline-block w-5 h-5' />
             <span>Let&apos;s Talk</span>
           </a>
         </div>
@@ -35,19 +36,5 @@ export const LandingPage = () => {
         sizes='(max-width: 768px) 290px, 800px'
       />
     </section>
-  );
-};
-
-const EMailIcon = () => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-      fill='currentColor'
-      className='inline-block w-5 h-5 align-middle text-inherit'
-    >
-      <path d='M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z' />
-      <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
-    </svg>
   );
 };
