@@ -18,7 +18,7 @@ module.exports = {
       "4xl": "2048px",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   darkMode: "class",
   future: {
     hoverOnlyWhenSupported: true,

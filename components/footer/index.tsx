@@ -38,7 +38,7 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link className={linkStyle} href={{ pathname: "/about" }}>
+              <Link className={linkStyle} href={{ pathname: "/privacy" }}>
                 Privacy
               </Link>
             </li>
