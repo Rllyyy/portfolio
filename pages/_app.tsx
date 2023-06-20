@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Navbar } from "components/navbar";
 import { Footer } from "components/footer";
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
