@@ -59,7 +59,7 @@ export function Navbar() {
       }`}
     >
       <div
-        className={`grid content-center w-full grid-cols-2 px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto gap-x-24 ${
+        className={`grid content-center w-full grid-cols-[1fr_max-content] px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto md:gap-x-24 ${
           isTop ? "py-8 md:py-16" : "py-2"
         }`}
       >
@@ -119,7 +119,7 @@ export function Navbar() {
             <span className='text-xl md:text-lg'>Contact</span>
           </li> */}
         </ul>
-        <div className='flex flex-row items-center order-2 md:order-3 justify-self-end gap-x-4'>
+        <div className='flex flex-row items-center order-2 md:order-3 justify-self-end gap-x-3 md:gap-x-4'>
           <button
             className='cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-[background] p-1'
             onClick={handleThemeSwitch}
