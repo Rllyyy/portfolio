@@ -15,32 +15,13 @@ export const Projects = () => {
               <article
                 className='flex flex-col items-center overflow-hidden border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-gray-700 lg:min-h-[650px]'
                 key={project.name}
-                /*  */
               >
                 <div
                   className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${
                     index % 2 !== 0 ? "lg:order-0" : "lg:order-1"
                   }`}
                 >
-                  <Carousel>
-                    {project.carouselItems?.map((item, i) => {
-                      if (item.type === "image") {
-                        return (
-                          <Image
-                            key={i}
-                            draggable='false'
-                            src={item.resource}
-                            width={650}
-                            height={520}
-                            alt={item.alt as string}
-                            className='object-contain w-full max-h-full p-[1px]'
-                          />
-                        );
-                      } else if (item.type === "video") {
-                        return <Video key={i} resource={item.resource} />;
-                      }
-                    })}
-                  </Carousel>
+                  <Carousel items={project.carouselItems} />
                 </div>
                 <div className='flex flex-col justify-center lg:w-[50%] bg-zinc-100 dark:bg-zinc-800 p-6 lg:p-8 flex-grow self-stretch '>
                   <h3 className='text-3xl font-semibold'>{project.name}</h3>

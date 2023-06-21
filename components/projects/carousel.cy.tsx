@@ -1,9 +1,6 @@
 /// <reference types="cypress" />
-import Image from "next/image";
-
 import { Carousel } from "./carousel";
 import "../../styles/globals.css";
-import { Video } from ".";
 
 const items = [
   {
@@ -28,26 +25,7 @@ const MockCarousel = () => {
     <div
       className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative order-0 `}
     >
-      <Carousel>
-        {items?.map((item, i) => {
-          if (item.type === "image") {
-            return (
-              <Image
-                key={i}
-                draggable='false'
-                src={item.resource}
-                width={650}
-                height={520}
-                alt={item.alt as string}
-                className='object-contain w-full max-h-full p-[1px]'
-                unoptimized
-              />
-            );
-          } else if (item.type === "video") {
-            return <Video key={i} resource={item.resource} />;
-          }
-        })}
-      </Carousel>
+      <Carousel items={items} unoptimizedImages={true} />
     </div>
   );
 };
