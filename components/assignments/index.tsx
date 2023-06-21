@@ -3,7 +3,7 @@ import assignments from "./assignments.json";
 
 export const Assignments = () => {
   return (
-    <section className='min-h-[75vh] px-4 py-16 bg-slate-50 dark:bg-zinc-700' id='assignments'>
+    <section className='min-h-[75vh] px-4 lg:px-6 py-16 bg-slate-50 dark:bg-zinc-700' id='assignments'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
         <div

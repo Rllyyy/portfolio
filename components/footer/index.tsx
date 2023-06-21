@@ -52,9 +52,15 @@ export function Footer() {
                 Github
               </a>
             </li>
-            {/* TODO add LinkedIn */}
             <li>
-              <a className={linkStyle}>LinkedIn</a>
+              <a
+                className={linkStyle}
+                href='https://www.linkedin.com/in/niklas-fischer-dev/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                LinkedIn
+              </a>
             </li>
             <li>
               <a

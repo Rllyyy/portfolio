@@ -5,7 +5,7 @@ import { FormEvent, useState, useSyncExternalStore } from "react";
 
 export const Projects = () => {
   return (
-    <section className='px-4 py-16 bg-zinc-50 dark:bg-zinc-900' id='projects'>
+    <section className='px-4 py-16 lg:px-6 bg-zinc-50 dark:bg-zinc-900' id='projects'>
       <div className='flex flex-col items-center gap-12 w-[min(100%,_1600px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Projects</h2>
         <div className='w-12 h-[2px] bg-indigo-600 dark:bg-indigo-500' />
@@ -15,7 +15,6 @@ export const Projects = () => {
               <article
                 className='flex flex-col items-center overflow-hidden border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-gray-700 lg:min-h-[650px]'
                 key={project.name}
-                /*  */
               >
                 <div
                   className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${

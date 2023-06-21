@@ -1,7 +1,7 @@
 export default function Privacy() {
   return (
-    <main className='duration-200 mt-28 pb-28 md:mt-44 bg-zinc-100 dark:bg-zinc-800'>
-      <div className='max-w-screen-xl p-4 mx-auto prose-lg prose-h4:font-semibold prose-h4:text-xl'>
+    <main className='p-4 mx-auto duration-200 lg:px-6 mt-28 pb-28 md:mt-40 bg-zinc-100 dark:bg-zinc-800'>
+      <div className='max-w-screen-xl mx-auto prose-lg prose-h4:font-semibold prose-h4:text-xl'>
         <h1>Datenschutz&shy;erklärung</h1>
         <h2>1. Datenschutz auf einen Blick</h2>
         <h3>Allgemeine Hinweise</h3>

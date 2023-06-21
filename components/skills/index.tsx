@@ -26,7 +26,7 @@ export const Skills = () => {
   if (!mounted) return null;
 
   return (
-    <section className='px-4 py-16 bg-zinc-100 dark:bg-zinc-800' id='skills'>
+    <section className='px-4 py-16 lg:px-6 bg-zinc-100 dark:bg-zinc-800' id='skills'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Skills</h2>
         {/* Display the skills */}

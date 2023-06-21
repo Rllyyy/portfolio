@@ -59,37 +59,35 @@ export function Navbar() {
       }`}
     >
       <div
-        className={`grid content-center w-full grid-cols-2 px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto ${
+        className={`grid content-center w-full grid-cols-2 px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto gap-x-24 ${
           isTop ? "py-8 md:py-16" : "py-2"
         }`}
       >
         <Link href={{ pathname: "/" }} className='self-center hover:no-underline'>
-          <h1 className='text-xl font-semibold '>Niklas Fischer</h1>
+          <h1 className='text-xl font-semibold text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-100'>
+            Niklas Fischer
+          </h1>
         </Link>
         <ul
-          className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none ${
+          className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none md:ml-auto ${
             showNav ? "" : "hidden"
           } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-black "}`}
         >
-          <li>
+          <li className='flex justify-center'>
             {/* smooth scrolling doesn't work: https://github.com/vercel/next.js/issues/44295 */}
             {/* <a href='/#top' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Home
             </a> */}
-            <Link
-              className='text-xl md:text-lg hover:no-underline'
-              href={{ pathname: "/" }}
-              onClick={handleNavbarCloseMobile}
-            >
+            <Link className={linkStyle} href={{ pathname: "/" }} onClick={handleNavbarCloseMobile}>
               Home
             </Link>
           </li>
-          <li>
+          <li className='flex justify-center'>
             {/* <a href='#projects' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
               Projects
             </a> */}
             <Link
-              className='text-xl md:text-lg hover:no-underline'
+              className={linkStyle}
               href={{ pathname: "/", hash: "projects" }}
               onClick={handleNavbarCloseMobile}
               scroll={false}
@@ -97,9 +95,9 @@ export function Navbar() {
               Projects
             </Link>
           </li>
-          <li>
+          <li className='flex justify-center'>
             <Link
-              className='text-xl md:text-lg hover:no-underline'
+              className={linkStyle}
               href={{ pathname: "/", hash: "skills" }}
               onClick={handleNavbarCloseMobile}
               scroll={false}
@@ -107,9 +105,9 @@ export function Navbar() {
               Skills
             </Link>
           </li>
-          <li>
+          <li className='flex justify-center'>
             <Link
-              className='text-xl md:text-lg hover:no-underline'
+              className={linkStyle}
               href={{ pathname: "/", hash: "assignments" }}
               onClick={handleNavbarCloseMobile}
               scroll={false}
@@ -117,9 +115,9 @@ export function Navbar() {
               Assignments
             </Link>
           </li>
-          <li>
+          {/*  <li>
             <span className='text-xl md:text-lg'>Contact</span>
-          </li>
+          </li> */}
         </ul>
         <div className='flex flex-row items-center order-2 md:order-3 justify-self-end gap-x-4'>
           <button
@@ -154,3 +152,6 @@ function useScrollYPosition() {
     () => undefined
   );
 }
+
+const linkStyle =
+  "h-full text-xl md:text-lg hover:no-underline text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50";
