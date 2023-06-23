@@ -7,6 +7,7 @@ import { Navbar } from "components/navbar";
 import { Footer } from "components/footer";
 
 import "styles/globals.css";
+import { MotionConfig } from "framer-motion";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,9 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <ThemeProvider enableSystem={true} attribute='class'>
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
+        <MotionConfig reducedMotion='user'>
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </MotionConfig>
       </ThemeProvider>
       <Analytics />
     </>

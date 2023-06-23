@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import { FormEvent, useState, useSyncExternalStore } from "react";
+import { motion } from "framer-motion";
 
 export const Projects = () => {
   return (
@@ -12,9 +13,13 @@ export const Projects = () => {
         <div className='space-y-6 lg:space-y-16'>
           {projects.map((project, index) => {
             return (
-              <article
+              <motion.article
                 className='flex flex-col items-center overflow-hidden border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-gray-700 lg:min-h-[650px]'
                 key={project.name}
+                initial={{ opacity: 0, x: index % 2 !== 0 ? "15%" : "-15%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.45 }}
               >
                 <div
                   className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${
@@ -79,7 +84,7 @@ export const Projects = () => {
                     )}
                   </div>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
         </div>

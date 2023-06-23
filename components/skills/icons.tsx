@@ -1,9 +1,15 @@
 import { iconStyle } from "./tailwind-classes";
+import { Variants, motion } from "framer-motion";
 
-/* https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg */
+/* https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.motion.svg */
 export const ReactIcon = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-11.5 -10.23174 23 20.46348' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      viewBox='-11.5 -10.23174 23 20.46348'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>React</title>
       <circle cx='0' cy='0' r='2.05' fill='#61dafb' />
       <g stroke='#61dafb' strokeWidth='1' fill='none'>
@@ -11,7 +17,7 @@ export const ReactIcon = () => {
         <ellipse rx='11' ry='4.2' transform='rotate(60)' />
         <ellipse rx='11' ry='4.2' transform='rotate(120)' />
       </g>
-    </svg>
+    </motion.svg>
   );
 };
 
@@ -19,7 +25,13 @@ export const ReactIcon = () => {
 export const NextJsIcon = ({ currentTheme }: { currentTheme: string | undefined }) => {
   const pathFillColor = currentTheme === "light" ? "#000" : "#fff";
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 394 80' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      fill='none'
+      viewBox='0 0 394 80'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>NextJs</title>
       <path
         fill={pathFillColor}
@@ -29,14 +41,20 @@ export const NextJsIcon = ({ currentTheme }: { currentTheme: string | undefined 
         fill={pathFillColor}
         d='M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z'
       />
-    </svg>
+    </motion.svg>
   );
 };
 
-/* https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg */
+/* https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.motion.svg */
 export const CSharpIcon = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 288' version='1.1' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      viewBox='0 0 256 288'
+      version='1.1'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>Csharp</title>
       <g>
         <path
@@ -64,20 +82,21 @@ export const CSharpIcon = () => {
           fillRule='nonzero'
         />
       </g>
-    </svg>
+    </motion.svg>
   );
 };
 
-/* https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg */
+/* https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.motion.svg */
 export const TypeScriptIcon = () => {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
       fill='none'
       height='512'
       viewBox='0 0 512 512'
       width='512'
       className={iconStyle}
+      variants={childVariants}
     >
       <title>TypeScript</title>
       <rect fill='#3178c6' height='512' rx='50' width='512' />
@@ -88,14 +107,19 @@ export const TypeScriptIcon = () => {
         fill='#fff'
         fillRule='evenodd'
       />
-    </svg>
+    </motion.svg>
   );
 };
 
-/* https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg */
+/* https://git-scm.com/images/logos/downloads/Git-Icon-1788C.motion.svg */
 export const GitIcon = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' className={iconStyle} viewBox='0 0 92 92'>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      className={iconStyle}
+      viewBox='0 0 92 92'
+      variants={childVariants}
+    >
       <title>Git</title>
       <defs>
         <clipPath id='a'>
@@ -111,14 +135,20 @@ export const GitIcon = () => {
           d='M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.328 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.034 7.034 0 0 1 1.669 7.277l10.187 10.184a7.028 7.028 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.05 7.05 0 0 1-9.965 0 7.044 7.044 0 0 1-1.528-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.06 7.06 0 0 1 2.304-1.539V33.926a7.049 7.049 0 0 1-3.82-9.234L29.242 14.272 1.73 41.777a5.925 5.925 0 0 0 0 8.371L41.852 90.27a5.925 5.925 0 0 0 8.37 0l39.934-39.934a5.925 5.925 0 0 0 0-8.371'
         />
       </g>
-    </svg>
+    </motion.svg>
   );
 };
 
 // https://tailwindcss.com/brand
 export const TailwindcssIcon = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 54 33' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      fill='none'
+      viewBox='0 0 54 33'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>Tailwindcss</title>
       <g clipPath='url(#prefix__clip0)'>
         <path
@@ -133,16 +163,22 @@ export const TailwindcssIcon = () => {
           <path fill='#fff' d='M0 0h54v32.4H0z' />
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   );
 };
 
-// https://github.com/dcurtis/markdown-mark/blob/master/svg/markdown-mark.svg
+// https://github.com/dcurtis/markdown-mark/blob/master/motion.svg/markdown-mark.motion.svg
 export const MarkdownIcon = ({ currentTheme }: { currentTheme: string | undefined }) => {
   const pathFillColor = currentTheme === "light" ? "#000" : "#ebecf0";
 
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 208 128' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      fill='none'
+      viewBox='0 0 208 128'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>Markdown</title>
       <g fill={pathFillColor}>
         <path
@@ -152,17 +188,32 @@ export const MarkdownIcon = ({ currentTheme }: { currentTheme: string | undefine
         />
         <path d='m30 98v-68h20l20 25 20-25h20v68h-20v-39l-20 25-20-25v39zm125 0-30-33h20v-35h20v35h20z' />
       </g>
-    </svg>
+    </motion.svg>
   );
 };
 
-/* https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg */
+/* https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.motion.svg */
 export const JavaScriptIcon = () => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 630 630' className={iconStyle}>
+    <motion.svg
+      xmlns='http://www.w3.org/2000/motion.svg'
+      viewBox='0 0 630 630'
+      className={iconStyle}
+      variants={childVariants}
+    >
       <title>JavaScript</title>
       <rect width='630' height='630' fill='#f7df1e' />
       <path d='m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z' />
-    </svg>
+    </motion.svg>
   );
+};
+
+// framer-motion animation variant
+export const childVariants: Variants = {
+  hidden: {
+    opacity: 0.2,
+  },
+  visible: {
+    opacity: 1,
+  },
 };

@@ -1,16 +1,21 @@
 import Image from "next/image";
 import assignments from "./assignments.json";
+import { Variants, motion } from "framer-motion";
 
 export const Assignments = () => {
   return (
     <section className='min-h-[75vh] px-4 lg:px-6 py-16 bg-slate-50 dark:bg-zinc-700' id='assignments'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
         <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
-        <div
+        <motion.div
           className='grid w-full gap-4 mt-10'
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(min(450px, 100%), 1fr))",
           }}
+          initial='hidden'
+          whileInView='visible'
+          variants={containerVariants}
+          viewport={{ once: true, margin: "-150px" }}
         >
           {assignments.map((assignment) => {
             const { title, imageDescription, pdfFileName, text, moduleId, date } = assignment;
@@ -26,7 +31,7 @@ export const Assignments = () => {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -39,7 +44,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
 
   return (
     <article className='flex flex-col overflow-hidden bg-white rounded-lg dark:bg-zinc-800'>
-      <div className='relative w-full h-64'>
+      <motion.article className='relative w-full h-64' variants={imageVariants}>
         <Image
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
@@ -47,7 +52,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           sizes='100%'
           fill
         />
-      </div>
+      </motion.article>
       <div className='flex flex-col self-stretch flex-grow p-4 border-b border-l border-r border-gray-300 rounded-b-lg dark:border-gray-900 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
           <p className='font-bold text-indigo-600 dark:text-indigo-500'>{shortDate}</p>
@@ -72,6 +77,25 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
       </div>
     </article>
   );
+};
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      duration: 0.2,
+    },
+  },
+};
+
+const imageVariants: Variants = {
+  hidden: {
+    opacity: 0.2,
+  },
+  visible: {
+    opacity: 1,
+  },
 };
 
 const Chevron = () => {
