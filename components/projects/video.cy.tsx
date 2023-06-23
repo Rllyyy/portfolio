@@ -2,6 +2,7 @@
 
 import { Video } from ".";
 import { Carousel } from "./carousel";
+import projects from "./projects.json";
 import Image from "next/image";
 
 import "../../styles/globals.css";
@@ -18,13 +19,16 @@ const items = [
   },
 ];
 
-const MockCarousel = () => {
+interface IMockCarouselItem {
+  carouselItems: (typeof projects)[number]["carouselItems"];
+}
+const MockCarousel: React.FC<IMockCarouselItem> = ({ carouselItems }) => {
   return (
     <div
       className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative order-0 `}
     >
       <Carousel>
-        {items?.map((item, i) => {
+        {carouselItems?.map((item, i) => {
           if (item.type === "image") {
             return (
               <Image
@@ -49,13 +53,13 @@ const MockCarousel = () => {
 
 describe("<Video />", () => {
   it("should show the YouTube consent info", () => {
-    cy.mount(<MockCarousel />);
+    cy.mount(<MockCarousel carouselItems={items} />);
     cy.contains("h3", "Activate external Media").should("exist");
     cy.get("iframe[title='YouTube video player'").should("not.exist");
   });
 
   it("should update the localStorage if clicking on 'I understand'", () => {
-    cy.mount(<MockCarousel />);
+    cy.mount(<MockCarousel carouselItems={items} />);
     cy.contains("button", "I understand")
       .click()
       .should(() => {
@@ -67,7 +71,7 @@ describe("<Video />", () => {
   });
 
   it("should update the sessionStorage if clicking on 'I understand' and unchecking 'Do not show again'", () => {
-    cy.mount(<MockCarousel />);
+    cy.mount(<MockCarousel carouselItems={items} />);
     cy.contains("label", "Do not show again").click();
     cy.contains("button", "I understand")
       .click()
@@ -81,7 +85,7 @@ describe("<Video />", () => {
 
   it("should not show the Consent warning if the consent is in the localStorage", () => {
     localStorage.setItem("youtube-consent", JSON.stringify(true, null, "\t"));
-    cy.mount(<MockCarousel />);
+    cy.mount(<MockCarousel carouselItems={items} />);
     cy.get("iframe[title='YouTube video player'").should("exist");
     cy.contains("h3", "Activate external Media").should("not.exist");
   });

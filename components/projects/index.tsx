@@ -149,24 +149,26 @@ export const Video: React.FC<IVideo> = ({ resource }) => {
   }
 
   return (
-    <div
-      className='absolute w-full max-h-full left-1/2 top-1/2'
-      style={{ position: "absolute", transform: "translate(-50%, -50%)" }}
-    >
+    <div className='relative w-full h-full'>
       <div
-        /* Weird workaround to not get scrollbars on md screen */
-        className='relative w-full md:mx-auto md:w-[70%] lg:w-full '
-        style={{
-          aspectRatio: "16 / 9",
-        }}
+        className='absolute w-full max-h-full left-1/2 top-1/2'
+        style={{ position: "absolute", transform: "translate(-50%, -50%)" }}
       >
-        <iframe
-          src={resource}
-          title='YouTube video player'
-          className='object-contain w-full h-full'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowFullScreen
-        ></iframe>
+        <div
+          /* Weird workaround to not get scrollbars on md screen */
+          className='relative w-full md:mx-auto md:w-[70%] lg:w-full '
+          style={{
+            aspectRatio: "16 / 9",
+          }}
+        >
+          <iframe
+            src={resource}
+            title='YouTube video player'
+            className='object-contain w-full h-full'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
