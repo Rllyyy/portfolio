@@ -5,6 +5,12 @@ import { FormEvent, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 
 export const Projects = () => {
+  const isMobile = useSyncExternalStore(
+    subscribe,
+    () => window.innerWidth < 768,
+    () => false
+  );
+
   return (
     <section className='px-4 py-16 lg:px-6 bg-zinc-50 dark:bg-zinc-900' id='projects'>
       <div className='flex flex-col items-center gap-12 w-[min(100%,_1600px)] m-auto'>
@@ -19,7 +25,7 @@ export const Projects = () => {
                 initial={{ opacity: 0, x: index % 2 !== 0 ? "15%" : "-15%" }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.45 }}
+                viewport={{ once: true, amount: isMobile ? 0.1 : 0.45 }}
               >
                 <div
                   className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${
@@ -30,15 +36,16 @@ export const Projects = () => {
                     {project.carouselItems?.map((item, i) => {
                       if (item.type === "image") {
                         return (
-                          <Image
-                            key={i}
-                            draggable='false'
-                            src={item.resource}
-                            width={650}
-                            height={520}
-                            alt={item.alt as string}
-                            className='object-contain w-full max-h-full p-[1px]'
-                          />
+                          <div key={i} className='relative w-full'>
+                            <Image
+                              draggable='false'
+                              src={item.resource}
+                              fill
+                              sizes='(max-width: 768px) 100vw, 700px'
+                              alt={item.alt as string}
+                              className='object-contain w-full max-h-full p-[1px]'
+                            />
+                          </div>
                         );
                       } else if (item.type === "video") {
                         return <Video key={i} resource={item.resource} />;
@@ -92,6 +99,13 @@ export const Projects = () => {
     </section>
   );
 };
+
+// Add event listener for window resizing
+function subscribe(onWindowResize: () => void) {
+  window.addEventListener("resize", onWindowResize);
+
+  return () => window.removeEventListener("resize", onWindowResize);
+}
 
 //this is the subscribe function, listens for changes
 const subscribeToLocalStorage = (listener: () => void) => {

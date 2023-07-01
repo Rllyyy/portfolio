@@ -51,7 +51,7 @@ export const LandingPage = () => {
         </motion.div>
       </div>
       <motion.div
-        className='relative order-1 w-full h-full md:order-2 max-w-[290px] md:max-w-[800px] md:justify-self-start'
+        className='relative order-1 w-full md:h-full md:order-2 max-w-[290px] md:max-w-[800px] md:justify-self-start h-[290px]'
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.1 }}
@@ -59,11 +59,10 @@ export const LandingPage = () => {
         <Image
           src='/hero-image.png'
           className='object-scale-down w-full h-full'
-          width={800}
-          height={800}
           alt='an isometric home office with a computer desk, lamps and plants, in the style of 2d game art, navy and blue'
           priority
-          sizes='(max-width: 768px) 290px, 800px'
+          fill
+          sizes='(max-width: 768px) 300px, 800px'
         />
       </motion.div>
     </section>

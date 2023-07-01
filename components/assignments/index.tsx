@@ -49,7 +49,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
           className='object-cover bg-zinc-200 dark:bg-zinc-900'
-          sizes='100%'
+          sizes='(max-width: 768px) 100vw, 450px'
           fill
         />
       </motion.article>
