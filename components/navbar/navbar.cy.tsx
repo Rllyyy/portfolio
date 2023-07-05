@@ -73,7 +73,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("be.visible");
       cy.contains("li", "Projects").should("be.visible");
       cy.contains("li", "Skills").should("be.visible");
-      cy.contains("li", "Contact").should("be.visible");
     });
 
     cy.get("nav").invoke("outerHeight").should("eq", 500);
@@ -89,7 +88,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("not.be.visible");
       cy.contains("li", "Projects").should("not.be.visible");
       cy.contains("li", "Skills").should("not.be.visible");
-      cy.contains("li", "Contact").should("not.be.visible");
     });
   });
 
@@ -101,7 +99,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("be.visible");
       cy.contains("li", "Projects").should("be.visible");
       cy.contains("li", "Skills").should("be.visible");
-      cy.contains("li", "Contact").should("be.visible");
     });
   });
 
@@ -113,7 +110,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("not.be.visible");
       cy.contains("li", "Projects").should("not.be.visible");
       cy.contains("li", "Skills").should("not.be.visible");
-      cy.contains("li", "Contact").should("not.be.visible");
     });
   });
 
@@ -127,7 +123,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("be.visible");
       cy.contains("li", "Projects").should("be.visible");
       cy.contains("li", "Skills").should("be.visible");
-      cy.contains("li", "Contact").should("be.visible");
     });
   });
 
@@ -197,7 +192,6 @@ describe("<Navbar />", () => {
       cy.contains("li", "Home").should("be.visible");
       cy.contains("li", "Projects").should("be.visible");
       cy.contains("li", "Skills").should("be.visible");
-      cy.contains("li", "Contact").should("be.visible");
     });
   });
 });

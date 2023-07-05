@@ -49,7 +49,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
           className='object-cover bg-zinc-200 dark:bg-zinc-900'
-          sizes='(max-width: 768px) 100vw, 450px'
+          sizes='(max-width: 768px) 100vw, (max-width: 1446) 50vw, 33vw'
           fill
         />
       </motion.article>
@@ -63,17 +63,18 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
             {moduleId}
           </span>
         </div>
-        <h3 className='text-2xl font-medium text-zinc-800 dark:text-zinc-100'>{title}</h3>
+        <h3 className='text-xl font-medium text-zinc-800 dark:text-zinc-100'>{title}</h3>
         <p className='text-zinc-800 dark:text-zinc-200'>{text}</p>
-        <a
-          className='flex flex-row items-center gap-1 mt-auto text-xl font-semibold text-indigo-600 hover:no-underline hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-700 '
+        <motion.a
+          className='flex flex-row items-center gap-1 mt-auto text-lg font-semibold text-indigo-600 hover:no-underline hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-700'
           href={`/assignments/${moduleId}/${pdfFileName}.pdf`}
           target='_blank'
           rel='noopener noreferrer'
+          whileHover={{ gap: "8px", transition: { duration: 0.1 } }}
         >
           <span>Read</span>
           <Chevron />
-        </a>
+        </motion.a>
       </div>
     </article>
   );
@@ -107,7 +108,7 @@ const Chevron = () => {
       viewBox='0 0 24 24'
       strokeWidth={4}
       stroke='currentColor'
-      className='inline-block w-5 h-5'
+      className='inline-block w-4 h-4'
     >
       <path strokeLinecap='round' strokeLinejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' />
     </svg>
