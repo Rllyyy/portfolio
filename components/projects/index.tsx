@@ -3,19 +3,20 @@ import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import { FormEvent, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
+import { ThickUnderline } from "components/icons/underline";
 
 export const Projects = () => {
-  const isMobile = useSyncExternalStore(
-    subscribe,
-    () => window.innerWidth < 768,
-    () => false
-  );
+  const viewportAmount = useViewportAmount();
 
   return (
-    <section className='px-4 py-16 lg:px-6 bg-zinc-50 dark:bg-zinc-900' id='projects'>
-      <div className='flex flex-col items-center gap-12 w-[min(100%,_1600px)] m-auto'>
-        <h2 className='text-5xl font-semibold'>Projects</h2>
-        <div className='w-12 h-[2px] bg-indigo-600 dark:bg-indigo-500' />
+    <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-50 dark:bg-zinc-900' id='projects'>
+      <div className='flex flex-col items-center gap-12 md:gap-16 w-[min(100%,_1600px)] m-auto'>
+        <div className='flex flex-col items-start w-full md:items-center gap-y-4'>
+          <h2 className='relative text-5xl font-semibold'>
+            Projects
+            <ThickUnderline />
+          </h2>
+        </div>
         <div className='space-y-6 lg:space-y-16'>
           {projects.map((project, index) => {
             return (
@@ -25,7 +26,7 @@ export const Projects = () => {
                 initial={{ opacity: 0, x: index % 2 !== 0 ? "15%" : "-15%" }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: isMobile ? 0.1 : 0.45 }}
+                viewport={{ once: true, amount: viewportAmount }}
               >
                 <div
                   className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${
@@ -98,6 +99,22 @@ export const Projects = () => {
       </div>
     </section>
   );
+};
+
+const useViewportAmount = () => {
+  const value = useSyncExternalStore(
+    subscribe,
+    () => window.innerHeight,
+    () => 0
+  );
+
+  if (value <= 850) {
+    return 0.1;
+  } else if (value <= 1100) {
+    return 0.2;
+  } else {
+    return 0.4;
+  }
 };
 
 // Add event listener for window resizing

@@ -1,14 +1,18 @@
 import Image from "next/image";
 import assignments from "./assignments.json";
 import { Variants, motion } from "framer-motion";
+import { ThinUnderline } from "../icons/underline";
 
 export const Assignments = () => {
   return (
-    <section className='min-h-[75vh] px-4 lg:px-6 py-16 bg-slate-50 dark:bg-zinc-700' id='assignments'>
-      <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
-        <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
+    <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-zinc-700' id='assignments'>
+      <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
+        <div className='flex flex-col items-start w-full md:items-center md:gap-y-4 gap-y-2'>
+          <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
+          <ThinUnderline />
+        </div>
         <motion.div
-          className='grid w-full gap-4 mt-10'
+          className='grid w-full gap-4'
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(min(450px, 100%), 1fr))",
           }}
@@ -40,11 +44,23 @@ export const Assignments = () => {
 type TCard = (typeof assignments)[number];
 
 const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, moduleId, date }) => {
-  const shortDate = getFormattedDate(date);
+  const machineDate = getFormattedDate(date, "en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const shortDate = getFormattedDate(date, "en-US", {
+    month: "short",
+    year: "numeric",
+  });
 
   return (
-    <article className='flex flex-col overflow-hidden bg-white rounded-lg dark:bg-zinc-800'>
-      <motion.article className='relative w-full h-64' variants={imageVariants}>
+    <article
+      className='flex flex-col overflow-hidden bg-white rounded-lg dark:bg-zinc-800'
+      id={`assignment-${moduleId}`}
+    >
+      <motion.div className='relative w-full h-64' variants={imageVariants}>
         <Image
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
@@ -52,10 +68,12 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           sizes='(max-width: 768px) 100vw, (max-width: 1446) 50vw, 33vw'
           fill
         />
-      </motion.article>
+      </motion.div>
       <div className='flex flex-col self-stretch flex-grow p-4 border-b border-l border-r border-gray-300 rounded-b-lg dark:border-gray-900 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
-          <p className='font-bold text-indigo-600 dark:text-indigo-500'>{shortDate}</p>
+          <time dateTime={machineDate} className='font-bold text-indigo-600 dark:text-indigo-500'>
+            {shortDate}
+          </time>
           <span
             className='inline px-3 py-1 text-sm font-bold leading-none rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300'
             aria-label='Module ID'
@@ -118,16 +136,13 @@ const Chevron = () => {
 /**
  * Converts a date string in the format "day.month.year" to a formatted date string.
  * @param dateString - The date string in the format "day.month.year".
+ * @param locale - The locale for formatting the date string.
+ * @param options - The formatting options for the date.
  * @returns The formatted date string.
  */
-function getFormattedDate(dateString: string): string {
+function getFormattedDate(dateString: string, local: string, options: Intl.DateTimeFormatOptions) {
   const [day, month, year] = dateString.split(".");
   const date = new Date(Number(year), Number(month) - 1, Number(day));
 
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    year: "numeric",
-  });
-
-  return formatter.format(date);
+  return new Intl.DateTimeFormat(local, options).format(date);
 }

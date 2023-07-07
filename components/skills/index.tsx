@@ -14,6 +14,7 @@ import {
   childVariants,
 } from "./icons";
 import { iconStyle, skillHeadingStyle, skillTextStyle, skillsArticleStyle, textWrapperStyle } from "./tailwind-classes";
+import { ThickUnderline } from "components/icons/underline";
 
 export const Skills = () => {
   const [mounted, setMounted] = useState(false);
@@ -28,9 +29,14 @@ export const Skills = () => {
   if (!mounted) return null;
 
   return (
-    <section className='px-4 py-16 lg:px-6 bg-zinc-100 dark:bg-zinc-800' id='skills'>
+    <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-100 dark:bg-zinc-800' id='skills'>
       <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
-        <h2 className='text-5xl font-semibold'>Skills</h2>
+        <div className='flex flex-col items-start w-full md:items-center gap-y-4'>
+          <h2 className='relative text-5xl font-semibold'>
+            Skills
+            <ThickUnderline />
+          </h2>
+        </div>
         {/* Display the skills */}
         <motion.div
           className='grid w-full grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3 '
