@@ -1,3 +1,4 @@
+import { EMailIcon } from "components/icons/email";
 import Link from "next/link";
 
 export function Footer() {
@@ -78,9 +79,10 @@ export function Footer() {
           <p className='text-lg font-semibold text-zinc-50'>Niklas Fischer</p>
           <p>niklas.fischer@mail.de</p>
           <a
-            className='p-2 mt-4 font-semibold leading-tight text-center text-white bg-indigo-600 rounded hover:no-underline hover:bg-indigo-700'
+            className='flex items-center justify-center p-2 mt-4 font-semibold leading-tight text-center text-white bg-indigo-600 rounded hover:no-underline hover:bg-indigo-700 gap-x-1'
             href='mailto:niklas.fischer@mail.de'
           >
+            <EMailIcon className='w-4 h-4' />
             <span>Contact</span>
           </a>
         </div>
