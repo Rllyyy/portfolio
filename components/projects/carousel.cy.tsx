@@ -85,7 +85,7 @@ describe("<Carousel />", () => {
 
   it("should show three dots at the bottom of the carousel", () => {
     cy.mount(<MockCarousel />);
-    cy.get("#carousel-dots").find("button").should("have.length", 3);
+    cy.get(".carousel-dots").find("button").should("have.length", 3);
   });
 
   it("should show the last item if clicking on the circle at the bottom of the carousel", () => {

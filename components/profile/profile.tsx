@@ -1,11 +1,17 @@
 import { EMailIcon } from "components/icons/email";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Profile = () => {
   return (
     <section className='px-4 py-20 lg:px-6 md:py-36 bg-zinc-200 dark:bg-gray-900' id='profile'>
-      <div className='grid md:grid-cols-2 w-full max-w-[1200px] mx-auto'>
+      <motion.div
+        className='grid md:grid-cols-2 w-full max-w-[1200px] mx-auto'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <div className='flex flex-col justify-between h-full overflow-hidden rounded-lg shadow-xl '>
           <div className='flex flex-col items-center h-full p-8 bg-gray-300 md:p-12 dark:bg-gray-700 gap-y-6'>
             <div className='relative w-40 h-40 overflow-hidden rounded-full md:w-48 md:h-48'>
@@ -47,9 +53,11 @@ export const Profile = () => {
               <StackoverflowIcon />
             </a>
             <a
-              href='https://www.linkedIn.com'
+              href='https://www.linkedin.com/in/niklas-fischer-dev/'
               className='fill-zinc-800 hover:fill-zinc-600 dark:fill-zinc-200 dark:hover:fill-zinc-50'
               aria-label='LinkedIn Profile'
+              rel='noopener noreferrer'
+              target='_blank'
             >
               <LinkedInIcon />
             </a>
@@ -87,7 +95,7 @@ export const Profile = () => {
             Currently, I am pursuing a degree in business economics with a specialization in digital transformation.
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

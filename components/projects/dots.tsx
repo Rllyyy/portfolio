@@ -18,13 +18,14 @@ const table = {
 
 const Dots: React.FC<IDots> = ({ length, activeIndex, setActiveIndex }) => {
   return (
-    <div className='flex items-center justify-center col-span-3 gap-[2px]' id='carousel-dots'>
+    <div className='flex items-center justify-center col-span-3 gap-[2px] carousel-dots'>
       {new Array(length).fill("").map((_, i) => (
         <button
           onClick={() => setActiveIndex(i)}
           key={i}
           className={`h-7 w-7 p-2 `}
           aria-label={`View ${table[i as keyof typeof table] || i} item`}
+          type='button'
         >
           <div
             className={`w-full h-full rounded-full ${

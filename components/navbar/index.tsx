@@ -124,6 +124,7 @@ export function Navbar() {
             className='cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-[background] p-1'
             onClick={handleThemeSwitch}
             aria-label={currentTheme === "light" ? "Use dark mode" : "Use light mode"}
+            type='button'
           >
             <ThemeSwitchIcon currentTheme={currentTheme} className='w-6 h-6 ' />
           </button>
@@ -131,6 +132,7 @@ export function Navbar() {
             onClick={handleNavClick}
             className='md:hidden'
             aria-label={!showNav ? "Show navigation" : "Hide navigation"}
+            type='button'
           >
             {!showNav ? <BurgerIcon /> : <XMarkIcon />}
           </button>
