@@ -8,7 +8,7 @@
       "Cypress",
       "Markdown"
     ],
-    "description": "A web-based application to practice for exams. With an intuitive editor, users can easily create questions and style them with markdown. The application offers a range of question types including multiple-choice, multiple-response, match, and fill-in-the-blanks. Build with shareability in mind.",
+    "description": "A web-based application to practice for exams. With an intuitive editor, users can easily create questions and style them with markdown. The application offers a range of question types including multiple-choice, multiple-response, match, and fill-in-the-blanks. Built with shareability in mind.",
     "links": {
       "primary": {
         "text": "VIEW",
@@ -102,5 +102,43 @@
         "alt": "Mockup of software used to create webinar certificates."
       }
     ]
+  },
+  {
+    "name": "Portfolio",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Cypress",
+      "Git"
+    ],
+    "description": "A personal portfolio site built with Next.js and TailwindCSS to showcase personal projects, skills and academic work. An optimized image loader ensures efficient loading times. This website also supports a dark mode feature.",
+    "carouselItems": [
+      {
+        "type": "image",
+        "resource": "/projects/portfolio/hero-section.png",
+        "alt": "Mockup of this website showing the hero-section."
+      },
+      {
+        "type": "image",
+        "resource": "/projects/portfolio/skills-light-dark.png",
+        "alt": "Mockup of this website showing skills section of this website in dark and light color scheme."
+      },
+      {
+        "type": "image",
+        "resource": "/projects/portfolio/mobile.png",
+        "alt": "Three mockups showing a project with a youtube video, the academic assignments section of this website and the hero section of this website."
+      }
+    ],
+    "links": {
+      "primary": {
+        "text": "VISIT",
+        "link": "https://www.niklasfischer.dev"
+      },
+      "secondary": {
+        "text": "GitHub",
+        "link": "https://github.com/Rllyyy/portfolio"
+      }
+    }
   }
 ]
