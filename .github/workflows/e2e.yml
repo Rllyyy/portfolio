@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
-        containers: [1, 2] # Uses 2 parallel instances
+        containers: [1] # Uses 2 parallel instances
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -44,7 +44,7 @@ jobs:
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
-        containers: [1, 2] # Uses 2 parallel instances
+        containers: [1] # Uses 2 parallel instances
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -61,7 +61,9 @@ jobs:
           record: true
           parallel: true # Runs test in parallel using settings above
           browser: chrome
-          spec: .*\.cy\.tsx
+          component: true
+          working-directory: examples/component-tests
+          # spec: components/**/*cy.tsx
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
           # in GitHub repo → Settings → Secrets → Actions
