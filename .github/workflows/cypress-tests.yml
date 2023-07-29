@@ -21,7 +21,7 @@ jobs:
         with:
           name: build
           if-no-files-found: error
-          path: build
+          path: .next
 
   e2e:
     runs-on: ubuntu-22.04
@@ -41,7 +41,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build
+          path: .next
 
       - name: Cypress run e2e tests
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
