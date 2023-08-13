@@ -10,7 +10,7 @@ import "../../styles/globals.css";
 const items = [
   {
     type: "video",
-    resource: "https://www.youtube-nocookie.com/embed/GgP1WLHhPMY",
+    resource: "https://www.youtube-nocookie.com/embed/Rqsy0nL4WK8",
   },
   {
     type: "image",
