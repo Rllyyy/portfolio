@@ -14,7 +14,7 @@ import {
   childVariants,
 } from "./icons";
 import { iconStyle, skillHeadingStyle, skillTextStyle, skillsArticleStyle, textWrapperStyle } from "./tailwind-classes";
-import { ThickUnderline } from "components/icons/underline";
+import { ThickUnderline } from "@/components/icons/underline";
 
 export const Skills = () => {
   const [mounted, setMounted] = useState(false);

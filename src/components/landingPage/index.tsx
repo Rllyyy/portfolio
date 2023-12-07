@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { EMailIcon } from "components/icons/email";
+import { EMailIcon } from "@/components/icons/email";
 
 export const LandingPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { EMailIcon } from "components/icons/email";
+import { EMailIcon } from "@/components/icons/email";
 import Link from "next/link";
 
 export function Footer() {

@@ -1,7 +1,7 @@
-import { EMailIcon } from "components/icons/email";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { EMailIcon } from "@/components/icons/email";
 
 export const Profile = () => {
   return (

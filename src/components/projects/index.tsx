@@ -3,7 +3,7 @@ import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import { FormEvent, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
-import { ThickUnderline } from "components/icons/underline";
+import { ThickUnderline } from "@/components/icons/underline";
 
 export const Projects = () => {
   const viewportAmount = useViewportAmount();

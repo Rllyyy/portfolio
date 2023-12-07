@@ -3,10 +3,10 @@ import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 
-import { Navbar } from "components/navbar";
-import { Footer } from "components/footer";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
-import "styles/globals.css";
+import "@/app/globals.css";
 import { MotionConfig } from "framer-motion";
 
 export default function App({ Component, pageProps }: AppProps) {

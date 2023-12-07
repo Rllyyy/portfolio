@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { Navbar } from ".";
-import Home from "pages";
+import Home from "@/pages";
 import { ThemeProvider } from "next-themes";
 
 import "../../styles/globals.css";
