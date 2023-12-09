@@ -14,17 +14,17 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link className={linkStyle} href={{ pathname: "/", hash: "projects" }} scroll={false}>
+              <Link className={linkStyle} href={{ pathname: "/", hash: "projects" }} scroll={true}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link className={linkStyle} href={{ pathname: "/", hash: "skills" }} scroll={false}>
+              <Link className={linkStyle} href={{ pathname: "/", hash: "skills" }} scroll={true}>
                 Skills
               </Link>
             </li>
             <li>
-              <Link className={linkStyle} href={{ pathname: "/", hash: "assignments" }} scroll={false}>
+              <Link className={linkStyle} href={{ pathname: "/", hash: "assignments" }} scroll={true}>
                 Academic Assignments
               </Link>
             </li>
@@ -82,7 +82,7 @@ export function Footer() {
             className='flex items-center justify-center p-2 mt-4 font-semibold leading-tight text-center text-white bg-indigo-600 rounded hover:no-underline hover:bg-indigo-700 gap-x-1'
             href='mailto:niklas.fischer@mail.de'
           >
-            <EMailIcon className='w-4 h-4' />
+            <EMailIcon className='w-4 h-4' width={16} height={16} />
             <span>Contact</span>
           </a>
         </div>

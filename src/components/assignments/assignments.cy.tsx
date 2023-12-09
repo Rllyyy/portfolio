@@ -2,7 +2,7 @@
 
 import { Assignments } from ".";
 
-import "../../styles/globals.css";
+import "@/app/globals.css";
 
 describe("<Assignments />", () => {
   it("should render assignments", () => {

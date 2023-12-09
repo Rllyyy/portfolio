@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { EMailIcon } from "@/components/icons/email";
@@ -28,7 +30,7 @@ export const LandingPage = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
-          Hi, I am an aspiring <b>Web Developer</b> looking for my first real job experience :)
+          Hi, I am an aspiring <b>Web Developer</b>
         </motion.p>
         <motion.div
           className='flex flex-row flex-wrap w-full gap-x-4 gap-y-2'

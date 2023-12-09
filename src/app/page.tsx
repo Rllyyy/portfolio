@@ -2,7 +2,7 @@ import { LandingPage } from "@/components/landingPage";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
 import { Assignments } from "@/components/assignments";
-import { Profile } from "@/components/profile/profile";
+import { Profile } from "@/components/profile";
 
 export default function Home() {
   return (

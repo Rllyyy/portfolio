@@ -3,7 +3,7 @@
 import { Skills } from ".";
 import { ThemeProvider } from "next-themes";
 
-import "../../styles/globals.css";
+import "@/app/globals.css";
 
 const MockSkillsWithTheme = () => {
   return (

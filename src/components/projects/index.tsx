@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Carousel } from "./carousel";
 import projects from "./projects.json";

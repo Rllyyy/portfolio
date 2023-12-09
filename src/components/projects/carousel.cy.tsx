@@ -2,8 +2,9 @@
 import Image from "next/image";
 
 import { Carousel } from "./carousel";
-import "../../styles/globals.css";
 import { Video } from ".";
+
+import "@/app/globals.css";
 
 const items = [
   {

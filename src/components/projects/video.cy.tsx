@@ -5,7 +5,7 @@ import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import Image from "next/image";
 
-import "../../styles/globals.css";
+import "@/app/globals.css";
 
 const items = [
   {

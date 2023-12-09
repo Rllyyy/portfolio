@@ -1,3 +1,5 @@
+"use client";
+
 import { Variants, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";

@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
 import { Navbar } from ".";
-import Home from "@/pages";
+import Home from "@/app/page";
 import { ThemeProvider } from "next-themes";
 
-import "../../styles/globals.css";
+import "@/app/globals.css";
 
 const MockNavbarWithTheme = () => {
   return (

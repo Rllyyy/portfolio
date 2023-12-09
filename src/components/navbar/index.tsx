@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -90,7 +92,7 @@ export function Navbar() {
               className={linkStyle}
               href={{ pathname: "/", hash: "projects" }}
               onClick={handleNavbarCloseMobile}
-              scroll={false}
+              scroll={true}
             >
               Projects
             </Link>
@@ -100,7 +102,7 @@ export function Navbar() {
               className={linkStyle}
               href={{ pathname: "/", hash: "skills" }}
               onClick={handleNavbarCloseMobile}
-              scroll={false}
+              scroll={true}
             >
               Skills
             </Link>
@@ -110,7 +112,7 @@ export function Navbar() {
               className={linkStyle}
               href={{ pathname: "/", hash: "assignments" }}
               onClick={handleNavbarCloseMobile}
-              scroll={false}
+              scroll={true}
             >
               Assignments
             </Link>

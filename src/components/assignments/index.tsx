@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import assignments from "./assignments.json";
 import { Variants, motion } from "framer-motion";
@@ -5,7 +7,7 @@ import { ThinUnderline } from "../icons/underline";
 
 export const Assignments = () => {
   return (
-    <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-zinc-700' id='assignments'>
+    <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-gray-900' id='assignments'>
       <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
         <div className='flex flex-col items-start w-full md:items-center md:gap-y-4 gap-y-2'>
           <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
@@ -57,7 +59,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
 
   return (
     <article
-      className='flex flex-col overflow-hidden bg-white rounded-lg dark:bg-zinc-800'
+      className='flex flex-col overflow-hidden bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 '
       id={`assignment-${moduleId}`}
     >
       <motion.div className='relative w-full h-64' variants={imageVariants}>
@@ -65,17 +67,17 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
           className='object-cover bg-zinc-200 dark:bg-zinc-900'
-          sizes='(max-width: 768px) 100vw, (max-width: 1446) 50vw, 33vw'
+          sizes='(max-width: 768px) 100vw, (max-width: 1446px) 50vw, 33vw'
           fill
         />
       </motion.div>
-      <div className='flex flex-col self-stretch flex-grow p-4 border-b border-l border-r border-gray-300 rounded-b-lg dark:border-gray-900 gap-y-2'>
+      <div className='flex flex-col self-stretch flex-grow p-5 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
-          <time dateTime={machineDate} className='font-bold text-indigo-600 dark:text-indigo-500'>
+          <time dateTime={machineDate} className='font-bold text-indigo-600 dark:text-gray-400'>
             {shortDate}
           </time>
           <span
-            className='inline px-3 py-1 text-sm font-bold leading-none rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300'
+            className='inline px-3 py-1 text-sm font-bold leading-none rounded-full bg-zinc-200 dark:bg-gray-700 text-zinc-600 dark:text-zinc-300'
             aria-label='Module ID'
           >
             {moduleId}
@@ -127,6 +129,8 @@ const Chevron = () => {
       strokeWidth={4}
       stroke='currentColor'
       className='inline-block w-4 h-4'
+      height={16}
+      width={16}
     >
       <path strokeLinecap='round' strokeLinejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' />
     </svg>
