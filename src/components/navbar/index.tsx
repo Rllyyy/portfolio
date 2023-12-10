@@ -76,18 +76,11 @@ export function Navbar() {
           } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-black "}`}
         >
           <li className='flex justify-center'>
-            {/* smooth scrolling doesn't work: https://github.com/vercel/next.js/issues/44295 */}
-            {/* <a href='/#top' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
-              Home
-            </a> */}
             <Link className={linkStyle} href={{ pathname: "/" }} onClick={handleNavbarCloseMobile}>
               Home
             </Link>
           </li>
           <li className='flex justify-center'>
-            {/* <a href='#projects' className='text-xl md:text-lg hover:no-underline' onClick={handleNavbarCloseMobile}>
-              Projects
-            </a> */}
             <Link
               className={linkStyle}
               href={{ pathname: "/", hash: "projects" }}
@@ -117,9 +110,6 @@ export function Navbar() {
               Assignments
             </Link>
           </li>
-          {/*  <li>
-            <span className='text-xl md:text-lg'>Contact</span>
-          </li> */}
         </ul>
         <div className='flex flex-row items-center order-2 md:order-3 justify-self-end gap-x-3 md:gap-x-4'>
           <button
