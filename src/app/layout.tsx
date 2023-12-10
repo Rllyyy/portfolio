@@ -20,9 +20,6 @@ export const viewport: Viewport = {
   themeColor: "#4f46e5",
 };
 
-// viewport: "width=device-width, initial-scale=1, minimum-scale=1",
-// icon: "/favicon.ico",
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>

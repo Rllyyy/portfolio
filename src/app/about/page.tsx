@@ -1,9 +1,22 @@
+import { type Metadata } from "next";
+import Image from "next/image";
+
 export default function About() {
   return (
-    <main className='mt-10 md:mt-40 duration-200 bg-zinc-100 dark:bg-zinc-800 min-h-[90vh] px-4 lg:px-6 py-16'>
-      <div className='max-w-5xl mx-auto space-y-12'>
+    <main className='mt-10 md:mt-24 duration-200 bg-zinc-100 dark:bg-zinc-800 min-h-[90vh]  py-16'>
+      <div className='relative w-full h-72'>
+        <Image
+          src='/images/office.png'
+          className='object-cover w-full h-full'
+          alt='image'
+          sizes='100vw'
+          fill
+          priority
+        />
+      </div>
+      <div className='max-w-5xl px-4 mx-auto mt-16 space-y-12 lg:px-6'>
         <section>
-          <h1 className='text-5xl'>About</h1>
+          <h1 className='text-5xl md:text-6xl'>About</h1>
           <p className='mt-8 text-lg'>
             This website serves as a platform to showcase my personal projects and academic assignments.
           </p>
@@ -26,3 +39,7 @@ export default function About() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "About | Niklas Fischer",
+};

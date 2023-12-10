@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 export default function Privacy() {
   return (
     <main className='p-4 mx-auto duration-200 lg:px-6 mt-28 pb-28 md:mt-40 bg-zinc-100 dark:bg-zinc-800'>
@@ -368,3 +370,7 @@ export default function Privacy() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Privacy | Niklas Fischer",
+};
