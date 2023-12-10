@@ -70,7 +70,7 @@ jobs:
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
 
   component:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: install
 
     strategy:
