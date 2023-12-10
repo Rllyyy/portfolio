@@ -5,20 +5,21 @@ import { Footer } from "@/components/footer";
 
 import "@/app/globals.css";
 
-import { type Viewport, type Metadata } from "next";
+import { type Metadata } from "next";
 import { Providers } from "@/app/providers";
 
 export const metadata: Metadata = {
   title: "Niklas Fischer",
   description: "The portfolio of Niklas Fischer",
+  viewport: "width=device-width, initial-scale=1, minimum-scale=1",
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  minimumScale: 1,
-  themeColor: "#4f46e5",
-};
+// export const viewport: Viewport = {
+//   width: "device-width",
+//   initialScale: 1,
+//   minimumScale: 1,
+//   themeColor: "#4f46e5",
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
