@@ -12,8 +12,10 @@ export const metadata: Metadata = {
   title: "Niklas Fischer",
   description: "The portfolio of Niklas Fischer",
   viewport: "width=device-width, initial-scale=1, minimum-scale=1",
+  themeColor: "#4f46e5",
 };
 
+// Use this for next@14
 // export const viewport: Viewport = {
 //   width: "device-width",
 //   initialScale: 1,
