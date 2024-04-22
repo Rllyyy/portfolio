@@ -37,7 +37,8 @@ export const Profile = () => {
             for companies.
           </p>
           <p className='mt-3 text-lg text-gray-700 md:mt-4 dark:text-gray-400'>
-            Currently, I am pursuing a degree in business economics with a specialization in digital transformation.
+            Currently, I am working as a Junior Software Engineer at Forum Energy Technologies and pursuing a degree in
+            Business Economics with a specialization in Digital Transformation.
           </p>
         </div>
       </div>

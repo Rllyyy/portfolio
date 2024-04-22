@@ -16,7 +16,12 @@ export function Card() {
     >
       <div className='flex flex-col items-center h-full p-8 bg-gray-300 md:p-12 dark:bg-gray-700 gap-y-6'>
         <div className='relative w-40 h-40 overflow-hidden rounded-full md:w-48 md:h-48'>
-          <Image src='/images/profile-image.png' alt='Profile Picture' fill className='object-contain rounded-1/2' />
+          <Image
+            src='/images/profile-image.png'
+            alt='Profile Picture'
+            fill
+            className='object-contain scale-125 rounded-1/2'
+          />
         </div>
         <h2 className='text-2xl font-medium'>Niklas Fischer</h2>
         <hr className='w-20 h-0.5 bg-indigo-600 border-0 dark:bg-indigo-500' />

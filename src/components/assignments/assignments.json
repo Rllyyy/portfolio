@@ -64,6 +64,14 @@
     "date": "21.03.2019"
   },
   {
+    "title": "Konzeption einer Benutzerdokumentation",
+    "text": "Die Benutzerdokumentation ist ein wesentlicher Bestandteil der Softwareentwicklung und ein kritischer Faktor für die Benutzererfahrung und -zufriedenheit. In dieser Arbeit wurde eine solche Dokumentation für die Software repeatio.de konzipiert.",
+    "moduleId": "SWE61",
+    "pdfFileName": "Konzeption_einer_Benutzerdokumentation",
+    "imageDescription": "Illustration of a person reading a manual",
+    "date": "08.04.2024"
+  },
+  {
     "title": "SWOT-Analyse",
     "text": "In einer sich ständig verändernden Geschäftswelt stehen Unternehmen vor immer neuen Herausforderungen. Die SWOT-Analyse hat sich dabei als ein wertvolles Instrument zur Strukturierung und Formulierung strategischer Entscheidungen etabliert. Wie sie zur Steigerung der Wettbewerbsfähigkeit und zur Erreichung der Unternehmensziele beiträgt, wird anhand einer fiktiven Fallstudie erläutert.",
     "moduleId": "UFU50",
