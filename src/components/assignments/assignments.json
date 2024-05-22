@@ -65,7 +65,7 @@
   },
   {
     "title": "Konzeption einer Benutzerdokumentation",
-    "text": "Die Benutzerdokumentation ist ein wesentlicher Bestandteil der Softwareentwicklung und ein kritischer Faktor für die Benutzererfahrung und -zufriedenheit. In dieser Arbeit wurde eine solche Dokumentation für die Software repeatio.de konzipiert.",
+    "text": "Die Benutzerdokumentation ist ein wesentlicher Bestandteil der Softwareentwicklung und ein kritischer Faktor für die Benutzererfahrung und -zufriedenheit. In dieser Arbeit wurde eine solche Dokumentation für die Software repeatio.de konzipiert. Die Dokumentation ist verfügbar unter: https://rllyyy.github.io/repeatio-docs/",
     "moduleId": "SWE61",
     "pdfFileName": "Konzeption_einer_Benutzerdokumentation",
     "imageDescription": "Illustration of a person reading a manual",

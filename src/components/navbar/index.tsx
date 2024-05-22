@@ -71,7 +71,7 @@ export function Navbar() {
           </h1>
         </Link>
         <ul
-          className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none md:ml-auto ${
+          className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center items-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none md:ml-auto ${
             showNav ? "" : "hidden"
           } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-black "}`}
         >
@@ -148,4 +148,4 @@ function useScrollYPosition() {
 }
 
 const linkStyle =
-  "h-full text-xl md:text-lg hover:no-underline text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50";
+  "h-full text-lg md:text-base leading-none hover:no-underline text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-zinc-50";
