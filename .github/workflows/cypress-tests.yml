@@ -25,7 +25,7 @@ jobs:
         with:
           name: build
           if-no-files-found: error
-          path: .next
+          path: .next/
 
   e2e:
     runs-on: ubuntu-22.04
