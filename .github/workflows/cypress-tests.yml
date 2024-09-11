@@ -1,6 +1,12 @@
 # https://docs.cypress.io/guides/continuous-integration/github-actions
 name: Cypress Tests
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   # Create and save build
@@ -9,9 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: yarn install
 
       - name: Build project
         uses: cypress-io/github-action@v6
