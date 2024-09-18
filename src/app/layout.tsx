@@ -15,14 +15,6 @@ export const metadata: Metadata = {
   themeColor: "#4f46e5",
 };
 
-// Use this for next@14
-// export const viewport: Viewport = {
-//   width: "device-width",
-//   initialScale: 1,
-//   minimumScale: 1,
-//   themeColor: "#4f46e5",
-// };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>
