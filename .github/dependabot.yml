@@ -14,3 +14,9 @@ updates:
     ignore:
       - dependency-name: "eslint"
       - dependency-name: "eslint-config-next"
+       - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
