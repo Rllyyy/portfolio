@@ -5,13 +5,16 @@ import { Footer } from "@/components/footer";
 
 import "@/app/globals.css";
 
-import { type Metadata } from "next";
+import { type Viewport, type Metadata } from "next";
 import { Providers } from "@/app/providers";
 
 export const metadata: Metadata = {
   title: "Niklas Fischer",
   description: "The portfolio of Niklas Fischer",
   viewport: "width=device-width, initial-scale=1, minimum-scale=1",
+};
+
+export const viewport: Viewport = {
   themeColor: "#4f46e5",
 };
 
