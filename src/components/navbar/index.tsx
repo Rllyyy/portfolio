@@ -57,7 +57,7 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 ${
         showNav ? "h-[100dvh]" : ""
       } ${
-        isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
+        isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
       }`}
     >
       <div
@@ -73,7 +73,7 @@ export function Navbar() {
         <ul
           className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center items-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none md:ml-auto ${
             showNav ? "" : "hidden"
-          } ${isTop ? "bg-zinc-100 dark:bg-zinc-800" : "bg-zinc-50 dark:bg-black "}`}
+          } ${isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black "}`}
         >
           <li className='flex justify-center'>
             <Link className={linkStyle} href={{ pathname: "/" }} onClick={handleNavbarCloseMobile}>

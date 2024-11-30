@@ -11,8 +11,8 @@ export const Profile = () => {
         <div className='h-full pt-8 md:p-10'>
           <h2 className='text-4xl font-semibold md:text-5xl'>About me</h2>
           <p className='mt-8 text-lg text-gray-700 md:mt-10 dark:text-gray-400'>
-            Hello, I&apos;m Niklas, a passionate front-end developer with a strong focus on creating intuitive and
-            engaging user experiences.
+            Hello, I&apos;m Niklas, a web developer with a strong focus on creating intuitive and engaging user
+            experiences.
           </p>
           <p className='mt-3 text-lg text-gray-700 md:mt-4 dark:text-gray-400'>
             I specialize in working with modern web technologies such as TypeScript, React, Tailwind and Next.js.

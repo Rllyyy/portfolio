@@ -5,20 +5,14 @@ import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import { FormEvent, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
-import { ThickUnderline } from "@/components/icons/underline";
 
 export const Projects = () => {
   const viewportAmount = useViewportAmount();
 
   return (
-    <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-50 dark:bg-zinc-900' id='projects'>
+    <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-50 dark:bg-dark-100' id='projects'>
       <div className='flex flex-col items-center gap-12 md:gap-16 w-[min(100%,_1600px)] m-auto'>
-        <div className='flex flex-col items-start w-full md:items-center gap-y-4'>
-          <h2 className='relative text-5xl font-semibold'>
-            Projects
-            <ThickUnderline />
-          </h2>
-        </div>
+        <h2 className='self-start text-5xl font-bold'>Projects</h2>
         <div className='space-y-6 lg:space-y-16'>
           {projects.map((project, index) => {
             return (
@@ -57,7 +51,7 @@ export const Projects = () => {
                     })}
                   </Carousel>
                 </div>
-                <div className='flex flex-col justify-center lg:w-[50%] bg-zinc-100 dark:bg-zinc-800 p-6 lg:p-8 flex-grow self-stretch '>
+                <div className='flex flex-col justify-center lg:w-[50%] bg-zinc-100 dark:bg-dark-200 p-6 lg:p-8 flex-grow self-stretch '>
                   <h3 className='text-3xl font-semibold'>{project.name}</h3>
                   <div className='flex flex-wrap gap-2 mt-2' aria-label='Project tech stack'>
                     {project.technologies.map((technology) => {

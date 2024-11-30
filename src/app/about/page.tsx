@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <main className='mt-10 md:mt-24 duration-200 bg-zinc-100 dark:bg-zinc-800 min-h-[90vh]  py-16'>
+    <main className='mt-10 md:mt-24 duration-200 bg-zinc-100 dark:bg-dark-100 min-h-[90vh] py-16'>
       <div className='relative w-full h-72'>
         <Image
           src='/images/office.png'

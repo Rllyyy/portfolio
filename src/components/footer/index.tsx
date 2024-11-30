@@ -50,7 +50,7 @@ export function Footer() {
           <ul className='space-y-2'>
             <li>
               <a className={linkStyle} href='https://github.com/Rllyyy' target='_blank' rel='noopener noreferrer'>
-                Github
+                GitHub
               </a>
             </li>
             <li>

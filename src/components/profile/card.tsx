@@ -20,7 +20,7 @@ export function Card() {
             src='/images/profile-image.png'
             alt='Profile Picture'
             fill
-            className='object-contain scale-125 rounded-1/2'
+            className='object-cover scale-105 rounded-1/2'
           />
         </div>
         <h2 className='text-2xl font-medium'>Niklas Fischer</h2>

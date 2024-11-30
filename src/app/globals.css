@@ -11,8 +11,8 @@
   }
 
   body {
-    @apply text-zinc-800 dark:text-zinc-100;
-    @apply bg-zinc-100 dark:bg-zinc-800;
+    @apply text-zinc-700 dark:text-zinc-100;
+    @apply bg-zinc-100 dark:bg-dark-100;
     @apply transition-colors;
   }
 

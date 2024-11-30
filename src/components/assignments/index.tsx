@@ -3,16 +3,12 @@
 import Image from "next/image";
 import assignments from "./assignments.json";
 import { Variants, motion } from "framer-motion";
-import { ThinUnderline } from "../icons/underline";
 
 export const Assignments = () => {
   return (
-    <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-gray-900' id='assignments'>
+    <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-dark-100' id='assignments'>
       <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
-        <div className='flex flex-col items-start w-full md:items-center md:gap-y-4 gap-y-2'>
-          <h2 className='text-5xl font-semibold'>Academic Assignments</h2>
-          <ThinUnderline />
-        </div>
+        <h2 className='self-start text-5xl font-bold'>Academic Assignments</h2>
         <motion.div
           className='grid w-full gap-4'
           style={{
@@ -59,14 +55,14 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
 
   return (
     <article
-      className='flex flex-col overflow-hidden bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 '
+      className='flex flex-col overflow-hidden bg-white border border-gray-300 rounded-lg dark:bg-dark-200 dark:border-zinc-800'
       id={`assignment-${moduleId}`}
     >
       <motion.div className='relative w-full h-64' variants={imageVariants}>
         <Image
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
-          className='object-cover bg-zinc-200 dark:bg-zinc-900'
+          className='object-cover bg-zinc-200 dark:bg-dark-100'
           sizes='(max-width: 768px) 100vw, (max-width: 1446px) 50vw, 33vw'
           fill
         />
@@ -86,7 +82,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
         <h3 className='text-xl font-medium text-zinc-800 dark:text-zinc-100'>{title}</h3>
         <p className='text-zinc-800 dark:text-zinc-200'>{text}</p>
         <motion.a
-          className='flex flex-row items-center gap-1 mt-auto text-lg font-semibold text-indigo-600 hover:no-underline hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-700'
+          className='flex flex-row items-center gap-1 mt-auto text-lg font-semibold text-indigo-600 hover:no-underline dark:text-indigo-500'
           href={`/assignments/${moduleId}/${pdfFileName}.pdf`}
           target='_blank'
           rel='noopener noreferrer'

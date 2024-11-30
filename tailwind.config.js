@@ -17,6 +17,15 @@ module.exports = {
 
       "4xl": "2048px",
     },
+
+    extend: {
+      colors: {
+        dark: {
+          100: "#0a0a0a",
+          200: "#1A1A1A",
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
   darkMode: "class",

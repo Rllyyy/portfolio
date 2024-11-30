@@ -30,7 +30,7 @@ export const LandingPage = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
-          Hi, I am an aspiring <b>Web Developer</b>
+          Hi, I am a <b>Web Developer</b>
         </motion.p>
         <motion.div
           className='flex flex-row flex-wrap w-full gap-x-4 gap-y-2'

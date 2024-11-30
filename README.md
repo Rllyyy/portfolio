@@ -5,7 +5,7 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/hero-section-dark.png">
       <source media="(prefers-color-scheme: light)" srcset="./.github/assets/hero-section.png">
-      <img alt="Image of hero section for portfolio website. Heading: Developing Solutions. Subheading: Hi, I am an aspiring Web Developer. On the right side of the hero section there is an isometric home office with a computer desk, lamps and plants, in the style of 2d game art, navy and blue" src="./.github/assets/hero-section.png">
+      <img alt="Image of hero section for portfolio website. Heading: Developing Solutions. Subheading: Hi, I am a Web Developer. On the right side of the hero section there is an isometric home office with a computer desk, lamps and plants, in the style of 2d game art, navy and blue" src="./.github/assets/hero-section.png">
     </picture>
   </p>
 </a>
