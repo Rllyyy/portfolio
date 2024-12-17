@@ -1,5 +1,13 @@
 [
   {
+    "title": "Konzeption eines Lastenhefts und Pflichtenhefts für eine betriebsinterne Softwarelösung (Projektbericht)",
+    "text": "Ohne adäquate Planungsinstrumente besteht das Risiko, dass Zeitrahmen und Budgets schnell überschritten werden. Um solche Risiken zu minimieren, bieten Lasten- und Pflichtenhefte als bewährte Werkzeuge der Softwareentwicklung einen strukturierten Ansatz.",
+    "moduleId": "BADITP",
+    "pdfFileName": "Konzeption_eines_Lasten-_und_Pflichtenhefts_für_eine_betriebsinterne_Softwareloesung",
+    "imageDescription": "Illustration of two books lying on top of a wooden desk.",
+    "date": "02.11.2024"
+  },
+  {
     "title": "Big Data und Prozessmanagement im Unternehmenseinsatz",
     "text": "Lange Zeit blieben digitale Datenmassen ungenutzt. Wie können Unternehmen Big Data im Geschäftsprozessmanagement nutzen, um daraus Chancen und Erkenntnisse zu gewinnen? Im Fokus dieser Arbeit steht zudem die Beantwortung der Frage, welche Herausforderungen und Risiken mit Big Data verbunden sind.",
     "moduleId": "ANS43",

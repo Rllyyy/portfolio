@@ -7,7 +7,7 @@ import "@/app/globals.css";
 describe("<Assignments />", () => {
   it("should render assignments", () => {
     cy.mount(<Assignments />);
-    cy.get("article").should("have.length", 11);
+    cy.get("article").should("have.length", 12);
   });
 
   it("should have the correct time value and attribute", () => {
