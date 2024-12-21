@@ -17,7 +17,7 @@ export const Projects = () => {
           {projects.map((project, index) => {
             return (
               <motion.article
-                className='flex flex-col items-center overflow-clip border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-gray-700 lg:min-h-[650px] scroll-mt-16 md:scroll-mt-20'
+                className='flex flex-col items-center overflow-clip border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-zinc-800 lg:min-h-[650px] scroll-mt-16 md:scroll-mt-20'
                 key={project.name}
                 id={project.name.toLowerCase().replaceAll(/\s+/g, "-")} //Fails for special characters if used for url
                 initial={{ opacity: 0, x: index % 2 !== 0 ? "15%" : "-15%" }}
