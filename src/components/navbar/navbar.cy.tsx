@@ -126,6 +126,27 @@ describe("<Navbar />", () => {
     });
   });
 
+  it("should show the navigation minimized if the viewport is decreased from desktop size to mobile size", () => {
+    cy.viewport(850, 500);
+
+    cy.mount(<MockLandingPageWithTheme />);
+
+    cy.viewport(500, 500);
+
+    cy.get("button[aria-label='Show navigation']").should("be.visible");
+  });
+
+  it("should keep the navigation visible if the viewport on mobile is changed", () => {
+    cy.viewport(400, 500);
+    cy.mount(<MockLandingPageWithTheme />);
+
+    cy.get("button[aria-label='Show navigation']").click();
+
+    cy.viewport(500, 500);
+
+    cy.get("button[aria-label='Hide navigation']").should("be.visible");
+  });
+
   it("should navigate to projects if clicking on Projects in navbar", () => {
     cy.viewport(850, 500);
     cy.mount(<MockLandingPageWithTheme />);

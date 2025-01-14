@@ -8,7 +8,9 @@ import { BurgerIcon, ThemeSwitchIcon, XMarkIcon } from "./icons";
 export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-  const [showNav, setShowNav] = useState(typeof window !== "undefined" && window.innerWidth >= 768); // Initially display the navbar if the window rendered and is wider than 768 pixel
+  const [showNavMobile, setShowNavMobile] = useState(false);
+  const isSmall = useIsSmall();
+
   const isTop = useScrollYPosition();
 
   // Get current theme to be either system or dark/light if the user clicked on the theme switcher (and saved the state to local storage)
@@ -21,7 +23,7 @@ export function Navbar() {
 
   // Update the display of the menu items on mobile
   const handleNavClick = () => {
-    setShowNav((prevShowNav) => !prevShowNav);
+    setShowNavMobile((prevShowNav) => !prevShowNav);
   };
 
   // Minimize the navbar on mobile if clicking on a menuitem
@@ -30,23 +32,8 @@ export function Navbar() {
     if (window.innerWidth >= 768) return;
 
     // Update the state
-    setShowNav(false);
+    setShowNavMobile(false);
   };
-
-  // Always show the menu items on desktop
-  // Fixes an issue where the menu items are no longer visible after
-  // the user closed the expanded menu on mobile and resized the window to desktop
-  useEffect(() => {
-    const handleResize = () => {
-      setShowNav(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => setMounted(true), []);
 
@@ -55,7 +42,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 ${
-        showNav ? "h-[100dvh]" : ""
+        isSmall && showNavMobile ? "h-[100dvh]" : ""
       } ${
         isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
       }`}
@@ -72,7 +59,7 @@ export function Navbar() {
         </Link>
         <ul
           className={`flex flex-col md:flex-row gap-y-[5%] md:gap-y-0 gap-x-6 text-lg md:relative  md:w-auto w-full px-6 py-2 md:p-0 text-center duration-200 justify-center items-center order-3 md:order-2 col-span-2 md:col-span-1 overscroll-none md:ml-auto ${
-            showNav ? "" : "hidden"
+            isSmall && !showNavMobile ? "hidden" : ""
           } ${isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black "}`}
         >
           <li className='flex justify-center'>
@@ -123,10 +110,10 @@ export function Navbar() {
           <button
             onClick={handleNavClick}
             className='md:hidden'
-            aria-label={!showNav ? "Show navigation" : "Hide navigation"}
+            aria-label={!showNavMobile ? "Show navigation" : "Hide navigation"}
             type='button'
           >
-            {!showNav ? <BurgerIcon /> : <XMarkIcon />}
+            {!showNavMobile ? <BurgerIcon /> : <XMarkIcon />}
           </button>
         </div>
       </div>
@@ -144,6 +131,19 @@ function useScrollYPosition() {
     subscribe,
     () => global.window?.scrollY === 0,
     () => undefined
+  );
+}
+
+function subscribeWindowResize(onWindowResize: () => void) {
+  global.window?.addEventListener("resize", onWindowResize);
+  return () => global.window.removeEventListener("resize", onWindowResize);
+}
+
+function useIsSmall() {
+  return useSyncExternalStore(
+    subscribeWindowResize,
+    () => global.window?.innerWidth < 768,
+    () => false
   );
 }
 
