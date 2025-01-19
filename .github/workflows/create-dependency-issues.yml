@@ -1,0 +1,61 @@
+name: "Check for Major Updates"
+
+on:
+  schedule:
+    - cron: "0 6 * * 6" # Runs every Saturday at 06:00 UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  check-major-updates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Get outdated dependencies and their release notes
+        run: yarn node .github/workflows/scripts/check-major-updates.js
+        continue-on-error: false
+
+      - name: Read major-test.json
+        id: read-json
+        run: |
+          cat major-test.json
+        shell: bash
+
+      - name: Create issues for major updates
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const majorUpdates = JSON.parse(fs.readFileSync('major-test.json', 'utf8'));
+
+            for (const update of majorUpdates) {
+              const issueTitle = `Bump ${update.pkg} from ${update.currentVersion} to ${update.latestVersion}`;
+              const existingIssues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'dependabot'
+              });
+              const issueExists = existingIssues.data.some(issue => issue.title === issueTitle);
+              if (!issueExists) {
+                github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: issueTitle,
+                  body: `<details><summary>Release Notes</summary>\n\n${update.releaseNotes}\n\n</details>`,
+                  labels: ['dependabot']
+                });
+              } else {
+                console.log(`Issue already exists for ${update.pkg}`);
+              }
+            }
