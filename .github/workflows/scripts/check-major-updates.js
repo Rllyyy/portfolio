@@ -64,7 +64,7 @@ async function checkMajorUpdates() {
   }
 
   if (majorUpdates.length > 0) {
-    fs.writeFileSync("major-test-2.json", JSON.stringify(majorUpdates, null, 2));
+    fs.writeFileSync("major-test.json", JSON.stringify(majorUpdates, null, 2));
   } else {
   }
 }
