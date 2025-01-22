@@ -42,12 +42,12 @@ jobs:
             const majorUpdates = JSON.parse(fs.readFileSync('major-test.json', 'utf8'));
 
             for (const update of majorUpdates) {
-              const issueTitle = `Bump ${update.pkg} from ${update.currentVersion} to ${update.latestVersion}`;
+              const issueTitle = `Upgrade ${update.pkg} from ${update.currentVersion} to ${update.latestVersion}`;
               const existingIssues = await github.rest.issues.listForRepo({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 state: 'open',
-                labels: 'dependabot'
+                labels: 'dependencies'
               });
               const issueExists = existingIssues.data.some(issue => issue.title === issueTitle);
               if (!issueExists) {
@@ -55,8 +55,8 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   title: issueTitle,
-                  body: `<details><summary>Release Notes</summary>\n\n${update.releaseNotes}\n\n</details>`,
-                  labels: ['dependabot']
+                  body: `${update.releaseNotes}`,
+                  labels: ['dependencies']
                 });
               } else {
                 console.log(`Issue already exists for ${update.pkg}`);
