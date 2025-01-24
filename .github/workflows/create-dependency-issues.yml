@@ -1,10 +1,10 @@
 name: "Check for Major Updates"
 
 on:
-  schedule:
-    - cron: "0 6 * * 6" # Runs every Saturday at 06:00 UTC
+  #schedule:
+  #- cron: "0 6 * * 6" # Runs every Saturday at 06:00 UTC
   workflow_dispatch: # Allows manual triggering of the workflow
-  push:
+  # push:
 
 jobs:
   check-major-updates:
@@ -41,6 +41,9 @@ jobs:
             const fs = require('fs');
             const majorUpdates = JSON.parse(fs.readFileSync('major-test.json', 'utf8'));
 
+                  
+            // body: `<blockquote>${update.releaseNotes}</blockquote>`,
+
             for (const update of majorUpdates) {
               const issueTitle = `Upgrade ${update.pkg} from ${update.currentVersion} to ${update.latestVersion}`;
               const existingIssues = await github.rest.issues.listForRepo({
@@ -55,7 +58,6 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   title: issueTitle,
-                  body: `${update.releaseNotes}`,
                   labels: ['dependencies']
                 });
               } else {
