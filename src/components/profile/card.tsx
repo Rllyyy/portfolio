@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { EMailIcon } from "@/components/icons/email";
+import { motion } from "motion/react";
 import { Icon } from "../icons";
 
 export function Card() {
@@ -42,7 +41,7 @@ export function Card() {
           href='mailto:niklas.fischer@mail.de'
           aria-label='Write E-Mail to niklas.fischer@mail.de'
         >
-          <EMailIcon className='w-6 h-6 fill-inherit' height={24} width={24} />
+          <Icon.EMail className='w-6 h-6 fill-inherit' height={24} width={24} />
         </a>
         <a
           href='https://stackoverflow.com/users/14602331/rllyyy'

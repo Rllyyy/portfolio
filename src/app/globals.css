@@ -21,4 +21,10 @@
       text-decoration: underline;
     }
   }
+
+  @media print {
+    body {
+      @apply bg-white;
+    }
+  }
 }

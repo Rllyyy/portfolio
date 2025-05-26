@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { EMailIcon } from "@/components/icons/email";
+import { motion } from "motion/react";
+import { Icon } from "@components/icons";
 
 export const LandingPage = () => {
   return (
@@ -48,7 +48,7 @@ export const LandingPage = () => {
             className='flex flex-row items-center px-4 space-x-2 text-lg text-center text-indigo-600 duration-100 border border-indigo-600 rounded-lg cursor-pointer md:text-xl dark:text-indigo-100 dark:border-indigo-500 hover:no-underline hover:bg-zinc-200 dark:hover:bg-zinc-700 h-11'
             href='mailto:niklas.fischer@mail.de'
           >
-            <EMailIcon />
+            <Icon.EMail />
             <span>Let&apos;s Talk</span>
           </a>
         </motion.div>

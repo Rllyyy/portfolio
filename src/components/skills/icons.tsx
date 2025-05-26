@@ -1,5 +1,5 @@
 import { iconStyle } from "./tailwind-classes";
-import { Variants, motion } from "framer-motion";
+import { Variants, motion } from "motion/react";
 
 /* https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.motion.svg */
 export const ReactIcon = () => {

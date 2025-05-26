@@ -1,6 +1,6 @@
 // Significant portions of this code is taken from:
 // https://github.com/jiangbo2015/framer-motion-carousel
-import { motion, MotionValue, PanInfo } from "framer-motion";
+import { motion, MotionValue, PanInfo } from "motion/react";
 
 interface ISlider {
   x: MotionValue<number>;

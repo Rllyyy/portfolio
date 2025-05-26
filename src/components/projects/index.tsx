@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import { FormEvent, useState, useSyncExternalStore } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const Projects = () => {
   const viewportAmount = useViewportAmount();

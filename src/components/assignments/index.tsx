@@ -1,16 +1,27 @@
-"use client";
-
+import { AssignmentsSchema } from "@schemas";
+import { transformURI } from "@utils/transformURI";
+import { getFormattedDate } from "@utils/formatDate";
+import * as motion from "motion/react-client";
 import Image from "next/image";
-import assignments from "./assignments.json";
-import { Variants, motion } from "framer-motion";
+import { TAssignment } from "@types";
+import { Variants } from "motion/dist/react";
+import { MotionComponent } from "./MotionLink";
+import { Icon } from "@components/icons";
 
-export const Assignments = () => {
+async function getAssignments() {
+  const { default: assignments } = await import("public/assignments.json");
+  return AssignmentsSchema.parse(assignments);
+}
+
+export const Assignments = async () => {
+  const assignments = await getAssignments();
+
   return (
     <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-dark-100' id='assignments'>
       <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
         <h2 className='self-start text-5xl font-bold'>Academic Assignments</h2>
         <motion.div
-          className='grid w-full gap-4'
+          className={"grid w-full gap-4"}
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(min(450px, 100%), 1fr))",
           }}
@@ -39,9 +50,7 @@ export const Assignments = () => {
   );
 };
 
-type TCard = (typeof assignments)[number];
-
-const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, moduleId, date }) => {
+const Card: React.FC<TAssignment> = ({ title, text, imageDescription, moduleId, date }) => {
   const machineDate = getFormattedDate(date, "en-CA", {
     year: "numeric",
     month: "2-digit",
@@ -58,7 +67,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
       className='flex flex-col overflow-hidden bg-white border border-gray-300 rounded-lg dark:bg-dark-200 dark:border-zinc-800'
       id={`assignment-${moduleId}`}
     >
-      <motion.div className='relative w-full h-64' variants={imageVariants}>
+      <div className='relative w-full h-64'>
         <Image
           src={`/assignments/${moduleId}/image.png`}
           alt={imageDescription}
@@ -66,7 +75,7 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
           sizes='(max-width: 768px) 100vw, (max-width: 1446px) 50vw, 33vw'
           fill
         />
-      </motion.div>
+      </div>
       <div className='flex flex-col self-stretch flex-grow p-5 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
           <time dateTime={machineDate} className='font-bold text-indigo-600 dark:text-gray-400'>
@@ -81,16 +90,14 @@ const Card: React.FC<TCard> = ({ title, text, pdfFileName, imageDescription, mod
         </div>
         <h3 className='text-xl font-medium text-zinc-800 dark:text-zinc-100'>{title}</h3>
         <p className='text-zinc-800 dark:text-zinc-200'>{text}</p>
-        <motion.a
+        <MotionComponent
           className='flex flex-row items-center gap-1 mt-auto text-lg font-semibold text-indigo-600 hover:no-underline dark:text-indigo-500'
-          href={`/assignments/${moduleId}/${pdfFileName}.pdf`}
-          target='_blank'
-          rel='noopener noreferrer'
+          href={`/assignments/${moduleId}/${transformURI(title)}`}
           whileHover={{ gap: "8px", transition: { duration: 0.1 } }}
         >
           <span>Read</span>
-          <Chevron />
-        </motion.a>
+          <Icon.Chevron />
+        </MotionComponent>
       </div>
     </article>
   );
@@ -105,44 +112,3 @@ const containerVariants: Variants = {
     },
   },
 };
-
-const imageVariants: Variants = {
-  hidden: {
-    opacity: 0.2,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
-
-const Chevron = () => {
-  /* https://heroicons.com/ */
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
-      viewBox='0 0 24 24'
-      strokeWidth={4}
-      stroke='currentColor'
-      className='inline-block w-4 h-4'
-      height={16}
-      width={16}
-    >
-      <path strokeLinecap='round' strokeLinejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' />
-    </svg>
-  );
-};
-
-/**
- * Converts a date string in the format "day.month.year" to a formatted date string.
- * @param dateString - The date string in the format "day.month.year".
- * @param locale - The locale for formatting the date string.
- * @param options - The formatting options for the date.
- * @returns The formatted date string.
- */
-function getFormattedDate(dateString: string, local: string, options: Intl.DateTimeFormatOptions) {
-  const [day, month, year] = dateString.split(".");
-  const date = new Date(Number(year), Number(month) - 1, Number(day));
-
-  return new Intl.DateTimeFormat(local, options).format(date);
-}
