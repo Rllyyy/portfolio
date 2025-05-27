@@ -37,6 +37,8 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
     year: "numeric",
   });
 
+  // console.log(`/assignments/${moduleId}/${transformURI(assignment.title)}.pdf`);
+
   return (
     <main className='px-3 space-y-2 mt-28 md:mt-40'>
       <div className='max-w-2xl mx-auto prose dark:prose-invert'>
@@ -53,7 +55,7 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
           </time>
           <a
             className='px-2 py-1.5 no-underline rounded-sm hover:no-underline hover:bg-gray-200 transition-[background] text-sm text-slate-600 dark:text-gray-400 font-normal flex flex-row gap-1'
-            href={`/assignments/${moduleId}/${assignment.pdfFileName}.pdf`}
+            href={`/assignments/${moduleId}/${transformURI(assignment.title)}.pdf`}
             target='_blank'
             rel='noopener noreferrer'
           >

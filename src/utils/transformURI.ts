@@ -8,5 +8,6 @@ export function transformURI(uri: string): string {
     .replace(/Ü/g, "Ue")
     .replace(/ß/g, "ss")
     .replace(/\?/g, "")
-    .replace(/\s+/g, "-");
+    .replace(/\s+/g, "-")
+    .replace(/:/g, "");
 }

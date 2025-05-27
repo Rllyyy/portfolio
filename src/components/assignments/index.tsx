@@ -31,14 +31,13 @@ export const Assignments = async () => {
           viewport={{ once: true, margin: "-150px" }}
         >
           {assignments.map((assignment) => {
-            const { title, imageDescription, pdfFileName, text, moduleId, date } = assignment;
+            const { title, imageDescription, text, moduleId, date } = assignment;
             return (
               <Card
                 key={title}
                 title={title}
                 imageDescription={imageDescription}
                 moduleId={moduleId}
-                pdfFileName={pdfFileName}
                 text={text}
                 date={date}
               />

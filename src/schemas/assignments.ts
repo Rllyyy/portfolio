@@ -6,7 +6,6 @@ export const AssignmentSchema = z.object({
   text: z.string(),
   date: z.string(),
   imageDescription: z.string(),
-  pdfFileName: z.string(),
 });
 
 export const AssignmentsSchema = z.array(AssignmentSchema);
