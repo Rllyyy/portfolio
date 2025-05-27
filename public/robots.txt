@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*.htm$
 
 Sitemap: https://www.niklasfischer.dev/sitemap.xml

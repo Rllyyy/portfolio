@@ -1,3 +1,6 @@
+import { SVGProps } from "react";
+import { twMerge } from "tailwind-merge";
+
 export function Icon() {}
 
 const LinkedIn = () => {
@@ -62,3 +65,69 @@ const GitHub = () => {
 };
 
 Icon.GitHub = GitHub;
+
+// https://tabler.io/icons
+const PDF = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='20'
+      height='20'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    >
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M14 3v4a1 1 0 0 0 1 1h4' />
+      <path d='M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4' />
+      <path d='M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6' />
+      <path d='M17 18h2' />
+      <path d='M20 15h-3v6' />
+      <path d='M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z' />
+    </svg>
+  );
+};
+
+Icon.PDF = PDF;
+
+const Chevron = () => {
+  /* https://heroicons.com/ */
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      strokeWidth={4}
+      stroke='currentColor'
+      className='inline-block w-4 h-4'
+      height={16}
+      width={16}
+    >
+      <path strokeLinecap='round' strokeLinejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' />
+    </svg>
+  );
+};
+
+Icon.Chevron = Chevron;
+
+interface IEMailIcon extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+const EMailIcon: React.FC<IEMailIcon> = ({ className, ...rest }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 24 24'
+      className={twMerge("inline-block w-5 h-5 align-middle fill-current", className)}
+      {...rest}
+    >
+      <path d='M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z' />
+      <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
+    </svg>
+  );
+};
+
+Icon.EMail = EMailIcon;

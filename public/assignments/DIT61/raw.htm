@@ -1,0 +1,1614 @@
+<div>
+<a name="_Toc133855614"><h2>1. Einleitung</h2></a>
+<a name="_Toc133855615"><h3>1.1 Relevanz des Themas</h3></a>
+<p>Die letzten Jahre zeichneten sich
+durch einen riesigen Hype um die Blockchain-Technologie aus. So konnten
+Unternehmen, die das Wort Blockchain ihrem Namen hinzufügten, mit einem
+deutlichen Wertanstieg auf dem Aktienmarkt rechnen.<a href="#_ftn1" name="_ftnref1" title=""><sup>[1]</sup></a> Mit dem Zusammenbruch
+der zweitgrößten <span>Kryptobörse</span> FTX im November 2022 scheint
+jedoch ein neues Zeitalter für die Blockchain-Technologien zu beginnen.<a href="#_ftn2" name="_ftnref2" title=""><sup>[2]</sup></a> Der
+darauf folgende Wertverfall vieler Kryptowährungen wird von einigen Vertretern
+bereits als Krypto-Winter bezeichnet.<a href="#_ftn3" name="_ftnref3" title=""><sup>[3]</sup></a> In
+dieser Arbeit werden mögliche Anwendungsfelder untersucht, erfolgreiche
+Anwendungen vorgestellt und potentielle Gefahren von Blockchain-Anwendungen für
+Nutzer und Unternehmen aufgezeigt.</p>
+<a name="_Toc133855616"><h3>1.2 Ziele der Arbeit</h3></a>
+<p>Das Hauptziel der vorliegenden
+Arbeit ist die Untersuchung der Blockchain-Technologie außerhalb des
+FinTech-Sektors hinsichtlich spezieller Anwendungsfelder, erfolgreicher
+Anwendungen und möglicher Gefahren. Zwischenziele bilden die Definition,
+Entwicklung und Arten sowie Darstellung besonderer Eigenschaften der Blockchain.</p>
+<a name="_Toc133855617"><h3>1.3 Aufbau der Arbeit</h3></a>
+<p>In den Grundlagen dieser Arbeit
+wird zunächst der Begriff Blockchain definiert (Kapitel 2.1) sowie Entwicklung
+und Arten der Blockchain näher betrachtet (Kapitel 2.2). Anschließend werden
+spezielle Eigenschaften der Blockchain herausgearbeitet (Kapitel 2.3). Im
+Hauptteil der Arbeit werden in Kapitel 3.1 spezielle Anwendungsfelder der
+Blockchain-Technologie untersucht und (erfolgreiche) Anwendungen vorgestellt.
+Abschließend werden einige Gefahren, die mit Blockchain-Anwendungen in
+Verbindung gebracht werden können, detailliert dargestellt.</p>
+<a name="_Toc133855618"><h2>2. Grundlagen</h2></a>
+<a name="_Toc133855619"><h3>2.1 Definition Blockchain</h3></a>
+<p>Die „Blockchain ist eine verteilte
+Datenbank, die eine Kette“<a href="#_ftn4" name="_ftnref4" title=""><sup>[4]</sup></a> von „digitalen
+Datensätzen, Ereignissen oder Transaktionen“<a href="#_ftn5" name="_ftnref5" title=""><sup>[5]</sup></a> (auch
+Blöcke genannt) additiv speichert und verwaltet.
+Sie gehört zur Gruppe der Distributed Ledger Technologien, die im Gegensatz zu
+zentralisierten Datenbanken „das gemeinsam genutzte Transaktionsregister in
+einem verteilten Netzwerk“<a href="#_ftn6" name="_ftnref6" title=""><sup>[6]</sup></a>
+verarbeiten.<a href="#_ftn7" name="_ftnref7" title=""><sup>[7]</sup></a>
+Die Blöcke, in denen die einzelnen Einträge gruppiert sind, werden durch eine
+kryptographische Signatur chronologisch und manipulationssicher zu einer stetig
+wachsenden Kette von Blöcken verknüpft.<a href="#_ftn8" name="_ftnref8" title=""><sup>[8]</sup></a> Dazu
+enthält jeder Block eine Referenz zum vorherigen Block (SHA-256-Hash), welcher
+sich aus den Informationen des Block-Headers ergibt (u.a. Zeitstempel<a href="#_ftn9" name="_ftnref9" title=""><sup>[9]</sup></a>, <span>Nonce</span><a href="#_ftn10" name="_ftnref10" title=""><sup>[10]</sup></a>,
+Schwierigkeitsgrad und Merkle-Root).<a href="#_ftn11" name="_ftnref11" title=""><sup>[11]</sup></a> Die Merkle-Root
+fasst alle Transaktionen des Blocks zu einem Hash zusammen, „um den Prozess
+effizienter zu gestalten“<a href="#_ftn12" name="_ftnref12" title=""><sup>[12]</sup></a>. Neu
+erstellte Blöcke<a href="#_ftn13" name="_ftnref13" title=""><sup>[13]</sup></a>
+werden durch die Mehrheit des gesamten Netzwerks verifiziert.<a href="#_ftn14" name="_ftnref14" title=""><sup>[14]</sup></a> Das
+Ziel der Blockchain ist es, eine sichere Transaktion zwischen Teilnehmern ohne
+Intermediäre, zentrale Behörden oder Vermittler zu ermöglichen.<a href="#_ftn15" name="_ftnref15" title=""><sup>[15]</sup></a> </p>
+<a name="_Toc133855620"><h3>2.2 Entwicklung und
+Arten der Blockchain</h3></a>
+<p>Die erste erfolgreiche
+Implementierung der Blockchain-Technologie wurde 2008 unter dem Pseudonym Satoshi
+Nakamoto in der Publikation „Bitcoin: A Peer-to-Peer Electronic Cash System“
+beschrieben. Zu den Zielen der Bitcoin Währung zählt die Revolutionierung des
+durch die Finanzkrise angeschlagenen Finanzwesens und dessen Unabhängigkeit von
+Dritten.<a href="#_ftn16" name="_ftnref16" title=""><sup>[16]</sup></a>
+Nakamoto (2008) forderte: „ein elektronisches Zahlensystem, das auf
+kryptografischen Beweisen statt auf Vertrauen [basiert], welches es zwei
+willigen Parteien ermöglicht, direkt miteinander zu handeln, ohne dass eine
+vertrauenswürdige dritte Partei erforderlich ist“<a href="#_ftn17" name="_ftnref17" title=""><sup>[17]</sup></a>. Damit gehört
+Bitcoin zur ersten Generation der Blockchain (Blockchain 1.0), welche „[...] ausschließlich
+zum Transfer von virtuellen Währungen (<span>Kryptotokens</span>)
+genutzt werden“<a href="#_ftn18" name="_ftnref18" title=""><sup>[18]</sup></a>.</p>
+<p>Im Rahmen der Blockchain 2.0 wurde
+der Funktionsumfang um Anwendungsbereiche in der Wirtschaft erweitert. Eine
+zentrale Rolle spielen in diesem Zusammenhang Smart Contracts.<a href="#_ftn19" name="_ftnref19" title=""><sup>[19]</sup></a> Das
+sind „Computerprotokolle, die Verträge abbilden oder überprüfen oder die
+Verhandlung bzw. Abwicklung technisch unterstützen“<a href="#_ftn20" name="_ftnref20" title=""><sup>[20]</sup></a>. Ein
+Smart <span>Contract</span> tritt technisch gesehen als
+„Wenn-Dann“-Prozess in Kraft. Ausgelöst wird er durch ein externes Ereignis
+oder durch das Eintreten vorab definierter Bedingungen.<a href="#_ftn21" name="_ftnref21" title=""><sup>[21]</sup></a> </p>
+<p>Schlussendlich umfasst die neueste
+Generation der Blockchain (Blockchain 3.0) alle Distributed-Ledger-Systeme, die
+Anwendungen außerhalb des Finanz- und Wirtschaftssektors ermöglichen, wie z.B. im
+öffentlichen Sektor.<a href="#_ftn22" name="_ftnref22" title=""><sup>[22]</sup></a> 
+Technologien der Blockchain 2.0 (und 3.0) basieren in der Regel auf der
+Blockchain Ethereum, da Bitcoin den Transfer von Werten (engl. Assets) und die
+Ausführung von Smart Contracts nicht unterstützt.<a href="#_ftn23" name="_ftnref23" title=""><sup>[23]</sup></a> Diese Ausarbeitung
+konzentriert sich gemäß der Aufgabenstellung auf die Blockchain 2.0 und 3.0.</p>
+<p>Unabhängig von dem Einsatzgebiet
+lässt sich die Blockchain in drei Arten unterscheiden. 
+Die öffentliche (engl. <span>public</span>) Blockchain ist für
+jeden zugänglich. Alle Nutzer*innen sind in dem Peer-to-Peer-Netzwerk (P2P) gleichberechtigt,
+d.h. sie dürfen Transaktionen durchführen, einsehen und validieren.<a href="#_ftn24" name="_ftnref24" title=""><sup>[24]</sup></a>
+Änderungen bzw. Aktualisierungen an einer öffentlichen Blockchain erfordern die
+Mehrheit der beteiligten Akteure, da es keine zentrale Verwaltungsinstanz gibt.
+Um die Manipulationssicherheit zu gewährleisten sind aufwendige Konsensmechanismen
+(insbesondere Proof-<span>of</span>-Work<a href="#_ftn25" name="_ftnref25" title=""><sup>[25]</sup></a> oder Proof-<span>of</span>-Stake<a href="#_ftn26" name="_ftnref26" title=""><sup>[26]</sup></a>)
+notwendig. Zu den bekanntesten Public Blockchains gehören Bitcoin und Ethereum.<a href="#_ftn27" name="_ftnref27" title=""><sup>[27]</sup></a> </p>
+<p>Bei der privaten Blockchain hingegen
+werden die Rechte der berechtigten Teilnehmer (Teilnahme, Einsicht, Validierung)
+von einer zentralen Instanz verwaltet. Das Recht, die Blockchain
+fortzuschreiben und vollständig einzusehen, liegt in der Regel ausschließlich
+bei der zentralen Instanz.<a href="#_ftn28" name="_ftnref28" title=""><sup>[28]</sup></a> Änderungen
+an einer privaten Blockchain können im Vergleich zu einer öffentlichen
+Blockchain einfacher durchgeführt werden und es kommen weniger aufwendige Konsensmechanismen
+(u.a. Proof-<span>of</span>-Authority) zum Einsatz, da die
+Teilnehmer bekannt sind. Aufgrund dieser Eigenschaften kommt sie im unternehmerischen
+Kontext häufig zum Einsatz.<a href="#_ftn29" name="_ftnref29" title=""><sup>[29]</sup></a> Die
+Plattform <span>Hyperledger</span> Fabric ist eine der
+bekanntesten privaten Blockchains.<a href="#_ftn30" name="_ftnref30" title=""><sup>[30]</sup></a> </p>
+<p>Von einer Konsortium-Blockchain
+oder Public <span>Permissioned</span> Blockchain ist die Rede, „wenn
+ausschließlich die Konsensberechtigung auf eine Gruppe von Nutzern beschränkt
+ist und jeder beliebige Nutzer einen Lesezugriff hat“<a href="#_ftn31" name="_ftnref31" title=""><sup>[31]</sup></a>. Sie
+stellt somit eine Hybridlösung zwischen öffentlicher und privater Blockchain
+dar.<a href="#_ftn32" name="_ftnref32" title=""><sup>[32]</sup></a></p>
+<p>Die Klassifizierung in öffentliche
+und private Blockchain scheint auf den ersten Blick von untergeordneter
+Bedeutung zu sein, ist aber für die spezifischen Eigenschaften von
+entscheidender Bedeutung. Bei der Evaluierung einzelner Blockchain-Projekte sollte
+dieser Aspekt immer berücksichtigt werden.</p>
+<a name="_Toc133855621"><h3>2.3 Besondere
+Eigenschaften der Blockchain</h3></a>
+<p>Die Blockchain-Technologie zeichnet
+sich durch eine Reihe besonderer Eigenschaften aus, die sie von anderen
+Technologien unterscheidet. Zunächst ist eine (öffentliche) Blockchain durch Dezentralität
+gekennzeichnet, da keine zentrale Partei Kontrolle über das Netzwerk hat.<a href="#_ftn33" name="_ftnref33" title=""><sup>[33]</sup></a> 
+Da alle Daten redundant in einem Peer-to-Peer-Netzwerk<a href="#_ftn34" name="_ftnref34" title=""><sup>[34]</sup></a>
+gespeichert werden, ist die Blockchain gegen Single-Point-<span>of</span>-<span>Failure</span>-Angriffe (z.B. DDOS) bei einer entsprechend hohen
+Anzahl an Blockchain Teilnehmern sicher und zeichnet sich somit auch durch eine
+hohe Ausfallsicherheit aus.<a href="#_ftn35" name="_ftnref35" title=""><sup>[35]</sup></a> </p>
+<p>Eine weitere wesentliche
+Eigenschaft ist die Manipulationssicherheit gegen nachträgliche Änderungen.<a href="#_ftn36" name="_ftnref36" title=""><sup>[36]</sup></a> Dazu
+wird eine Hashfunktion verwendet, die Werte einer beliebigen Zeichenlänge „in
+eine Bitfolge mit fester Zeichenlänge“<a href="#_ftn37" name="_ftnref37" title=""><sup>[37]</sup></a> (z.B.
+64 Zeichen bei SHA-256) umwandelt. Wenn ein Wert einer Transaktion innerhalb
+des Blocks manipuliert wird, ändert sich auch vollständig der Hash-Output.<a href="#_ftn38" name="_ftnref38" title=""><sup>[38]</sup></a> Da jeder
+Block in der Blockchain durch den Hash-Wert des vorherigen Blocks miteinander
+verknüpft ist, „müsste ein potenzieller Angreifer nun alle nachfolgenden Blöcke
+mit viel Rechenaufwand neu verketten“<a href="#_ftn39" name="_ftnref39" title=""><sup>[39]</sup></a>. Hinzu
+kommt, „dass die so veränderte Blockchain auf dem einen Knoten nicht mehr mit
+der Mehrheit der Kopien auf den übrigen Knoten übereinstimmt“<a href="#_ftn40" name="_ftnref40" title=""><sup>[40]</sup></a>. Die
+Blockchain schafft somit Vertrauen ohne einen Intermediär.<a href="#_ftn41" name="_ftnref41" title=""><sup>[41]</sup></a></p>
+<p>Eine öffentliche Blockchain
+zeichnet sich zudem durch eine hohe Transparenz aus, da jede Transaktion mit Absender-
+und Empfängeradresse sowie dem übertragenen Beitrag einsehbar ist. Da jedoch
+nur die Adressen öffentlich zugänglich sind, nicht aber der Besitzer, spricht
+man in diesem Zusammenhang von Pseudoanonymität.<a href="#_ftn42" name="_ftnref42" title=""><sup>[42]</sup></a><span><o:p></o:p></span></p>
+<p>Die Vertrauenswürdigkeit und
+Authentizität der Transaktionen und Teilnehmer der Blockchain wird durch asymmetrische
+Verschlüsselung, sogenannte Public-Key-Verfahren, sichergestellt. Für jeden
+Teilnehmer werden ein öffentlicher und ein privater Schlüssel mathematisch
+generiert, die voneinander abhängig sind. Bei der Berechnung der Schlüsselpaare
+ist es entscheidend, dass eine Rückrechnung auf Basis eines Schlüssels nahezu
+unmöglich ist.<a href="#_ftn43" name="_ftnref43" title=""><sup>[43]</sup></a>
+Der Sender verschlüsselt die Nachricht mit Hilfe des öffentlichen Schlüssels
+des Empfängers, „[...] da nur dieser den richtigen privaten Schlüssel besitzt,
+um die Nachricht zu lesen“<a href="#_ftn44" name="_ftnref44" title=""><sup>[44]</sup></a>. Umgekehrt
+kann ein Absender „eine Nachricht mit einer digitalen Signatur [- dem privaten
+Schlüssel -] versehen“<a href="#_ftn45" name="_ftnref45" title=""><sup>[45]</sup></a>, um
+sich zu authentifizieren. 
+Der Empfänger verwendet dann den öffentlichen Schlüssel des Absenders, um die
+Nachricht zu entschlüsseln und stellt so die Authentizität des Absenders sicher.<a href="#_ftn46" name="_ftnref46" title=""><sup>[46]</sup></a></p>
+<p>Die meisten der genannten Eigenschaften
+treffen jedoch nur auf öffentliche Blockchains zu. Private Blockchains sind
+weder dezentral noch manipulationssicher oder transparent. Immer wieder werben Blockchain-Projekte,
+die auf einer privaten Blockchain basieren, mit den Eigenschaften der
+öffentlichen Blockchain. Ob private Blockchains überhaupt als Blockchains zu
+klassifizieren sind, ist in der Literatur teilweise sehr umstritten<a href="#_ftn47" name="_ftnref47" title=""><sup>[47]</sup></a>.<a href="#_ftn48" name="_ftnref48" title=""><sup>[48]</sup></a></p>
+<a name="_Toc133855622"><h2>3. Hauptteil</h2></a>
+<a name="_Toc133855623"><h3>3.1 Anwendungsfelder und
+erfolgreiche Anwendungen der Blockchain</h3></a>
+<p>Kryptowährungen (z.B. Bitcoin,
+Ether, etc. pp.) zählen nach wie vor zu den erfolgreichsten Anwendungsfeldern der
+Blockchain, die jedoch gemäß der Aufgabenstellung nicht näher untersucht werden.<a href="#_ftn49" name="_ftnref49" title=""><sup>[49]</sup></a> Darüber
+hinaus lässt sich allgemein feststellen, dass „[...] viele Projekte, die
+während des Höhepunkts des Hypes vorgestellt wurden, entweder völlig vom Markt
+verschwunden [sind] oder [...] heute unter ganz anderen Voraussetzungen weiter [fortbestehen]“<a href="#_ftn50" name="_ftnref50" title=""><sup>[50]</sup></a>.</p>
+<a name="_Toc133855624"><h4>3.1.1 Blockchain im
+Supply Chain Management</h4></a>
+<p><span>Im Supply Chain Management kann die
+Blockchain-Technologie zur Betrugs- und Fälschungserkennung von Produkten
+eingesetzt werden. Sie gewährleistet die Authentizität der Originalprodukte
+innerhalb der Lieferkette, indem beispielsweise „Informationen über den
+Standort und die Historie sämtlicher Wertschöpfungsschritte eines Produktes“<a href="#_ftn51" name="_ftnref51" title=""><sup>[51]</sup></a>
+unveränderbar auf der Blockchain gespeichert werden.<a href="#_ftn52" name="_ftnref52" title=""><sup>[52]</sup></a>
+Mithilfe von Sensoren kann zudem der Produktstatus über die gesamte Lieferkette
+gesichert werden. Sie speichern beispielsweise Informationen über Temperatur,
+Luftfeuchtigkeit oder Lichtintensität fälschungssicher auf der Blockchain.<a href="#_ftn53" name="_ftnref53" title=""><sup>[53]</sup></a>
+Überschreitet ein Element eine zuvor definierte Eigenschaft können Smart
+Contracts diesen Vorfall automatisch melden und das Produkt aussortieren.<a href="#_ftn54" name="_ftnref54" title=""><sup>[54]</sup></a></span>
+Durch gefälschte Produkte in der Pharmaindustrie entstehen jährliche Kosten von
+über 163 Milliarden US-Dollar.<a href="#_ftn55" name="_ftnref55" title=""><sup>[55]</sup></a> Neben
+diesem finanziellen Schaden werden auch Menschenleben durch den Einsatz
+gefälschter Medikamente gefährdet.<a href="#_ftn56" name="_ftnref56" title=""><sup>[56]</sup></a> In
+einem Pilotprojekt wurde die auf der <span>HyperLedger</span>-Plattform
+basierende Blockchain von <span>TraceLink</span> (Trace <span>Histories</span>) eingesetzt, um die Authentizität von
+Medikamenten entlang der gesamten Lieferkette sicherzustellen.<a href="#_ftn57" name="_ftnref57" title=""><sup>[57]</sup></a>
+Darüber hinaus kann die Blockchain im Rahmen des Compliance Trackings und
+Zertifikatsmanagements zum Einsatz kommen, um die Einhaltung vertraglicher oder
+gesetzlicher Verpflichtungen entlang der Lieferkette mittels Smart Contracts sicherzustellen.<a href="#_ftn58" name="_ftnref58" title=""><sup>[58]</sup></a> So wird
+die Blockchain insbesondere in Brachen, die hohe Anforderungen an die
+Einhaltung von Qualitätsstandards und Nachweispflichten stellen, eingesetzt.
+Dazu gehören unter anderem die Luft- und Raumfahrt oder die
+Lebensmittelindustrie.<a href="#_ftn59" name="_ftnref59" title=""><sup>[59]</sup></a>
+Darüber hinaus zielt der Einsatz der Blockchain-Technologie in diesem Bereich
+darauf ab, den Bedarf an papierbasierten Dokumenten zu eliminieren, da diese
+leicht zu fälschen sind und in der Lieferkette verloren gehen können.<a href="#_ftn60" name="_ftnref60" title=""><sup>[60]</sup></a></p>
+<p>Die Plattform <span>VeChain</span>
+ist eine der bekanntesten Blockchain-Anwendungen in diesem Bereich, die zur Überwachung
+von Qualität, Authentizität, Herkunft und Transport von Produkten eingesetzt
+wird.<a href="#_ftn61" name="_ftnref61" title=""><sup>[61]</sup></a> <span>VeChain</span> ist eine Public <span>Permissioned</span>
+Blockchain (Konsortium Blockchain)<a href="#_ftn62" name="_ftnref62" title=""><sup>[62]</sup></a>, d.h. <span>während die Transaktionen</span> öffentlich einsehbar sind, erfolgt
+die Validation und Signierung der Blöcke privat durch Proof-<span>of</span>-Authority<a href="#_ftn63" name="_ftnref63" title=""><sup>[63]</sup></a>.
+Konkret wird dies durch eine Gruppe von 101 Knoten realisiert.<a href="#_ftn64" name="_ftnref64" title=""><sup>[64]</sup></a> <span>VeChain</span> kooperiert mit verschiedenen Unternehmen, darunter
+Bayer (<span>CSecure</span><a href="#_ftn65" name="_ftnref65" title=""><sup>[65]</sup></a>) und
+BMW (<span>VerifyCar</span><a href="#_ftn66" name="_ftnref66" title=""><sup>[66]</sup></a>), um
+seine Blockchain-Plattform und Anwendungen in verschiedenen Bereichen
+einzusetzen und weiterzuentwickeln.<a href="#_ftn67" name="_ftnref67" title=""><sup>[67]</sup></a> </p>
+<a name="_Toc133855625"><h4>3.1.2 Blockchain</h4></a>
+<p>In der Literatur wird von einigen
+Autoren die Möglichkeit diskutiert, Blockchain im Identitätsmanagement
+einzusetzen, um Personen, Objekte und Prozesse anhand bestimmter Attribute
+online zu authentifizieren. Statt für jeden Service im Internet ein eigenes Konto
+mit unterschiedlichen Benutzernamen und Passwörtern anzulegen, sollen
+Identitäten durch die Blockchain dezentral und sicher verwaltet werden.
+Theoretisch könnten dem Dienst die benötigten Informationen zur Verfügung
+gestellt werden. Dies würde es den Nutzern ermöglichen individuelle Rechte für
+den jeweiligen Service zu verwalten.<a href="#_ftn68" name="_ftnref68" title=""><sup>[68]</sup></a><span><o:p></o:p></span></p>
+<p><span>IBM Digital <span>Credentials</span> ermöglicht
+die Ausstellung und Verifizierung von digitalen Ausweisen und Zertifikaten,
+welche kryptographisch sicher auf der Blockchain gespeichert werden. In der <span>Digital Identity</span> Wallet, die auf IBM Digital <span>Credentials</span> basiert, können unter anderem Bildungsnachweise,
+Führerscheine und medizinische Dokumente abgelegt werden.<a href="#_ftn69" name="_ftnref69" title=""><sup>[69]</sup></a><o:p></o:p></span></p>
+<a name="_Toc133855626"><h4>3.1.3 Verwaltung von
+Rechten mit der Blockchain (NFTs)</h4></a>
+<p>Ein weiteres Anwendungsfeld stellt
+die Eigentumsverwaltung mittels non-fungible Tokens (NFTs) dar. Vermögenswerte
+(engl. Assets), die ersetzbar und austauschbar sind, werden als „fungible“ bezeichnet.
+Dazu zählen u.a. Bargeld, Kryptowährungen, Öl oder Aktien. Ein Euro ist
+beispielsweise gegen einen anderen Euro austauschbar, da er nicht einzigartig
+ist.<a href="#_ftn70" name="_ftnref70" title=""><sup>[70]</sup></a> 
+Non-fungible Tokens zeichnen sich hingegen durch kryptografische
+Einzigartigkeit, Unteilbarkeit, Unersetzbarkeit und Überprüfbarkeit aus. Sie ermöglichen
+die digitale Repräsentation von physischen oder immateriellen Werten auf der
+Blockchain und werden somit zum Nachweis und zur Übertragung von Eigentum
+verwendet.<a href="#_ftn71" name="_ftnref71" title=""><sup>[71]</sup></a>
+Der Smart <span>Contract</span> des Tokens ermöglicht es zudem, Lizenzgebühren<a href="#_ftn72" name="_ftnref72" title=""><sup>[72]</sup></a> für
+eine Transaktion zu integrieren, die dem Ersteller oder den Vorbesitzern
+zufließen.<a href="#_ftn73" name="_ftnref73" title=""><sup>[73]</sup></a><b><o:p></o:p></b></p>
+<p>Im Jahr 2021 sorgte der Verkauf von
+<span>Beeples</span> (Mike Winkelmann) NFT „5000 <span>Everydays</span>“ für 42,329.453 Ether (umgerechnet 69,3 Millionen
+USD) als erste Auktion dieser Art für großes Aufsehen in den Medien und in der Kunstwelt.<a href="#_ftn74" name="_ftnref74" title=""><sup>[74]</sup></a> Auch
+wenn es schon vorher einige NFT-Projekte gab (z.B. <span>CryptoKitties</span>
+oder <span>CryptoPunks</span>), hat die Auktion dazu beigetragen,
+die NFT-Technologie auch außerhalb der „Krypto-Community“ bekannt zu machen. Im
+Folgenden entstanden zahlreiche NFT-Projekte und -Kollektionen (u.a. Bored <span>Aped</span> Yard Club, <span>Decentraland</span> und NBA
+Top Shot).<a href="#_ftn75" name="_ftnref75" title=""><sup>[75]</sup></a>
+In den meisten Fällen werden digitale Assets (z.B. Kunstwerke) nicht auf der
+Blockchain gespeichert, sondern es wird lediglich ein Link zu einer (ggf. zentralisierten)
+Ressource in der Metadatei<a href="#_ftn76" name="_ftnref76" title=""><sup>[76]</sup></a> des Tokens
+hinterlegt, da die Speicherkosten für 1 Megabyte bereits mehrere tausend Euro
+betragen.<a href="#_ftn77" name="_ftnref77" title=""><sup>[77]</sup></a>
+Die Anzahl der monatlich verkauften NFTs ist seit dem Höhepunkt im Jahr 2021
+inzwischen deutlich zurückgegangen.<a href="#_ftn78" name="_ftnref78" title=""><sup>[78]</sup></a></p>
+<p>Obwohl NFTs in erster Linie für den
+Erwerb und Besitz digitaler Kunstwerke angewendet werden, lässt sich das
+Prinzip auch auf andere (physische) Objekte übertragen. In diesen Fällen spricht
+man von Asset (<span>Backed</span>) Tokens. Die Tokenisierung kann
+aber auch fungible (austauschbare) Werte übertragen werden. Utility Token
+gewähren dem Inhaber Nutzungsrechte an einer Dienstleistung oder einem Produkt.<a href="#_ftn79" name="_ftnref79" title=""><sup>[79]</sup></a>
+Security Tokens beschreiben „[...] auf der Blockchain abgebildete, rechtlich
+regulierte Wertpapiere wie Aktien, Anleihen und Derivate sowie Besitzansprüche
+an realen physischen oder digitalen Vermögenswerten“<a href="#_ftn80" name="_ftnref80" title=""><sup>[80]</sup></a>. 
+Als Gegenleistung erhalten Token-Besitzer Dividendenausschüttungen oder sind
+zur Stimmabgabe berechtigt.<a href="#_ftn81" name="_ftnref81" title=""><sup>[81]</sup></a></p>
+<a name="_Toc133855627"><h4>3.1.4 Mit der Blockchain
+Organisationen steuern (DAOs)</h4></a>
+<p>Eine Dezentrale Autonome
+Organisation (DAO) ist eine Organisation, die durch Smart Contracts gesteuert
+wird. Im Gegensatz zu traditionellen Organisationen haben DAOs keine zentrale
+Autorität oder Hierarchie, sondern werden durch ein dezentrales Netzwerk von
+Teilnehmern gesteuert. Die Regeln der DAO werden durch den Smart <span>Contract</span> festgelegt, der von den Teilnehmern der DAO in
+Abstimmungen akzeptiert wird.<a href="#_ftn82" name="_ftnref82" title=""><sup>[82]</sup></a> 
+Die Abstimmung erfolgt mit Hilfe von Governance Tokens, welche eine Unterform
+von Utility Tokens darstellen. Die Nutzer können in der Regel beliebig viele
+dieser Token erwerben, um ihren Stimmenanteil zu erhöhen.<a href="#_ftn83" name="_ftnref83" title=""><sup>[83]</sup></a> DAOs
+wurden in der Vergangenheit u.a. zur Steuerung eines Risikokapitalgebers („The
+DAO“<a href="#_ftn84" name="_ftnref84" title=""><sup>[84]</sup></a>),
+Verwaltung von <span>Stablecoins</span><a href="#_ftn85" name="_ftnref85" title=""><sup>[85]</sup></a> (z.B. „<span>MakerDAO</span>“) oder zum Kauf von (digitalen) Gegenständen (z.B.
+„<span>ConstitutionDAO</span>“<a href="#_ftn86" name="_ftnref86" title=""><sup>[86]</sup></a>)
+gegründet.<a href="#_ftn87" name="_ftnref87" title=""><sup>[87]</sup></a>
+</p>
+<a name="_Toc133855628"><h3>3.2 Gefahren von
+Blockchain-Anwendung</h3></a>
+<p>Von Blockchain-Anwendungen gehen einige
+Gefahren aus, die es zu beachten gilt. In den letzten Jahren wurde mit großem
+Aufwand versucht, die Blockchain-Technologie auf viele Anwendungsbereiche zu
+übertragen. Dementsprechend lassen sich Kritikpunkte aus einem Themenbereich in
+der Regel auch auf andere Teilbereiche übertragen. Allgemeine Kritikpunkte -
+wie z.B. die Auswirkungen auf die Umwelt bei bestimmten
+Konsolidierungsmechanismen<a href="#_ftn88" name="_ftnref88" title=""><sup>[88]</sup></a> sowie
+eine zunehmende Machtkonzentration<a href="#_ftn89" name="_ftnref89" title=""><sup>[89]</sup></a> -
+können nicht näher betrachtet werden.</p>
+<a name="_Toc133855629"><h4>3.2.1 Blockchain in der
+Praxis - Kosten und eingestellte Projekte</h4></a>
+<p>Zunächst sind der Aufbau und
+Betrieb einer Blockchain für das eigene Unternehmen mit hohen Kosten<a href="#_ftn90" name="_ftnref90" title=""><sup>[90]</sup></a>
+verbunden.<a href="#_ftn91" name="_ftnref91" title=""><sup>[91]</sup></a>
+Vorher sollte geprüft werden, ob die Blockchain die Probleme des Unternehmens löst,
+oder ob nicht eine herkömmliche Datenbank eine angemessenere Alternative
+darstellt. Ein <span>Mitarbeiter
+von Amazon Web Services stellte im Jahr 2016 nach einer Befragung von mehreren
+Unternehmen, die sich auf die Blockchain spezialisiert haben, folgendes fest:
+„sie [- die befragten Unternehmen - ] brauchen alle Datenbanken. Sie könnten
+alle eine Ledger-ähnliche Datenstruktur nutzen, auch kryptographisches <span>Hashing</span> und Signieren. Aber, ähm, warum brauchen sie eine
+Blockchain? Darüber herrscht große Unklarheit“<a href="#_ftn92" name="_ftnref92" title=""><sup>[92]</sup></a>.
+</span>Die <span>Australian</span> Securities Exchange Ltd (ASX)
+investierte beispielsweise 168 Millionen US-Dollar in die Entwicklung einer
+Blockchain-Plattform, nur um das Projekt nach vier Jahren aufgrund mangelnder
+Lösungssicherheit einzustellen.<a href="#_ftn93" name="_ftnref93" title=""><sup>[93]</sup></a> Vor der
+Einstellung des Projekts galt es lange Zeit als Beweis dafür, dass sich die Blockchain
+Technologie von einer Nischentechnologie zur Mainstream-Technologie entwickelt
+hat.<a href="#_ftn94" name="_ftnref94" title=""><sup>[94]</sup></a> 
+Entscheidungsbäume von <span>Yagan</span> et al. (2018) sowie Werner
+et al. (2020) können bei Entscheidung über den richtigen Einsatz einer
+Blockchain helfen.<a href="#_ftn95" name="_ftnref95" title=""><sup>[95]</sup></a> </p>
+<p>Neben eingestellten Projekten, die
+aus wirtschaftlichen Gründen nicht rentabel sind, existieren eine große Zahl
+von Projekten, die von vornherein als Betrug konzipiert wurden. Zu den
+häufigsten Betrugsmethoden gehören Exit-Scams und Ponzi Schemen. Exit-Scams (auch
+als Rug-<span>Pulls</span> bezeichnet) sind „scheinbar legitime <span>Kryptowährunsdienste</span> oder -projekte, die dann aber verschwinden,
+ohne die Gelder der Nutzer zurückzuzahlen“<a href="#_ftn96" name="_ftnref96" title=""><sup>[96]</sup></a>. Bekannte
+Beispiele sind Pure Bit<a href="#_ftn97" name="_ftnref97" title=""><sup>[97]</sup></a> und <span>Squid</span><a href="#_ftn98" name="_ftnref98" title=""><sup>[98]</sup></a>.<a href="#_ftn99" name="_ftnref99" title=""><sup>[99]</sup></a> Ponzi
+Schemen verwenden das Geld neuer Investoren, um den alten Investoren falsche
+Renditen auszuzahlen.<a href="#_ftn100" name="_ftnref100" title=""><sup>[100]</sup></a> <span>BitConnect</span> betrog seine Investoren auf diese Weise um mehr
+als 2 Milliarden US-Dollar.<a href="#_ftn101" name="_ftnref101" title=""><sup>[101]</sup></a></p>
+<a name="_Toc133855630"><h4>3.2.2 Unveränderlichkeit
+der Blockchain</h4></a>
+<p>Nachträgliche Änderungen an der
+Blockchain sind oft schwierig.<a href="#_ftn102" name="_ftnref102" title=""><sup>[102]</sup></a> Zum
+einen ist damit ein hoher Rechenaufwand verbunden, da die Hashwerte für alle
+nachfolgenden Blöcke neu berechnet werden müssen. Zum anderen muss die Mehrheit
+der <span>Validatoren</span> der Änderung zustimmen, was
+insbesondere bei öffentlichen Blockchains nicht als gegeben angesehen werden
+kann. Folglich ist es von zentraler Bedeutung, dass die eingegebenen Daten
+korrekt sind.<a href="#_ftn103" name="_ftnref103" title=""><sup>[103]</sup></a><b><o:p></o:p></b></p>
+<p>Die Unmöglichkeit, illegale Inhalte
+- darunter fallen beispielsweise urheberrechtlich geschütztes Material - von
+der Blockchain zu löschen, wirft weitreichende strafrechtliche Probleme auf.<a href="#_ftn104" name="_ftnref104" title=""><sup>[104]</sup></a> Darüber
+hinaus ist die Blockchain-Technologie nicht mit dem Recht auf Vergessenwerden
+nach Art. 17 Abs. 1 DSGVO in Bezug auf personenbezogene Daten vereinbar.<a href="#_ftn105" name="_ftnref105" title=""><sup>[105]</sup></a> Vor
+dem Hintergrund, dass bei öffentlichen Blockchains „[...] durch die Analyse der
+Transaktionen Rückschlüsse auf die Personen gezogen werden“<a href="#_ftn106" name="_ftnref106" title=""><sup>[106]</sup></a> können,
+erscheint dieser Aspekt besonders bedenklich.</p>
+<a name="_Toc133855631"><h4>3.2.3 Die Gefahren von Smart
+Contracts</h4></a>
+<p>Das Problem der Unveränderbarkeit betrifft
+auch Smart Contracts. Wie jeder normale Programmcode können sie auch Fehler
+(engl. Bugs) enthalten, die jedoch bei öffentlichen Blockchains für jeden
+einsehbar sind. Im Jahr 2016 konnte ein Angreifer der als dezentrale autonome
+Organisation organisierten Investmentfirma „The DAO“ durch einen Fehler in
+einem Smart <span>Contract</span> 65 Millionen Euro entwenden. Der
+Diebstahl konnte nur durch eine Hard Fork<a href="#_ftn107" name="_ftnref107" title=""><sup>[107]</sup></a> der
+Ethereum Blockchain rückgängig gemacht werden.<a href="#_ftn108" name="_ftnref108" title=""><sup>[108]</sup></a><b><o:p></o:p></b></p>
+<p>Neben unbeabsichtigten
+Programmfehlern, können Smart Contracts auch als Malware missbraucht werden. <span>Airdropping</span> beschreibt ein mögliches Angriffsszenario, bei
+dem ein Smart <span>Contract</span> der Wallet des Opfers
+hinzugefügt wird. Die Malware kann als Link oder eigeständige Software
+hinterlegt werden. Interagiert das Opfer mit der Malware, indem er z.B.
+versucht den Token zu verkaufen, wird die gesamte Wallet geleert.<a href="#_ftn109" name="_ftnref109" title=""><sup>[109]</sup></a></p>
+<p>Obwohl sie als „Smart Contracts“ bezeichnet
+werden, sind sie weder intelligent noch können sie ohne weiteres als Verträge
+im rechtlichen Sinne eingestuft werden.<a href="#_ftn110" name="_ftnref110" title=""><sup>[110]</sup></a> Dies
+liegt u.a. daran, dass sie in der Regel nur das Verfügungsgeschäft im Sinne des
+§ 929 BGB oder Teile davon beinhalten. Das Verpflichtungsgeschäft als vorherige
+Vereinbarung, wird in der Regel außerhalb der Blockchain abgeschlossen und ist somit
+nicht Teil des Smart Contracts.<a href="#_ftn111" name="_ftnref111" title=""><sup>[111]</sup></a> Die
+Vorstellung mancher Blockchain-Anhänger, „einzig mit Programmcode Rechtswirkung
+entfalten zu können“<a href="#_ftn112" name="_ftnref112" title=""><sup>[112]</sup></a>, wird
+von Juristen kritisch bewertet, da diese Ideologie mit der Rechtslage kollidiert.
+Außerdem dürfen sie - wie jeder andere Vertrag - nicht gegen geltendes Recht
+verstoßen. Hinzu kommen ungeklärte Fragen der Haftung und der Rückabwicklung
+von Verträgen.<a href="#_ftn113" name="_ftnref113" title=""><sup>[113]</sup></a></p>
+<p>Smart Contracts, die in einer
+öffentlichen Blockchain gespeichert werden, stehen ebenfalls vor einem nicht unerheblichen
+Dilemma. Auf der einen Seite sollen sie leistungsfähige und selbstverwaltende
+Anwendungen sein, auf der anderen Seite sind die Kosten für die Speicherung des
+Programmcodes auf der öffentlichen Blockchain so hoch, dass sie möglichst niedrig
+gehalten werden sollen.<a href="#_ftn114" name="_ftnref114" title=""><sup>[114]</sup></a> Die
+Speicherung von 1 KB auf der Blockchain Ethereum kostet bereits 0,0128 Ether<a href="#_ftn115" name="_ftnref115" title=""><sup>[115]</sup></a> oder
+20,86 €<a href="#_ftn116" name="_ftnref116" title=""><sup>[116]</sup></a>.
+Da die Kosten jedoch nicht linear verlaufen, fallen für 1 MB zum aktuellen
+Zeitpunkt Kosten von über 21.300 Euro an.<a href="#_ftn117" name="_ftnref117" title=""><sup>[117]</sup></a> Zusätzliche
+Kosten wie die Grundgebühr und das Trinkgeld<a href="#_ftn118" name="_ftnref118" title=""><sup>[118]</sup></a> sind
+in dieser Rechnung noch nicht enthalten. 
+Die Kosten sind zudem von den stark schwankenden Preisen (bei Ethereum sind
+dies <span>der Gas</span><a href="#_ftn119" name="_ftnref119" title=""><sup>[119]</sup></a>- und der
+Ether-Preis) der jeweiligen Blockchain abhängig.</p>
+<p>Für den Zugriff auf Daten außerhalb
+der Blockchain sind sogenannte Oracles erforderlich.<a href="#_ftn120" name="_ftnref120" title=""><sup>[120]</sup></a> 
+Im Kontext des Supply Chain Managements kann dies z.B. ein Sensor sein, der die
+Temperatur misst. Hier besteht die Gefahr, dass (bewusst) fehlerhafte Daten auf
+der Blockchain gespeichert werden: „Herumpfuschen an Lieferketten ist nicht das
+Problem, die Einträge werden im Allgemeinen nicht manipuliert. Das Problem ist
+eher, dass in den Dateneinträgen gelogen wird: Das geht aber auch mit
+Blockchain“<a href="#_ftn121" name="_ftnref121" title=""><sup>[121]</sup></a>.</p>
+<a name="_Toc133855632"><h4>3.2.4 Sicherheitsrisiken
+der Blockchain</h4></a>
+<p>Besitz und Eigentum werden in der
+Blockchain ausschließlich über den Besitz des privaten Schlüssels (Private Key)
+einer Wallet geregelt. Wird dieser private Schlüssel z.B. durch Phishing<a href="#_ftn122" name="_ftnref122" title=""><sup>[122]</sup></a>
+gestohlen, gibt es für das Opfer keine Möglichkeit, den Inhalt der Wallet
+wiederzuerlangen. Der Dieb ist nach dem Blockchain-Grundsatz „Code <span>is</span> Law“ der neue Besitzer und - anders als in der realen
+Welt<a href="#_ftn123" name="_ftnref123" title=""><sup>[123]</sup></a> - auch
+Eigentümer über den Inhalt der Wallet.<a href="#_ftn124" name="_ftnref124" title=""><sup>[124]</sup></a> 
+Die Anonymität der Blockchain und das fehlende technische Verständnis
+erschweren die Arbeit der Strafverfolgungsbehörden bei der Aufklärung solcher
+Straftaten erheblich.</p>
+<p>Verfügt ein Angreifer mehr als 50
+Prozent der Rechenleistung bei Proof-<span>of</span>-Work
+Verfahren oder über die Hälfte des Gesamtvermögens bei Proof-<span>of</span>-Stake Verfahren, kann er folgende Manipulationen an der
+Blockchain vornehmen:<b><o:p></o:p></b></p>
+<ul><li><!--[if !supportLists]--><!--[endif]-->Transaktionen in alten Blöcken unter hohem
+Aufwand verändern,</li><li><!--[if !supportLists]--><!--[endif]-->seine eigene Liste an neuen Blöcken durchsetzen,</li><li><!--[if !supportLists]--><!--[endif]-->nur die eigenen Transaktionen aufnehmen oder die
+Transaktionen bestimmter Nutzer verweigern und</li><li><!--[if !supportLists]--><!--[endif]-->doppelte Ausgaben<a href="#_ftn125" name="_ftnref125" title=""><sup>[125]</sup></a> durchführen.<a href="#_ftn126" name="_ftnref126" title=""><sup>[126]</sup></a></li></ul>
+<p>Diese Gefahr besteht vor allem bei
+kleinen öffentlichen Blockchains, da der Manipulationsaufwand mit steigender
+Teilnehmerzahl deutlich zunimmt.<a href="#_ftn127" name="_ftnref127" title=""><sup>[127]</sup></a></p>
+<a name="_Toc133855633"><h4>3.2.5 Die Gefahren von Non
+Fungible Tokens</h4></a>
+<p>Was erhält der Käufer beim Kauf
+eines NFTs? Die Beantwortung dieser Frage gestaltet sich in der Praxis häufig
+als schwierig. Allgemein lässt sich ein wachsendes Missverständnis über die Eigentumsverhältnisse
+von NFTs beobachten. Wie bereits erläutert, ist die Speicherung größerer
+Dateien auf der Blockchain, nur unter hohen Kosten möglich. Die meisten NFTs
+enthalten daher nur einen Link als Objekt in der Metadatei zur digitalen
+Ressource (z.B. Bild oder Video). Dass die Ressource mit Ausnahme des Links
+nicht Teil des NFTs ist, sei an dieser Stelle besonders hervorzuheben. Der Erwerb
+eines NFTs umfasst lediglich die Metadatei, die neben dem Link und <span>TokenId</span> weitere Informationen wie Originalautor, Titel und
+Beschreibung enthalten kann. Der Ersteller des NFTs kann weitere Nutzungs- oder
+Lizenzrechte mit dem NFT kapseln. Die Ressource selbst befindet sich in den
+meisten Fällen auf einer zentral strukturierten Plattform. Wird sie gelöscht
+oder verschoben, ist das NFT praktisch unbrauchbar.<a href="#_ftn128" name="_ftnref128" title=""><sup>[128]</sup></a></p>
+<p>Dem Ersteller eines NFTs steht es frei,
+willkürliche Eigentumsansprüche aufzustellen, die dann in die Blockchain
+geschrieben werden. Niemand kann garantieren, dass der Ersteller des NFTs tatsächlich
+zur Herstellung des NFTs berechtigt ist. Dieses Phänomen betrifft insbesondere
+Künstler. Die Plattform <span>OpenSea</span> schätzt, dass etwa 80
+Prozent aller NFTs, die mit Hilfe der von der Plattform bereitgestellten Tools
+erstellt wurden, Plagiate, gefälschte Sammlungen oder Spam sind.<a href="#_ftn129" name="_ftnref129" title=""><sup>[129]</sup></a></p>
+<p>Marktmanipulation durch <span>Wash</span> Trading, bei dem eine Person ihren Gegenstand an einen
+anderen eigenen Account verkauft, um den Eindruck einer hohen Nachfrage zu erwecken,
+ist ein weit verbreitetes Phänomen in der NFT-Welt.<a href="#_ftn130" name="_ftnref130" title=""><sup>[130]</sup></a> Die
+Analysefirma <span>CryptoSlam</span> fand heraus, dass 84 Prozent aller
+Transaktionen auf dem Marktplatz <span>LooksRare</span> im Wert
+von 9.5 Milliarden USD solche <span>Wash</span>-Trades waren.<a href="#_ftn131" name="_ftnref131" title=""><sup>[131]</sup></a></p>
+<a name="_Toc133855634"><h4>3.2.6 Die Gefahren von Dezentralen
+Autonomen Organisationen</h4></a>
+<p>DAOs sind in ihrem Handeln wenig flexibel.
+Smart Contracts, welche eine DAO steuern, sind nicht in der Lage, komplexe Umstände
+und Umwelteinflüsse, mit denen jede Organisation konfrontiert wird, angemessen
+abzubilden. Änderungen an einem Smart <span>Contract</span> erfordern
+immer die Mehrheit der Governance Tokens in einer Abstimmung. Zudem scheint die
+„Rechtslage in Bezug auf <span>Kryptoobjekte</span> [...]
+allgemein nicht eindeutig zu sein bzw. es gibt einige Grenzfälle und Grauzonen“<a href="#_ftn132" name="_ftnref132" title=""><sup>[132]</sup></a>. So
+verstoß bereits die erste DAO (The DAO), nach einer Untersuchung der amerikanischen
+Börsenaufsichtsbehörde (US Securities and Exchange <span>Commission</span>)
+im Jahr 2017 gegen das US-amerikanische Wertpapiergesetz, da es sich bei dem
+Verkauf der The DAO Tokens um Wertpapiere handelte.<a href="#_ftn133" name="_ftnref133" title=""><sup>[133]</sup></a> Diese Aspekte
+tragen wahrscheinlich dazu bei, dass in der Praxis kaum erfolgreiche
+DAO-Projekte existieren. Die meisten DAOs beschränken sich darauf,
+infrastrukturähnliche <span>Kryptowährungsprojekte</span> zu
+verwalten.<a href="#_ftn134" name="_ftnref134" title=""><sup>[134]</sup></a></p>
+<p>Obwohl DAOs oft behaupten,
+demokratisch zu sein, ist die Macht in einer DAO häufig stark zentralisiert. Der
+freie Handel des Governance Tokens und die Hoffnung auf eine zukünftige
+Wertsteigerung sorgt dafür, dass der Käufer dazu bereit ist, mehr für den Token
+zu bezahlen, wovon wiederum der Herausgeber des Tokens profitiert. Außerdem gestaltet
+sich eine faire Verteilung der Governance Tokens aufgrund der Pseudoanonymität
+der Mitglieder als nahezu unmöglich. In der Praxis führt diese ungleiche
+Verteilung von Governance Tokens zu einer starken Machtkonzentration bei
+einigen wenigen Teilnehmern, die fast die alleinige Kontrolle über die DAO
+ausüben. Analysen von <span>Chainalysis</span> zeigen, „dass in
+mehreren großen DAOs weniger als 1% aller Eigentümer 90 % der Stimmrechte
+besitzen“<a href="#_ftn135" name="_ftnref135" title=""><sup>[135]</sup></a>.
+In einigen Fällen halten 0,1 Prozent aller Besitzer 90 Prozent der Stimmrechte.<a href="#_ftn136" name="_ftnref136" title=""><sup>[136]</sup></a></p>
+<a name="_Toc133855635"><h2>4.
+Schlussbetrachtung</h2></a>
+<p><span>In den letzten Jahren hat kaum eine Technologie eine
+so kontroverse Diskussion hervorgerufen wie die Blockchain-Technologie.
+Einerseits ermöglicht sie eine dezentrale, unveränderbare und transparente Speicherungsmethode,
+die im Supply Chain Management, Identitätsmanagement, Rechteverwaltung und Steuerung
+von Organisationen zum Einsatz kommt. Andererseits zeigt die Praxis, dass mit
+der Technologie hohe Kosten verbunden sind und viele Projekte scheitern. Zentrale
+Eigenschaften – wie die Unveränderlichkeit – sorgen für rechtliche Probleme und
+grenzen eine sinnvolle Nutzung deutlich ein. Außerdem löst sie wesentliche
+Probleme, wie das Eintragen bewusst falscher Dateneinträge, nicht. Betrüger
+nutzen zahlreiche Aspekte der Blockchain-Technologie aus, um sich an ihr zu
+bereichern. Der NFT-Bereich ist währenddessen durch Plagiate und <span>Wash</span>-Trading gekennzeichnet. Erfolgreiche DAOs sucht man in
+der Praxis vergeblich. Zu groß scheinen die praktischen und rechtlichen
+Probleme zu sein. 
+Der Grund für das Scheitern vieler Blockchain Projekte scheint in den
+Eigenschaften der Blockchain zu liegen. Öffentliche Blockchains skalieren mit
+einer wachsenden Datenmenge nicht und die Teilnehmer sind nur Pseudoanonym.
+Teile dieser Probleme lassen sich mit einer privaten Blockchain lösen, jedoch wäre
+diese dann nicht mehr dezentral und transparent. 
+Ob die Blockchain als Datenbanktechnologie für ein Unternehmen geeignet ist,
+muss immer individuell beurteilt werden. Die Praxis zeigt, dass in den meisten
+Fällen solche Vorhaben jedoch wenig zielführend sind.<o:p></o:p></span></p>
+<p><span>Einige Autoren gehen davon aus, dass sich der
+Einflussbereich der Blockchain in Zukunft weiter ausweiten wird. Die Vorhersagungen
+reichen von der Speicherung von Patientendaten über Wahlen mit Hilfe der
+Blockchain bis hin zur Entwicklung zum Web 3.0<a href="#_ftn137" name="_ftnref137" title=""><sup>[137]</sup></a>.<a href="#_ftn138" name="_ftnref138" title=""><sup>[138]</sup></a>
+<span>Vor</span> dem Hintergrund der dargestellten Gefahren sind
+solche Vorhaben jedoch kritisch zu betrachten. Unterdessen arbeitet die
+Europäische Kommission an verschiedenen regulatorischen Maßnahmen zur
+Bekämpfung von Geldwäsche und Terrorismusfinanzierung mittels
+Blockchain-Technologien sowie an der Schaffung von Rahmenbedingungen für die
+Geschäftstätigkeit mit <span>Kryptowerten</span> und die
+behördliche Zuständigkeit.<a href="#_ftn139" name="_ftnref139" title=""><sup>[139]</sup></a>
+<o:p></o:p></span></p>
+<p><span>Aufgrund der begrenzten Seitenzahl konnte die
+Funktionsweise der Blockchain in dieser Ausarbeitung nur kurz erläutert werden.
+Auch die verschiedenen Konsensmechanismen wurden lediglich oberflächlich
+betrachtet. Für die Recherche musste auf eine große Anzahl an grauer Literatur
+zurückgegriffen werden. Dabei fällt auf, dass die Blockchain-Technologie ein
+vergleichsweises neues Forschungsfeld darstellt, in dem kritische Stimmen noch
+selten sind.
+Im Hauptteil der Arbeit konnte nur ein Teil von Anwendungsfeldern und Gefahren
+vorgestellt werden. Wie zu Anfang des Hauptteils beschrieben, wurden allgemeine
+Kritikpunkte wie Umwelteinwirkung und zunehmende Zentralisation nur flüchtig
+betrachtet. Zudem scheinen einige der vorgestellten Projekte (z.B. <span>VerifyCar</span> von BMW) eingestellt worden zu sein. 
+Zum Thema Gefahren durch DAOs wurde eine Studie von </span><span>Chainalysis</span>
+zitiert, die sich mit der Machtverteilung in mehreren großen DAOs auseinandergesetzt
+hat. Leider werden die verschiedenen DAOs nicht beim Namen benannt und die
+Ergebnisse lassen sich extern nicht verifizieren.<span><o:p></o:p></span></p>
+</div>
+<span>
+</span>
+<div>
+<a name="_Toc133855636"><h2>II. Literaturverzeichnis</h2></a>
+<p><a name="_Toc106974382"><span>[</span></a><span><span><span>Abeyratne</span></span></span><span><span>, S. A., 2016]<span>         </span><span>Abeyratne</span>, S. A./<span>Monfared</span>, R. P.
+(2016): Blockchain <span>ready</span> <span>manufacturing</span>
+<span>supply</span> <span>chain</span> <span>using</span> <span>distributed</span> <span>ledger</span>. In: International Journal <span>of</span>
+Research in Engineering and Technology, 5 (9). <span>Bengaluru</span>:
+<span>eSAT</span> Publishing House <span>Pvt</span>.
+Ltd, S. 1-10<o:p></o:p></span></span></p>
+<p><span><span>[Adam, K., 2022]<span>                    </span>Adam,
+K. (2022): Blockchain-Technologie für Unternehmensprozesse - Sinnvolle
+Anwendung der neuen Technologie in Unternehmen, 2. Auflage. Berlin: Springer
+Gabler<o:p></o:p></span></span></p>
+<p><span><span>[<span>Behner</span>, P., 2017]<span>                  </span><span>Behner</span>,
+P./Hecht, M.-L./Wahl, F. (2017): Fighting counterfeit <span>pharmaceuticals</span>
+- New <span>defenses</span> <span>for</span> an <span>underestimated</span>-and <span>growing-menace</span>.
+London: <span>Strategy&amp;PwC</span><o:p></o:p></span></span></p>
+<p><span><span>[Berghoff, C., 2019]<span>                </span>Berghoff,
+C./Gebhardt, U./<span>Lochter</span>, M./<span>Maßberg</span>,
+S. (u.a.) (2019): Blockchain sicher gestalten - Konzepte, Anforderungen,
+Bewertungen. Bundesamt für Sicherheit in der Informationstechnik, </span></span><a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Blockchain_Analyse.pdf?__blob=publicationFile&amp;v=3"><span><span>https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Blockchain_Analyse.pdf?__blob=publicationFile&amp;v=3</span></span><span></span></a><span><span> (Abgerufen am
+08.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Beutelspacher, A., 2010]<span>      </span>Beutelspacher, A./Neumann, H. B./<span>Schwarzpaul</span>,
+T. (2010): Kryptografie in Theorie und Praxis. Mathematische Grundlagen für
+Internetsicherheit, Mobilfunk und elektronisches Geld, 2. überarbeitete
+Auflage. Wiesbaden: Vieweg + Teubner<o:p></o:p></span></span></p>
+<p><span><span>[BMW, 2019]<span>                          </span>BWM
+(2019): <span>How</span> <span>blockchian</span> <span>automotive</span> <span>solutions</span> <span>can</span> <span>help</span> <span>drivers</span>.
+BMW, </span></span><a href="https://www.bmw.com/en/innovation/blockchain-automotive.html"><span><span>https://www.bmw.com/en/innovation/blockchain-automotive.html</span></span><span></span></a><span><span> (Abgerufen am
+04.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Bogart, S., 2015]<span>                   </span>Bogart,
+S./Rice, K. (2015): The Blockchain Report - Welcome <span>to</span>
+<span>the</span> Internet <span>of</span> Value.
+Needham, </span></span><a href="https://needham.bluematrix.com/sellside/EmailDocViewer?encrypt=4aaafaf1-d76e-4ee3-9406-7d0ad3c0d019&amp;mime=pdf&amp;co=needham&amp;id=sbogart@needhamco.com&amp;source=mail"><span><span>https://needham.bluematrix.com/sellside/EmailDocViewer?encrypt=4aaafaf1-d76e-4ee3-9406-7d0ad3c0d019&amp;mime=pdf&amp;co=needham&amp;id=sbogart@needhamco.com&amp;source=mail</span></span><span></span></a><span><span> (Abgerufen am
+08.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Boom, D. V., 2022]<span>                </span>Boom,
+D. V. (2020): <span>Someone</span> Lost <span>Millions</span>
+<span>Trying</span> <span>to</span> Claim $2K Crypto <span>Airdrop</span>. CNET, </span></span><a href="https://www.cnet.com/personal-finance/someone-lost-millions-trying-to-claim-2k-crypto-airdrop/"><span><span>https://www.cnet.com/personal-finance/someone-lost-millions-trying-to-claim-2k-crypto-airdrop/</span></span><span></span></a><span><span> (Abgerufen am
+04.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Bray, T., 2022]<span>                       </span>Bray,
+T. (2022): AWS and Blockchain. <span>Tbray</span>, </span></span><a href="https://www.tbray.org/ongoing/When/202x/2022/11/19/AWS-Blockchain"><span><span>https://www.tbray.org/ongoing/When/202x/2022/11/19/AWS-Blockchain</span></span><span></span></a><span><span> (Abgerufen am
+14.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Browning, K, 2021]<span>               </span>Browning,
+K. (2021): <span>How</span> ‘Put <span>That</span> on
+Top Shot!’ <span>Became</span> a New N.B.A. Mantra. The New York
+Times, </span></span><a href="https://www.nytimes.com/2021/05/13/business/nba-top-shot-moments.html"><span><span>https://www.nytimes.com/2021/05/13/business/nba-top-shot-moments.html</span></span><span></span></a><span><span> (Abgerufen am
+13.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Brühl, V., 2017]<span>                     </span>Brühl,
+V. (2017): Virtual <span>Currencies</span>, Distributed Ledgers
+and <span>the</span> Future <span>of</span> Financial
+Services. In: <span>Bongardt</span>, A./Torres, F.: <span>Intereconomics</span>, 52 (6). Kiel: ZBW-Leibniz Information <span>Centre</span> <span>for</span> Economics (u.a.), S.
+370-378.<o:p></o:p></span></span></p>
+<p><span><span>[Bundesnetzagentur, 2021]<span>   </span>Bundesnetzagentur (2021): Die Blockchain-Technologie -Grundlagen,
+Potenziale und Herausforderungen. Bundesnetzagentur, </span></span><a href="https://www.bundesnetzagentur.de/DE/Fachthemen/Digitalisierung/Technologien/Blockchain/Links_Dokumente/einfuehrung_bc.pdf?__blob=publicationFile&amp;v=12"><span><span>https://www.bundesnetzagentur.de/DE/Fachthemen/Digitalisierung/Technologien/Blockchain/Links_Dokumente/einfuehrung_bc.pdf?__blob=publicationFile&amp;v=12</span></span><span></span></a><span><span> (Abgerufen am
+16.03.2023). Bonn: Bundesnetzagentur für Elektrizität, Gas, Telekommunikation,
+Post und Eisenbahnen<o:p></o:p></span></span></p>
+<p><span><span>[<span>Buterin</span>, V., 2015]<span>                  </span><span>Buterin</span>,
+V. (2015): On Public and Private Blockchains. Ethereum <span>foundaation</span>
+<span>blog</span>, </span></span><a href="https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains"><span><span>https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains</span></span><span></span></a><span><span> (Abgerufen am
+15.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Cheng, A., 2021]<span>                    </span>Cheng,
+A. (2021): ‘<span>Squid</span> Game’-<span>inspired</span>
+<span>cryptocurrency</span> <span>that</span> <span>soared</span> <span>by</span> 23 <span>million</span>
+<span>percent</span> <span>now</span> <span>worthless</span> after apparent <span>scam</span>.
+The Washington Post, </span></span><a href="https://www.washingtonpost.com/world/2021/11/02/squid-game-crypto-rug-pull/"><span><span>https://www.washingtonpost.com/world/2021/11/02/squid-game-crypto-rug-pull/</span></span><span></span></a><span><span> (Abgerufen am
+03.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Cheng, E. 2017]<span>                     </span>Cheng,
+E. (2017): $24 <span>million</span> <span>iced</span>
+<span>tea</span> <span>company</span> <span>says</span> <span>it’s</span> <span>pivoting</span>
+<span>to</span> <span>the</span> <span>blockchain</span>,
+and <span>its</span> stock <span>jumps</span> 200%.
+CNBC: </span></span><a href="https://www.cnbc.com/2017/12/21/long-island-iced-tea-micro-cap-adds-blockchain-to-name-and-stock-soars.html"><span><span>https://www.cnbc.com/2017/12/21/long-island-iced-tea-micro-cap-adds-blockchain-to-name-and-stock-soars.html</span></span><span></span></a><span><span> (Abgerufen am 31.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Christies, o. D.]<span>                      </span>Christie’s
+(<span>o.D</span>.): <span>Beeple’s</span> <span>opus</span> - <span>Created</span> <span>over</span> 5,000 <span>days</span> <span>by</span> <span>the</span> <span>groundbreaking</span>
+<span>artist</span>, <span>this</span> monumental <span>collage</span> was <span>the</span> <span>first</span> <span>purely</span> digital <span>artwork</span> (NFT) <span>ever</span> <span>offered</span> at Christie’s. Christie’s, </span></span><a href="https://www.christies.com/features/Monumental-collage-by-Beeple-is-first-purely-digital-artwork-NFT-to-come-to-auction-11510-7.aspx"><span><span>https://www.christies.com/features/Monumental-collage-by-Beeple-is-first-purely-digital-artwork-NFT-to-come-to-auction-11510-7.aspx</span></span><span></span></a><span><span> (Abgerufen am
+22.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Coinbase, 2023]<span>                    </span>Coinbase
+(2023): Ethereum ETH. Coinbase, </span></span><a href="https://www.coinbase.com/de/price/ethereum"><span><span>https://www.coinbase.com/de/price/ethereum</span></span><span></span></a><span><span> (Abgerufen am
+25.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Condos</span>, J., 2016]<span>                   </span><span>Condos</span>,
+J./<span>Sorrell</span>, W. H./<span>Donegan</span>,
+S. L (2016): Blockchain Technology: <span>Opportunities</span> and
+<span>Risks</span>. Vermont, </span></span><a href="http://legislature.vermont.gov/assets/Legislative-Reports/blockchain-technology-report-final.pdf"><span><span>http://legislature.vermont.gov/assets/Legislative-Reports/blockchain-technology-report-final.pdf</span></span><span></span></a><span><span> (Aktuell nicht
+aufrufbar, zitiert nach Schlatt, V. [2016])<o:p></o:p></span></span></p>
+<p><span><span>[Cong, W. L., 2023]<span>                 </span>Cong,
+L. W./Grauer, K./<span>Rabetti</span>, D. (u.a.) (2023): The Dark
+Side <span>of</span> Crypto and Web3: Crypto-<span>Related</span>
+Scams. SSRN, </span></span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4358572"><span><span>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4358572</span></span><span></span></a><span><span> (Abgerufen am
+02.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Council <span>of</span> <span>the</span> EU, 2022]<span>       </span>Council
+<span>of</span> <span>the</span> EU (2022): Digital <span>finance</span>: <span>agreement</span> <span>reached</span> on European <span>crypto-assets</span>
+<span>regulation</span> (<span>MiCA</span>). European
+Council <span>Council</span> <span>of</span> <span>the</span> European Union (Abgerufen am 16.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span><span>CryptoSlam</span></span><span>!,</span> 2022]<span>               </span><span>CryptoSlam</span>! (2022): <span>We</span> just <span>removed</span> <span>over</span> $5 <span>billion</span> in #NFT <span>wash</span> <span>sales</span> <span>from</span> <span>our</span>
+<span>sales</span> <span>volume</span> <span>figures</span>. Twitter, </span></span><a href="https://twitter.com/cryptoslamio/status/1487114454848491524"><span><span>https://twitter.com/cryptoslamio/status/1487114454848491524</span></span><span></span></a><span><span> (Abgerufen am
+05.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Dept</span>. <span>of</span>
+Justice, 2022] <span>         </span>Department <span>of</span> Justice Office <span>of</span> Public
+Affairs (2022): <span>BitConnect</span> Founder <span>Indicted</span> in Global $2.4 Billion <span>Cryptocurrency</span>
+Scheme. The United <span>Sates</span> Department <span>of</span> Justice, </span></span><a href="https://www.justice.gov/opa/pr/bitconnect-founder-indicted-global-24-billion-cryptocurrency-scheme"><span><span>https://www.justice.gov/opa/pr/bitconnect-founder-indicted-global-24-billion-cryptocurrency-scheme</span></span><span></span></a><span><span> (Abgerufen am
+02.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Dickens, S., 2021]<span>                  </span>Dickens,
+S. (2021): NFT <span>collectors</span> <span>now</span>
+‘<span>trading</span>’ NFTs <span>to</span> <span>avoid</span> <span>extortionate</span> <span>added</span> <span>fees</span>. Yahoo!, </span></span><a href="https://www.yahoo.com/video/nft-collectors-now-trading-nfts-151339088.html"><span><span>https://www.yahoo.com/video/nft-collectors-now-trading-nfts-151339088.html</span></span><span></span></a><span><span> (Abgerufen am
+21.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Digiconomist</span>, 2017]<span>              </span><span>Digiconomist</span>
+(2017): Bitcoin <span>Sustainability</span> Report <span>December</span> 2017. <span>Digiconomist</span>, </span></span><a href="https://digiconomist.net/bitcoin-sustainability-report-12-2017"><span><span>https://digiconomist.net/bitcoin-sustainability-report-12-2017</span></span><span></span></a><span><span> (Abgerufen am
+11.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Do, H., 2019]<span>                         </span>Do,
+H./<span>Hoiczyk</span>, C./<span>Uckelmann</span>,
+D. (2019): Blockchain – Anwendungen in Logistik und Supply Chain:
+Funktionsweise, Use Cases und Leitfaden für Unternehmen. In: Zeitschrift für
+wirtschaftlichen Fabrikbetrieb, 114 (10). München: Carl Hanser Verlag, S. 617-620<o:p></o:p></span></span></p>
+<p><span><span>[Drescher, D., 2017 ]<span>              </span>Drescher D. (2017). Blockchain <span>basics</span>:
+A non-<span>technical</span> <span>introduction</span>
+in 25 <span>steps</span>. Kalifornien: <span>Apress</span><o:p></o:p></span></span></p>
+<p><span><span>[<span>Dujak</span>, D., 2019]<span>                    </span><span>Dujak</span>,
+D./<span>Sajter</span>, D. (2019). Blockchain <span>applications</span>
+in <span>supply</span> <span>chain</span>. In: Kawa,
+A./<span>Maryniak</span> , A.(Hrsg.): SMART <span>supply</span>
+network. Basel: Springer International Publishing, S. 21-46<o:p></o:p></span></span></p>
+<p><span><span>[Fill, H.-G., 2020]<span>                    </span>Fill,
+H.-G./Meier, A. (u.a.) (2020): Blockchain kompakt - Grundlagen,
+Anwendungsoptionen und kritische Bewertung. Wiesbaden: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[Fischer, C., 2019]<span>                  </span>Fischer,
+C./Fiedler, I./<span>Babenko</span>, L. (2019):
+Blockchain-Technologie im Handel der Zukunft. In: Heinemann, G./<span>Gehrckens</span>, H./Täuber, T. (Hrsg.): Handel mit Mehrwert - Digitaler
+Wandel in Märkten, Geschäftsmodellen und Geschäftssystemen. Wiesbaden: Springer
+Gabler, S.441-472<o:p></o:p></span></span></p>
+<p><span><span>[<span>Frankenfield</span>, J., 2021]<span>           </span><span>Frankenfield</span>,
+J. (2021): <span>VeChain</span>: <span>What</span> <span>It</span> <span>Is</span>, <span>How</span>
+<span>It</span> Works, <span>Examples</span>, and <span>History</span>. <span>Investopedia</span>, </span></span><a href="https://www.investopedia.com/terms/v/vechain.asp"><span><span>https://www.investopedia.com/terms/v/vechain.asp</span></span><span></span></a><span><span> (Abgerufen am
+02.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Fridgen</span>, G., 2019]<span>                 </span><span>Fridgen</span>,
+G./Guggenberger, N./<span>Hoerzen</span>, T. (u.a.) (2019): Chancen
+und Herausforderungen von DLT (Blockchain) in Mobilität und Logistik. Gutachten
+des Fraunhofer-Institut für angewandte Informationstechnik FIT im Auftrag des
+Bundesministeriums für Verkehr und digitale Infrastruktur. Berlin: Bundesministerium
+für Verkehr und digitale Infrastruktur<o:p></o:p></span></span></p>
+<p><span><span>[Gärtner, P., 2022]<span>                 </span>Gärtner,
+P. (2022): Öffentlichkeit Blockchain - die Zukunft des Gesundheitswesens? In: Digitale
+Welt, 6 (3). München: DIGITALE WELT Academy, S. 18-19<o:p></o:p></span></span></p>
+<p><span><span>[<span>Gentemann</span>, L., 2019]<span>           </span><span>Gentemann</span>,
+L. (2019): Blockchain in Deutschland–Einsatz, Potenziale, Herausforderungen.
+Berlin: Bitkom e. V.<o:p></o:p></span></span></p>
+<p><span><span>[<span>Geuter</span>, J., 2022]<span>                   </span><span>Geuter</span>,
+J./<span>Koglin</span>, F. (2022): Das Dritte Web. <span>tante</span>, </span></span><a href="https://tante.cc/2022/02/04/das-dritte-web/"><span><span>https://tante.cc/2022/02/04/das-dritte-web/</span></span><span></span></a><span><span> (Abgerufen am
+23.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Gibbs, M., 2017]<span>                   </span>Gibbs,
+M. (2017): Media Release 7 <span>December</span> 2017 - ASX <span>selects</span> <span>distributed</span> <span>ledger</span> <span>technology</span> <span>to</span> <span>replace</span> CHESS. ASX, </span></span><a href="https://www.asx.com.au/documents/asx-news/ASX-Selects-DLT-to-Replace-CHESS-Media-Release-7December2017.pdf"><span><span>https://www.asx.com.au/documents/asx-news/ASX-Selects-DLT-to-Replace-CHESS-Media-Release-7December2017.pdf</span></span><span></span></a><span><span> (Abgerufen am
+26.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Golden, <span>o.D</span>.]<span>                         </span>Golden (<span>o.D</span>.): <span>VeChain</span>. GOLDEN, </span></span><a href="https://golden.com/wiki/VeChain-ZXE8RPP"><span><span>https://golden.com/wiki/VeChain-ZXE8RPP</span></span><span></span></a><span><span> (Abgerufen am
+02.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Grauer, K., 2022]<span>                   </span><span>Grauer</span>, K./<span>Kueshner</span>, W./McMahon,
+E./<span>Updegrave</span>, H. (2022): The <span>Chainalysis</span>
+State <span>of</span> Web3 Report - <span>Your</span>
+<span>guide</span> <span>to</span> <span>how</span> <span>blockchains</span> <span>are</span> <span>changing</span> <span>the</span>
+<span>internet</span>. New York, <span>Chainalysis</span>,
+Inc<o:p></o:p></span></span></p>
+<p><span><span>[<span>Guadamuz</span>, A., 2021]<span>            </span><span>Guadamuz</span>,
+A. (2021): The <span>treachery</span> of <span>images</span>:
+non-fungible Tokens and <span>copyright</span>. In: Journal <span>of</span> <span>Intellectual</span> Property Law
+&amp; Practice, 16 (12). Oxford: Oxford University Press, S. 1367-</span> </span><span><span>1385<o:p></o:p></span></span></p>
+<p><span><span>[Hansen, P., 2019]<span>                  </span>Hansen,
+P./Britze, N./Winkelmann, M. (u.a.) (2019): Evaluierung und Implementierung von
+Blockchain Use Cases - Leitfaden. Berlin: Bitkom Bundesverband
+Informationswirtschaft, Telekommunikation und neue Medien e. V.<o:p></o:p></span></span></p>
+<p><span><span>[Hayward, A., 2022]<span>               </span>Hayward,
+A. (2022): <span>LooksRare</span> <span>Has</span> <span>Reportedly</span> <span>Generated</span> $8B in
+Ethereum NFT <span>Wash</span> Trading - <span>CryptoSlam</span>
+<span>says</span> <span>the</span> <span>vast</span> <span>majority</span> <span>of</span>
+<span>the</span> <span>hot</span> NFT <span><span>marketplace’s</span></span> <span>sales</span>
+<span>are</span> <span>illegitimate</span> <span>trades</span> <span>made</span> <span>to</span>
+<span>manipulate</span> <span>the</span> <span>token</span> <span>rewards</span> <span>model</span>.
+<span>Decrypt</span>, </span></span><a href="https://decrypt.co/91510/looksrare-has-reportedly-generated-8b-ethereum-nft-wash-trading"><span><span>https://decrypt.co/91510/looksrare-has-reportedly-generated-8b-ethereum-nft-wash-trading</span></span><span></span></a><span><span> (Abgerufen am
+05.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Hein, C., 2019]<span>                      </span>Hein,
+C./Wellbrock, W./Hein, C. (2019): Rechtliche Herausforderungen von
+Blockchain-Anwendungen - Straf-, Datenschutz- und Zivilrecht. Wiesbaden:
+Springer Gabler<o:p></o:p></span></span></p>
+<p><span><span>[<span>Hinckeldeyn</span>, J., 2019]<span>           </span><span>Hinckeldeyn</span>,
+J. (2019): Blockchain-Technologie in der Supply Chain - Einführung und
+Anwendungsbeispiele. Wiesbaden: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[<span>Holschbach</span>, E., 2022]<span>           </span><span>Holschbach</span>,
+E./<span>Buss</span>, E. (2022): Blockchain in Einkauf und Supply
+Chain - Technologie, Anwendungen und Potentiale in der Praxis. Wiesbaden:
+Springer Gabler<o:p></o:p></span></span></p>
+<p><span><span>[Hopf, S. 2018]<span>                       </span>Hopf,
+S./Picot, A. (2018): Revolutioniert Blockchain-Technologie das Management von
+Eigentumsrechten und Transaktionskosten? In: Redlich, T. (u.a.) (<span>Hrsg</span>): Interdisziplinäre Perspektiven zur Zukunft der
+Wertschöpfung. Wiesbaden: Springer<o:p></o:p></span></span></p>
+<p><span><span>[Hou, G., 2022]<span>                       </span>Hou,
+G. (2022): <span>Cryptocurrency</span> <span>money</span>
+<span>laundering</span> and <span>exit</span> <span>scams</span>: Cases, <span>regulatory</span> <span>responses</span> and <span>issues</span>. In: <span>Corbert</span>, S. (Hrsg.): Understanding <span>Cryptocurrency</span>
+Fraud - The <span>challenges</span> and <span>headwinds</span>
+<span>to</span> <span>regulate</span> digital <span>currencies</span>. Berlin (u.a.): De Gruyter, S. 83-96<o:p></o:p></span></span></p>
+<p><span><span>[Hwang, I., 2022]<span>                    </span>Hwang,
+I. (2022): <span>What</span> <span>Is</span> a 51% <span>Attack</span>? SoFi, </span></span><a href="https://www.sofi.com/learn/content/51-attack/"><span><span>https://www.sofi.com/learn/content/51-attack/</span></span><span></span></a><span><span> (Abgerufen am
+26.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[IBM Corporation, 2021]<span>        </span>IBM Corporation (2021): IBM Digital <span>Credentials</span>.
+IBM, </span></span><a href="https://www.ibm.com/downloads/cas/onj2ywob"><span><span>https://www.ibm.com/downloads/cas/onj2ywob</span></span><span></span></a><span><span> (Abgerufen am
+04.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Isselmann, J., 2023]<span>              </span>Isselmann, J. (2023): Non-Fungible Tokens (NFTs) &amp;
+Web3: Neue Produktwelten für den Finanzmarkt. In: Wirtschaftsinformatik &amp; Management,
+15 (1), S. 20-31<span><o:p></o:p></span></span></span></p>
+<p><span><span>[Jabbar, S., 2021]<span>                    </span>Jabbar,
+S./Lloyd, H./<span>Mannoudeh</span>, M. (u.a.) (2021): Blockchain-<span>enabled</span> <span>supply</span> <span>chain</span>: <span>analysis</span>, <span>challenges</span>, and <span>future</span> <span>directions</span>. In: Jeon, G./Cuomo, S./<span>Chehri</span>,
+A. (u.a.): <span>Multimedia Systems</span>, 27 (4). Wiesbaden:
+Springer Verlag, S. 787-806<o:p></o:p></span></span></p>
+<p><span><span>[<span>Khubbeeva</span>, P., 2023]<span>            </span><span>Khubbeeva</span>,
+P. (2023): Kryptowährungen und Blockchain – Die große Ernüchterung?
+Netzpolitik.org, </span></span><a href="https://netzpolitik.org/2023/kryptowaehrungen-und-blockchain-die-grosse-ernuechterung/"><span><span>https://netzpolitik.org/2023/kryptowaehrungen-und-blockchain-die-grosse-ernuechterung/</span></span><span></span></a><span><span> (Abgerufen am
+24.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Koebler</span>, J., 2021]<span>                  </span><span>Koebler</span>,
+J./Pearson, J. (2021): ‘Buy <span>the</span> <span>Constitution</span>’
+<span>Aftermath</span>: <span>Everyone</span> Very <span>Mad</span>, <span>Confused</span>, <span>Losing</span> Lots <span>of</span> Money, Fighting, <span>Crying</span>, Etc. VICE, </span></span><a href="https://www.vice.com/en/article/qjb8av/constitutiondao-aftermath-everyone-very-mad-confused-losing-lots-of-money-fighting-crying-etc"><span><span>https://www.vice.com/en/article/qjb8av/constitutiondao-aftermath-everyone-very-mad-confused-losing-lots-of-money-fighting-crying-etc</span></span><span></span></a><span><span> (Abgerufen am
+01.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Krugman, P., 2022]<span>               </span>Krugman,
+P. (2022): Blockchains, <span>What</span> Are <span>They</span>
+<span>Good</span> <span>For</span>? The New York
+Times, </span></span><a href="https://www.nytimes.com/2022/12/01/opinion/blockchains-what-are-they-good-for.html"><span><span>https://www.nytimes.com/2022/12/01/opinion/blockchains-what-are-they-good-for.html</span></span><span></span></a><span><span> (Abgerufen am
+26.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Kurt, L., 2022]<span>                       </span>Kurt,
+L./Kurt, D. (2022): Digitale Assets &amp; Tokenisierung - Grundlagen umfassend
+verstehen. Wiesbaden: Springer Gabler<o:p></o:p></span></span></p>
+<p><span><span>[Lawler, R., 2022]<span>                   </span>Lawler,
+R. (2022): <span>Decentraland’s</span> <span>billion</span>-dollar
+‘<span>metaverse</span>’ <span>reportedly</span> <span>had</span> 38 <span>active</span> <span>users</span>
+in <span>one</span> <span>day</span>. The <span>Verge</span>, </span></span><a href="https://www.theverge.com/2022/10/13/23402418/decentraland-metaverse-empty-38-users-dappradar-wallet-data"><span><span>https://www.theverge.com/2022/10/13/23402418/decentraland-metaverse-empty-38-users-dappradar-wallet-data</span></span><span></span></a><span><span> (Abgerufen am
+13.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Léopold, E., 2018]<span>                 </span>Léopold,
+E. (2018): Blockchain in <span>aviation</span>. <span>Exploring</span> <span>the</span> <span>fundamentals</span>,
+<span>use</span> <span>cases</span>, and <span>industry</span> initiatives - Whitepaper. Quebec: International
+Air Transport <span>Association</span><o:p></o:p></span></span></p>
+<p><span><span>[Meinel, C., 2020]<span>                   </span>Meinel,
+C./<span>Gayvoronskaya</span>, T. (2020): Blockchain – Hype oder
+Innovation. Berlin: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[Nakamoto, S., 2008]<span>             </span></span>Nakamoto</span><span><span>, S. (2008): Bitcoin: A Peer-to-Peer Electronic Cash
+System. Bitcoin, </span></span><a href="https://bitcoin.org/bitcoin.pdf"><span><span>https://bitcoin.org/bitcoin.pdf</span></span><span></span></a><span><span> (Abgerufen am
+11.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Nield</span>, D., 2021]<span>                     </span><span>Nield</span>,
+D. (2021): <span>What</span> <span>Is</span> Web3 and
+<span>Why</span> <span>Should</span> <span>You</span> Care? GIZMODO, </span></span><a href="https://gizmodo.com/what-is-web-3-and-why-should-you-care-1848204799"><span><span>https://gizmodo.com/what-is-web-3-and-why-should-you-care-1848204799</span></span><span></span></a><span><span> (Abgerufen am
+12.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>NonFungible</span>, 2023]<span>              </span><span>NonFungible</span>
+(2023): Total <span>number</span> <span>of</span> <span>sales</span> <span>involving</span> a non-fungible <span>token</span> (NFT) in <span>the</span> <span>art</span> <span>segment</span> <span>worldwide</span>
+<span>over</span> <span>the</span> <span>previous</span> 30 <span>days</span> <span>from</span> April 15, 2021 <span>to</span> March 15,
+2023, <span>by</span> type [Graph]. In Statista: <span> </span></span></span><a href="https://www.statista.com/statistics/1235228/nft-art-monthly-sales-volume/"><span><span>https://www.statista.com/statistics/1235228/nft-art-monthly-sales-volume/</span></span><span></span></a><span><span> (Abgerufen am
+06.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Oettler</span>, M., 2021]<span>                 </span><span>Oettler</span>,
+M. (2021): Advantages and <span>Disadvantages</span> <span>of</span> Proof <span>of</span> Stake. BCAM
+(Blockchain Academy Mittweida), </span></span><a href="https://blockchain-academy.hs-mittweida.de/courses/blockchain-introduction-technical-beginner-to-intermediate/lessons/lesson-19-proof-of-stake-introduction/topic/advantages-and-disadvantages-of-proof-of-stake/"><span><span>https://blockchain-academy.hs-mittweida.de/courses/blockchain-introduction-technical-beginner-to-intermediate/lessons/lesson-19-proof-of-stake-introduction/topic/advantages-and-disadvantages-of-proof-of-stake/</span></span><span></span></a><span><span> (Abgerufen am
+10.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Olsen, D., 2022]<span>                    </span>Olsen,
+D. [<span>Folding</span> <span>Ideas</span>] (2022): Line
+Goes Up – The Problem With NFTs. YouTube, </span></span><a href="https://www.youtube.com/watch?v=YQ_xWvX1n9g"><span><span>https://www.youtube.com/watch?v=YQ_xWvX1n9g</span></span><span></span></a><span><span> (Abgerufen am
+18.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>OpenSea</span>, 2022]<span>                    </span><span>OpenSea</span>
+(2022): <span>To</span> all <span>the</span> <span>creators</span> in <span>our</span> <span>community</span> <span>impacted</span> <span>by</span> <span>the</span> 50 item <span>limit</span> <span>we</span> <span>added</span>
+<span>to</span> <span>our</span> <span>free</span>
+<span>minting</span> <span>tool</span>, <span>we</span> <span>hear</span> <span>you</span>
+and <span>we're</span> sorry. <span>We</span> <span>have</span> <span>reversed</span> <span>the</span>
+<span>decision</span>. But <span>we</span> also <span>want</span> <span>to</span> <span>offer</span>
+an <span>explanation</span> </span></span><span><span>↯</span></span><span><span>. Twitter, </span></span><a href="https://twitter.com/opensea/status/1486843204062236676"><span><span>https://twitter.com/opensea/status/1486843204062236676</span></span><span></span></a><span><span> (Abgerufen am
+05.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Paar, C., 2016]<span>                       </span>Paar,
+C./Pelzl, J. (2016): Kryptografie verständlich - Ein Lehrbuch für Studierende
+und Anwender. Berlin: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[Palau, A., 2018]<span>                     </span>Palau,
+A. (2018): <span>Storing</span> on Ethereum. <span>Analyzing</span>
+<span>the</span> <span>costs</span>. Medium, </span></span><a href="https://medium.com/coinmonks/storing-on-ethereum-analyzing-the-costs-922d41d6b316"><span><span>https://medium.com/coinmonks/storing-on-ethereum-analyzing-the-costs-922d41d6b316</span></span><span></span></a><span><span> (Abgerufen am
+26.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Park, D., 2022]<span>                      </span>Park,
+D. (2022): ASX WILL REASSESS ALL ASPECTS OF THE CHESS REPLACEMENT PROJECT AND
+DERECOGNISE CAPITALISED SOFTWARE OF $245-255 MILLION PRE-TAX IN 1H23. ASX, </span></span><a href="https://www2.asx.com.au/content/dam/asx/about/media-releases/2022/60-17-november-2022-CHESS-Replacement-ASX-reassessing-financial-derecognition_.pdf"><span><span>https://www2.asx.com.au/content/dam/asx/about/media-releases/2022/60-17-november-2022-CHESS-Replacement-ASX-reassessing-financial-derecognition_.pdf</span></span><span></span></a><span><span> (Abgerufen am
+26.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Park, S., 2021]<span>                       </span>Park,
+S./<span>Specter</span>, M./<span>Narula</span>, N.
+(u.a.) (2021): <span>Going</span> <span>from</span> <span>bad</span> <span>to</span> <span>worse</span>:
+<span>from</span> Internet <span>voting</span> <span>to</span> <span>blockchain</span> <span>voting</span>.
+In: Journal <span>of</span> <span>Cybersecurity</span>,
+7 (1). Oxford: Oxford University Press, S. 1-15<o:p></o:p></span></span></p>
+<p><span><span>[Petersen, M., 2018]<span>              </span>Petersen,
+M./<span>Hackius</span>, N./von See, B. (2018): Mapping <span>the</span> <span>sea</span> <span>of</span>
+<span>opportunities</span>: Blockchain in <span>supply</span>
+<span>chain</span> and <span>logistics</span>.
+Information Technology, 60 (5-6). Berlin: De Gruyter, S. 263-271<o:p></o:p></span></span></p>
+<p><span><span>[Pohlmann, N., 2022]<span>             </span>Pohlmann,
+N. (2022): Cyber-Sicherheit - Das Lehrbuch für Konzepte, Prinzipien, Mechanismen,
+Architekturen und Eigenschaften von Cyber-Sicherheitssystemen in der
+Digitalisierung, 2. Auflage. Wiesbaden: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[<span>Ravenscraft</span>, E., 2022]<span>           </span><span>Ravenscraft</span>,
+E. (2022): NFTs <span>Don’t</span> Work <span>the</span>
+Way <span>You</span> Might Think <span>They</span> Do
+- <span>We</span> <span>bust</span> <span>the</span> <span>biggest</span> <span>misconceptions</span>
+<span>about</span> <span>what</span> "<span>minting</span>" <span>actually</span> <span>means</span>. WIRED, </span></span><a href="https://www.wired.com/story/nfts-dont-work-the-way-you-think-they-do/"><span><span>https://www.wired.com/story/nfts-dont-work-the-way-you-think-they-do/</span></span><span></span></a><span><span> (Abgerufen am
+21.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Reinwald, R., 2022]<span>               </span>Reinwald,
+R. (2022): Die steuerliche Behandlung von Krypto-Assets. Wiesbaden: Springer
+Gabler<o:p></o:p></span></span></p>
+<p><span><span>[<span>Reyburn</span>, S., 2021]<span>                 </span><span>Reyburn</span>,
+S. (2021): The $69 Million <span>Beeple</span> NFT Was <span>Bought</span> With <span>Cryptocurrency</span>. The
+New York Times, </span></span><a href="https://www.nytimes.com/2021/03/12/arts/beeple-nft-buyer-ether.html"><span><span>https://www.nytimes.com/2021/03/12/arts/beeple-nft-buyer-ether.html</span></span><span></span></a><span><span> (Abgerufen am
+22.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Riggert</span>, W., <span>o.D</span>.]<span>                  </span><span>Riggert</span>, W. (<span>o.D</span>.): Fallstudie
+Digitale Transformation technologieorientiert I (DIT602-FS). Stuttgart: <span>AKAD Bildungsgesellschaft</span> mbh<o:p></o:p></span></span></p>
+<p><span><span>[<span>Roose</span>, K., <span>o.D</span>.]<span>                      </span><span>Roose</span>, K. (<span>o.D</span>.): <span>What</span> <span>are</span> DAOs? The New York
+Times, </span></span><a href="https://www.nytimes.com/interactive/2022/03/18/technology/what-are-daos.html"><span><span>https://www.nytimes.com/interactive/2022/03/18/technology/what-are-daos.html</span></span><span></span></a><span><span> (Abgerufen am
+01.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Rosenberger, P., 2018]<span>         </span>Rosenberger, P. (2018): Bitcoin und Blockchain – Vom
+Scheitern einer Ideologie und dem Erfolg einer revolutionären Technik. Berlin:
+Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[Rutz, V., 2020]<span>                       </span>Rutz,
+V. (2020): Blockchain quo vadis - Eine Stärken-Schwächen-Analyse des Private-
+und des Public-Blockchain-Ansatzes. Wiesbaden: Springer Gabler<o:p></o:p></span></span></p>
+<p><span><span>[Schacht, S., 2019]<span>                  </span>Schacht,
+S. (2019): Die Blockchain-Technologie. In: Schacht, S. Lanquillon, C. (<span>Hsg</span>.): Blockchain und maschinelles Lernen – Wie das
+maschinelle Lernen und die Distributed-Ledger-Technologie voneinander
+profitieren. Berlin: Springer Vieweg<o:p></o:p></span></span></p>
+<p><span><span>[Schlatt, V., 2016]<span>                   </span>Schlatt,
+V./Schweizer, A./Urbach, N./<span>Fridgen</span>, G. (2016):
+Blockchain: Grundlagen, Anwendungen und Potenziale. Projektgruppe
+Wirtschaftsinformatik des Fraunhofer-Instituts für Angewandte
+Informationstechnik FIT, </span></span><a href="https://www.fit.fraunhofer.de/content/dam/fit/de/documents/Blockchain_WhitePaper_Grundlagen-Anwendungen-Potentiale.pdf"><span><span>https://www.fit.fraunhofer.de/content/dam/fit/de/documents/Blockchain_WhitePaper_Grundlagen-Anwendungen-Potentiale.pdf</span></span><span></span></a><span><span> (Abgerufen am
+07.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Semenzin</span>, S., 2022]<span>               </span><span>Semenzin</span>,
+S./Rozas, D./Hassan, S. (2022): Blockchain-<span>based</span> <span>application</span> at a <span>governmental</span> <span>level</span>: <span>disruption</span> <span>or</span> <span>illusion</span>? The <span>case</span> <span>of</span> Estonia. In: Policy and
+Society, 41 (3). Oxford: Oxford University Press, S. 386-401<o:p></o:p></span></span></p>
+<p><span><span>[<span>Shimron</span>, L., 2022]<span>                 </span><span>Shimron</span>,
+L. (2022): NFT 2022 Year-End Review. Forbes, </span></span><a href="https://www.forbes.com/sites/leeorshimron/2022/12/21/nft-2022-year-end-review/"><span><span>https://www.forbes.com/sites/leeorshimron/2022/12/21/nft-2022-year-end-review/</span></span><span></span></a><span><span> (Abgerufen am
+13.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Sixt, E., 2017]<span>                        </span>Sixt,
+E. (2017): Bitcoins und andere dezentrale Transaktionssysteme - Blockchains als
+Basis einer <span>Kryptoökonomie</span>. Wiesbaden: Springer
+Gabler<o:p></o:p></span></span></p>
+<p><span><span>[Smith, C., <span>o.D</span>. ]<span>                     </span>Smith, C./John, G./<span>Wackerow</span>, P. (<span>o.D</span>.):</span> </span><span><span>GAS UND GEBÜHREN., Ethereum, </span></span><a href="https://ethereum.org/de/developers/docs/gas/"><span><span>https://ethereum.org/de/developers/docs/gas/</span></span><span></span></a><span><span> (Abgerufen am
+28.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Stahlbock, R., 2020]<span>              </span>Stahlbock, R./Heilig, L./Cammin, P./Voß, S. (2020):
+Blockchain in der maritimen Logistik. In: Fill, H.-G./Meier, A. (Hrsg.):
+Blockchain - Grundlagen, Anwendungsszenarien und Nutzungspotenziale. Wiesbaden:
+Springer Vieweg, S. 235-254<o:p></o:p></span></span></p>
+<p><span><span>[<span>Staud</span>, J., <span>o.D</span>.]<span>                       </span><span>Staud</span>, J. (<span>o.D</span>.):
+Wirtschaftsinformatik – eine Übersicht (WIN101). Stuttgart: <span>AKAD
+Bildungsgesellschaft</span> mbh<o:p></o:p></span></span></p>
+<p><span><span>[Steger, M., 2020]<span>                  </span>Steger,
+M. (2020): Bitcoin und andere Kryptowährungen (<span>currency</span>
+<span>token</span>) – Grundlagen der Besteuerung im Privat- und im
+Betriebsvermögen: Praxishandbuch mit Beispielen und Mustereinspruch zum Thema Verfassungsmäßigkeit.
+Berlin: Erich Schmidt Verlag<o:p></o:p></span></span></p>
+<p><span><span>[Swan, M., 2015]<span>                    </span>SWAN,
+M. (2015). Blockchain. <span>Blueprint</span> <span>for</span>
+a <span>new</span> <span>economy</span> (Safari Tech
+Books Online, 1. <span>ed</span>.). Beijing: O’Reilly<o:p></o:p></span></span></p>
+<p><span><span>[Szabo, N., 1997]<span>                    </span>Szabo,
+N. (1997) <span>Formalizing</span> and <span>securing</span>
+<span>relationships</span> on <span>public</span> <span>networks</span>. Satoshi Nakamoto Institute, </span></span><a href="https://nakamotoinstitute.org/formalizing-securing-relationships/"><span><span>https://nakamotoinstitute.org/formalizing-securing-relationships/</span></span><span></span></a><span><span> (Abgerufen am
+12.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Tapscott</span>, D., 2016]<span>                </span><span>Tapscott</span>
+D./<span>Tapscott</span> A. (2016): Blockchain <span>revolution</span>:
+<span>How</span> <span>the</span> <span>technology</span>
+<span>behind</span> <span>bitcoin</span> <span>is</span> <span>changing</span> <span>money</span>,
+<span>business</span>, and <span>the</span> <span>world</span>. New York: Portfolio/Penguin<o:p></o:p></span></span></p>
+<p><span><span>[<span>Tijan</span>, E., 2019]<span>                      </span><span>Tijan</span>,
+E./<span>Aksentijević</span>, S./<span>Ivanić</span>,
+K. (u.a.) (2019): Blockchain <span>technology</span> <span>implementation</span> in <span>logistics</span>. <span>Sustainability</span>, 11 (4). Basel: MDPI<o:p></o:p></span></span></p>
+<p><span><span>[<span>TraceLink</span>, <span>o.D</span>.]<span>                     </span><span>TraceLink</span> (<span>o.D</span>.): FDA <span>Approves</span> <span>TraceLink</span> DSCSA Pilot
+Submission <span>for</span> Network Solutions; <span>Delivering</span>
+2023 <span>Traceability</span> By <span>Leveraging</span>
+Blockchain and Digital <span>Recalls</span> <span>Across</span>
+a Supply Network. <span>Tracelink</span>, </span></span><a href="https://www.tracelink.com/why-tracelink/news-room/fda-approves-tracelink-dscsa-pilot-submission-for-network-solutions-delivering-2023-traceability-by-leveraging-blockchain-and-di"><span><span>https://www.tracelink.com/why-tracelink/news-room/fda-approves-tracelink-dscsa-pilot-submission-for-network-solutions-delivering-2023-traceability-by-leveraging-blockchain-and-di</span></span><span></span></a><span><span> (Abgerufen am
+27.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Uddin, M., 2021]<span>                   </span>Uddin,
+M./Salah, K./<span>Jayaraman</span>, R. (u.a.) (2021): Blockchain <span>for</span> <span>drug</span> <span>traceability</span>:
+<span>Architectures</span> and open <span>challenges</span>.
+In: Health <span>Informatics</span> Journal, 27 (2). Thousand
+Oaks: SAGE <span>Publsihing</span>, S. 1-15<o:p></o:p></span></span></p>
+<p><span><span>[<span>Valeonti</span>, F., 2021]<span>                 </span><span>Valeonti</span>,
+F./<span>Bikakis</span>, A./<span>Terras</span>, M.
+(u.a.) (2021): Crypto <span>Collectibles</span>, Museum Funding
+and <span>OpenGLAM</span>: Challenges, <span>Opportunities</span>
+and <span>the</span> Potential <span>of</span>
+Non-Fungible Tokens (NFTs). In Applied Sciences, 11 (21). Basel: MDPI, S. 1-19<o:p></o:p></span></span></p>
+<p><span><span>[Valiente, M.-C., 2021]<span>           </span>Valiente M.-C.,/<span>Tschorsch</span> F.
+(2021): Blockchain-<span>based</span> <span>technologies</span>.
+In: Internet Policy Review, 10 (2). Berlin: Alexander von Humboldt Institut für
+Internet und Gesellschaft, S. 1-6<o:p></o:p></span></span></p>
+<p><span><span>[Veronesi, T., 2020]<span>                </span>Veronesi,
+T. (2020): Die Blockchain. In: Anderl, A. (Hrsg.): #Blockchain in der Rechtspraxis.
+Wien: LexisNexis Verlag, S. 1-19<o:p></o:p></span></span></p>
+<p><span><span>[<span>VeWorld</span>, 2022]<span>                     </span><span>VeWorld</span>
+(2022): <span>vechain</span> – Business White Paper. <span>Veworld</span>, </span></span><a href="https://cdn.veworld.com/cases/case-studies-whitepaper-en.pdf"><span><span>https://cdn.veworld.com/cases/case-studies-whitepaper-en.pdf</span></span><span></span></a><span><span> (Abgerufen am
+04.04.2023) <o:p></o:p></span></span></p>
+<p><span><span>[Vries, A. d., 2021]<span>                  </span>Vries,
+A. d./Stoll, C. (2021): <span>Bitcoin's</span> <span>growing</span>
+e-<span>waste</span> <span>problem</span>. In:
+Resources, <span>Conservation</span> and Recycling, 175.
+Amsterdam: Elsevier<o:p></o:p></span></span></p>
+<p><span><span>[<span>Walport</span>, M., 2015]<span>               </span><span>Walport</span>,
+M. (2015) Distributed Ledger Technology: <span>beyond</span> <span>blockchain</span>. Government Office <span>for</span>
+Science, </span></span><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/492972/gs-16-1-distributed-ledger-technology.pdf"><span><span>https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/492972/gs-16-1-distributed-ledger-technology.pdf</span></span><span></span></a><span><span> (Abgerufen am
+08.03.2023)<o:p></o:p></span></span></p>
+<p><span><span>[Wang, A., 2020]<span>                    </span>Wang,
+A. (2020): <span>VeChain</span> <span>partners</span>
+<span>with</span> Bayer China <span>to</span> <span>create</span> <span>CSecure</span>- a <span>clinical</span> trial <span>traceability</span> <span>platform</span>. BOXMINING, </span></span><a href="https://boxmining.com/vechain-bayer/"><span><span>https://boxmining.com/vechain-bayer/</span></span><span></span></a><span><span> (Abgerufen am
+04.04.2023)<o:p></o:p></span></span></p>
+<p><span><span>[<span>Weking</span>, J., 2020]<span>                   </span><span>Weking</span>,
+J./<span>Mandalenakis</span>, M./Hein, A. (u.a.) (2020): The <span>impact</span> <span>of</span> <span>blockchain</span>
+<span>technology</span> on <span>business</span> <span>models</span> – A <span>taxonomy</span> and <span>archetypal</span> <span>patterns</span>. Electronic <span>Markets</span>, 30(2). Wiesbaden: Springer<o:p></o:p></span></span></p>
+<p><span><span>[Welpe, I. M.,2022]<span>                </span>Welpe,
+I. M. (2022): Blockchain und Web3 - Eine Technologieallianz, die im Kommen ist
+(Interview). In: Digitale Welt, 6 (3). München: DIGITALE WELT Academy, S. 18-19<o:p></o:p></span></span></p>
+<p><span><span>[Werner, J., 2020]<span>                  </span>Werner,
+J./Mandel, P./<span>Zarnekow</span>, R. (2020): Auswahlprozess für
+den Blockchain-Einsatz. In: Fill, H.-G./Meier, A. (Hrsg.): Blockchain -
+Grundlagen, Anwendungsszenarien und Nutzungspotenziale. Wiesbaden: Springer
+Vieweg, S. 21-39<o:p></o:p></span></span></p>
+<p><span><span>[<span>Yaga</span>, D., 2018]<span>                      </span><span>Yaga</span>,
+D./Mell, P./Roby, N. (u.a.) (2018): Blockchain Technology <span>Overview</span>.
+<span>Gaithersburg</span> (u.a.): National Institute <span>of</span> Standards and Technology<o:p></o:p></span></span></p>
+<p><span><span>[<span>YCharts</span>, 2023]<span>                       </span><span>YCharts</span>
+(2023): Ethereum Average Gas Price (I:EGPND) – 20.36 <span>Gwei</span>
+<span>for</span> Mar 25 2023. <span>YCharts</span>, </span></span><a href="https://ycharts.com/indicators/ethereum_average_gas_price"><span><span>https://ycharts.com/indicators/ethereum_average_gas_price</span></span><span></span></a><span><span> (Abgerufen am
+25.03.2023)<o:p></o:p></span></span></p>
+<span></span>
+</div>
+<div><!--[if !supportFootnotes]-->
+<hr align="left" size="1" width="33%">
+<!--[endif]-->
+<div id="ftn1">
+<p><a href="#_ftnref1" name="_ftn1" title=""><sup>[1]</sup></a> Vgl. Cheng,
+E. (2017)</p>
+</div>
+<div id="ftn2">
+<p><a href="#_ftnref2" name="_ftn2" title=""><sup>[2]</sup></a> Vgl. Isselmann,
+J. (2023) S. 24</p>
+</div>
+<div id="ftn3">
+<p><a href="#_ftnref3" name="_ftn3" title=""><sup>[3]</sup></a> Vgl.
+Khubbeeva, P. (2023)<span><o:p></o:p></span></p>
+</div>
+<div id="ftn4">
+<p><a href="#_ftnref4" name="_ftn4" title=""><sup>[4]</sup></a> Adam, K.
+(2022) S. 5</p>
+</div>
+<div id="ftn5">
+<p><a href="#_ftnref5" name="_ftn5" title=""><sup>[5]</sup></a> Condos,
+J. (2016) zitiert nach Schlatt, V. (2016) S. 7</p>
+</div>
+<div id="ftn6">
+<p><a href="#_ftnref6" name="_ftn6" title=""><sup>[6]</sup></a> Rutz, V.
+(2020) S. 9</p>
+</div>
+<div id="ftn7">
+<p><a href="#_ftnref7" name="_ftn7" title=""><sup>[7]</sup></a> Vgl. Gentemann,
+L. (2019) S. 15</p>
+</div>
+<div id="ftn8">
+<p><a href="#_ftnref8" name="_ftn8" title=""><sup>[8]</sup></a> Vgl. Bogart,
+S. (2015) S. 3; vgl. Walport, M. (2015) S. 17; vgl. Berghoff, C. (2019) S. 9;
+vgl. Adam, K. (2022) S. 18; vgl. Rutz, V. (2020) S. 12</p>
+</div>
+<div id="ftn9">
+<p><a href="#_ftnref9" name="_ftn9" title=""><sup>[9]</sup></a> „Der
+Zeitstempel gibt an, zu welchem Zeitpunkt der Block erstellt wurde“. (Fill,
+H.-G. [2020] S. 23)</p>
+</div>
+<div id="ftn10">
+<p><a href="#_ftnref10" name="_ftn10" title=""><sup>[10]</sup></a> „Die
+Nonce (Number used once) ist eine einmalige Zahlenfolge, die zum Beweis der
+Lösung des Puzzles benötigt wird.“ (Fill, H.-G. [2020] S. 23)</p>
+</div>
+<div id="ftn11">
+<p><a href="#_ftnref11" name="_ftn11" title=""><sup>[11]</sup></a> Vgl.
+Meinel, C. (2020) S. 8 f./46 ff.; vgl. Fill, H.-G. [2020] S. 23/137</p>
+</div>
+<div id="ftn12">
+<p><a href="#_ftnref12" name="_ftn12" title=""><sup>[12]</sup></a> Meinel,
+C. (2020)<a href="https://link-springer-com.gw.akad-d.de/content/pdf/10.1007/978-3-662-61916-2.pdf?pdf=button"></a>
+S. 8</p>
+</div>
+<div id="ftn13">
+<p><a href="#_ftnref13" name="_ftn13" title=""><sup>[13]</sup></a> Zu den
+bekanntesten Verfahren zählen in diesem Zusammenhang Proof-of-Work und
+Proof-of-Stake.</p>
+</div>
+<div id="ftn14">
+<p><a href="#_ftnref14" name="_ftn14" title=""><sup>[14]</sup></a> Vgl. Riggert,
+W. (o.D.) S. 18</p>
+</div>
+<div id="ftn15">
+<p><a href="#_ftnref15" name="_ftn15" title=""><sup>[15]</sup></a> Vgl. Adam,
+K. (2022) S. 18</p>
+</div>
+<div id="ftn16">
+<p><a href="#_ftnref16" name="_ftn16" title=""><sup>[16]</sup></a> Vgl.
+Meinel, C. (2020) S. 5; Vgl. Nakamoto, S. (2008) S. 1<span><o:p></o:p></span></p>
+</div>
+<div id="ftn17">
+<p><a href="#_ftnref17" name="_ftn17" title=""><sup>[17]</sup></a> Nakamoto,
+S. (2008) S. 1</p>
+</div>
+<div id="ftn18">
+<p><a href="#_ftnref18" name="_ftn18" title=""><sup>[18]</sup></a> Vgl.
+Rutz, V. (2020) S. 23; vgl. Swan, M. (2015), S. ix; vgl. Schlatt, V. (2016) S.
+15</p>
+</div>
+<div id="ftn19">
+<p><a href="#_ftnref19" name="_ftn19" title=""><sup>[19]</sup></a> Vgl. Adam,
+K. (2022) S. 57</p>
+</div>
+<div id="ftn20">
+<p><a href="#_ftnref20" name="_ftn20" title=""><sup>[20]</sup></a> Szabo,
+N. (1997) zitiert nach Adam, K. (2022) S. 57</p>
+</div>
+<div id="ftn21">
+<p><a href="#_ftnref21" name="_ftn21" title=""><sup>[21]</sup></a> Vgl.
+Adam, K. (2022) S. 57; vgl. Hopf, S. (2018) S. 114</p>
+</div>
+<div id="ftn22">
+<p><a href="#_ftnref22" name="_ftn22" title=""><sup>[22]</sup></a> Vgl.
+Rutz, V. (2020) S. 23; Vgl. Schlatt, V. (2016) S. 15</p>
+</div>
+<div id="ftn23">
+<p><a href="#_ftnref23" name="_ftn23" title=""><sup>[23]</sup></a> Vgl.
+Adam, K. (2022) S. 56</p>
+</div>
+<div id="ftn24">
+<p><a href="#_ftnref24" name="_ftn24" title=""><sup>[24]</sup></a> Vgl. Adam,
+K. (2022) S. 20 f.; Buterin, V. (2015) o. S. </p>
+</div>
+<div id="ftn25">
+<p><a href="#_ftnref25" name="_ftn25" title=""><sup>[25]</sup></a> Beim
+Proof-of-Work (PoW) Verfahren wird durch kostspieliges und aufwendiges „Ausprobieren
+beliebig vieler Hashwerte versucht einen der Zielvorgabe entsprechenden Wert zu
+finden“ (Meinel, C. [2020] S. 52). „Der Nutzer, der das Rechenrätsel schneller
+als die anderen Nutzer des Systems löst, darf die Blockchain fortschreiben und
+erhält dafür eine Belohnung“ (Meinel, C. [2020] S. 51 f.). Dieser Prozess wird
+als Mining (dt. Schürfen) bezeichnet. (Vgl. Meinel, C. [2020] S. 52; vgl. Adam,
+K. [2022] S. 29)</p>
+</div>
+<div id="ftn26">
+<p><a href="#_ftnref26" name="_ftn26" title=""><sup>[26]</sup></a> Beim
+Proof-of-Stake (PoS) Verfahren erfolgt die Auswahl des nächsten Block-Erzeugers
+anhand des gewichteten Zufallsprinzips und damit nicht auf der Rechenleistung,
+wie beim PoW-Verfahren. Die Wahrscheinlichkeit, ausgewählt zu werden, hängt von
+der „Anzahl und Haltedauer der bereitgestellten-Assets“ (Reinwald, R. [2022] S.
+20) ab. Dieses Verfahren ist im Gegensatz zu PoW mit einem deutlich geringerem
+Rechenaufwand verbunden. (Vgl. Fill, H.-G. [2020] S. 152; vgl. Reinwald, R. [2022]
+S. 20; vgl. Steger, M. [2020] S. 151; vgl. Veronesi, T. [2020] S. 15)</p>
+</div>
+<div id="ftn27">
+<p><a href="#_ftnref27" name="_ftn27" title=""><sup>[27]</sup></a> Vgl. Bundesnetzagentur
+(2021) S. 13 ff.</p>
+</div>
+<div id="ftn28">
+<p><a href="#_ftnref28" name="_ftn28" title=""><sup>[28]</sup></a> Vgl. <span>Buterin, V. (2015)</span></p>
+</div>
+<div id="ftn29">
+<p><a href="#_ftnref29" name="_ftn29" title=""><sup>[29]</sup></a> Vgl. Bundesnetzagentur
+(2021) S. 14</p>
+</div>
+<div id="ftn30">
+<p><a href="#_ftnref30" name="_ftn30" title=""><sup>[30]</sup></a> Vgl.
+Fill, H.-G. (2020) S. 59</p>
+</div>
+<div id="ftn31">
+<p><a href="#_ftnref31" name="_ftn31" title=""><sup>[31]</sup></a> Meinel,
+C. (2020) S. 57</p>
+</div>
+<div id="ftn32">
+<p><a href="#_ftnref32" name="_ftn32" title=""><sup>[32]</sup></a> Vgl.
+Buterin, V. (2015)</p>
+</div>
+<div id="ftn33">
+<p><a href="#_ftnref33" name="_ftn33" title=""><sup>[33]</sup></a> Vgl. Adam,
+K. (2022) S. 17; vgl. Fill, H.-G. (2020) S. 133</p>
+</div>
+<div id="ftn34">
+<p><a href="#_ftnref34" name="_ftn34" title=""><sup>[34]</sup></a> Im
+Gegensatz zur Client-Server-Architektur, in der Rechner entweder als Server
+Dienstleistungen bereitstellen oder als Client diese anfragen, können
+Teilnehmer in einem Peer-to-Peer-Netzwerk sowohl als Server als auch als Client
+agieren. Alle Teilnehmer in einem P2P-Netzwerk sind damit in ihrer Funktion gleichberechtigt.
+(Vgl. Staud, J. [o.D.] S. 43 f.; vgl. Schacht, S. [2019] S. 5)</p>
+</div>
+<div id="ftn35">
+<p><a href="#_ftnref35" name="_ftn35" title=""><sup>[35]</sup></a> Vgl. Adam,
+K. (2022) S. 17; vgl. Holschbach, E. (2022) S. 5; vgl. Abeyratne, S. A. (2016)
+S. 3</p>
+</div>
+<div id="ftn36">
+<p><a href="#_ftnref36" name="_ftn36" title=""><sup>[36]</sup></a> Vgl. Fill.
+H.-G. (2020) S. 133</p>
+</div>
+<div id="ftn37">
+<p><a href="#_ftnref37" name="_ftn37" title=""><sup>[37]</sup></a> Rutz,
+V. (2020) S. 13</p>
+</div>
+<div id="ftn38">
+<p><a href="#_ftnref38" name="_ftn38" title=""><sup>[38]</sup></a> Vgl.
+Beutelspacher, A. (2010) S. 176; vgl. Paar, C. (2016) S. 335, vgl. Rutz, V. (2020)
+S. 13; vgl. Brühl, V. (2017) S. 372</p>
+</div>
+<div id="ftn39">
+<p><a href="#_ftnref39" name="_ftn39" title=""><sup>[39]</sup></a> Schacht,
+S. (2019) S. 6</p>
+</div>
+<div id="ftn40">
+<p><a href="#_ftnref40" name="_ftn40" title=""><sup>[40]</sup></a> Schacht,
+S. (2019) S. 6</p>
+</div>
+<div id="ftn41">
+<p><a href="#_ftnref41" name="_ftn41" title=""><sup>[41]</sup></a> Vgl. Fill,
+H.-G. (2020) S. 133</p>
+</div>
+<div id="ftn42">
+<p><a href="#_ftnref42" name="_ftn42" title=""><sup>[42]</sup></a> Vgl. Rosenberger,
+P. (2018) S. 86</p>
+</div>
+<div id="ftn43">
+<p><a href="#_ftnref43" name="_ftn43" title=""><sup>[43]</sup></a> Vgl. Schacht,
+S. (2019) S. 10</p>
+</div>
+<div id="ftn44">
+<p><a href="#_ftnref44" name="_ftn44" title=""><sup>[44]</sup></a> Holschbach,
+E. (2022) S. 9</p>
+</div>
+<div id="ftn45">
+<p><a href="#_ftnref45" name="_ftn45" title=""><sup>[45]</sup></a> Holschbach,
+E. (2022) S. 9</p>
+</div>
+<div id="ftn46">
+<p><a href="#_ftnref46" name="_ftn46" title=""><sup>[46]</sup></a> Vgl. Holschbach,
+E. (2022) S. 9 ; vgl. Fischer, C. (2019) S. 443 f.; Hinckeldeyn, J. (2019) S. 8
+f.</p>
+</div>
+<div id="ftn47">
+<p><a href="#_ftnref47" name="_ftn47" title=""><sup>[47]</sup></a> Siehe
+dazu u.a. Valiente &amp; Tschorsch (2021), Drescher (2017) und Tapscott &amp;
+Tapscott (2016)</p>
+</div>
+<div id="ftn48">
+<p><a href="#_ftnref48" name="_ftn48" title=""><sup>[48]</sup></a> Vgl.
+Semenzin, S. (2022) S. 390 f.</p>
+</div>
+<div id="ftn49">
+<p><a href="#_ftnref49" name="_ftn49" title=""><sup>[49]</sup></a> Vgl. Reinwald,
+R. (2022) S. 35</p>
+</div>
+<div id="ftn50">
+<p><a href="#_ftnref50" name="_ftn50" title=""><sup>[50]</sup></a> Rosenberger,
+P. (2018) S. 117</p>
+</div>
+<div id="ftn51">
+<p><a href="#_ftnref51" name="_ftn51" title=""><sup>[51]</sup></a> Holschbach,
+E. (2022) S. 33</p>
+</div>
+<div id="ftn52">
+<p><a href="#_ftnref52" name="_ftn52" title=""><sup>[52]</sup></a> Vgl.
+Petersen, M. (2018) S. 268; vgl. Weking, J. (2020) S. 291; vgl. Do, H. (2019)
+S. 618</p>
+</div>
+<div id="ftn53">
+<p><a href="#_ftnref53" name="_ftn53" title=""><sup>[53]</sup></a> Vgl. Tijan,
+E. (2019) S. 6; vgl. Holschbach, E. (2022) S. 33</p>
+</div>
+<div id="ftn54">
+<p><a href="#_ftnref54" name="_ftn54" title=""><sup>[54]</sup></a> Vgl.
+Adam, K. (2022) S. 57; vgl. Schacht, S. (2019) S. 71; vgl. Holschbach, E.
+(2022) S. 34</p>
+</div>
+<div id="ftn55">
+<p><a href="#_ftnref55" name="_ftn55" title=""><sup>[55]</sup></a> Vgl.
+Behner, P. (2017) S. 4</p>
+</div>
+<div id="ftn56">
+<p><a href="#_ftnref56" name="_ftn56" title=""><sup>[56]</sup></a> Vgl. Dujak,
+D. (2019) S. 40; vgl. Holschbach, E. (2022) S. 34</p>
+</div>
+<div id="ftn57">
+<p><a href="#_ftnref57" name="_ftn57" title=""><sup>[57]</sup></a> Vgl.
+Uddin, M. (2021) S. 4; vgl. TraceLink (o.D.)</p>
+</div>
+<div id="ftn58">
+<p><a href="#_ftnref58" name="_ftn58" title=""><sup>[58]</sup></a> Vgl. Hansen,
+P. (2019) S. 14; vgl. Holschbach, E. (2022) S. 34</p>
+</div>
+<div id="ftn59">
+<p><a href="#_ftnref59" name="_ftn59" title=""><sup>[59]</sup></a> Vgl.
+Léopold, E. (2018) S. 12 vgl. Holschbach, E. (2022) S. 32 f.</p>
+</div>
+<div id="ftn60">
+<p><a href="#_ftnref60" name="_ftn60" title=""><sup>[60]</sup></a> Vgl.
+Stahlbock, R. (2020) S. 239</p>
+</div>
+<div id="ftn61">
+<p><a href="#_ftnref61" name="_ftn61" title=""><sup>[61]</sup></a> Vgl.
+Frankenfield, J. (2021); vgl. Golden (o.D.); vgl. VeWorld (2022) S. 19</p>
+</div>
+<div id="ftn62">
+<p><a href="#_ftnref62" name="_ftn62" title=""><sup>[62]</sup></a> Siehe
+Kapitel 2.2</p>
+</div>
+<div id="ftn63">
+<p><a href="#_ftnref63" name="_ftn63" title=""><sup>[63]</sup></a> „Die
+Validatoren werden von den Betreibern des Systems als Authorities üblicherweise
+vor Inbetriebnahme der Blockchain benannt“ (Adam, K. [2022] S. 38). </p>
+</div>
+<div id="ftn64">
+<p><a href="#_ftnref64" name="_ftn64" title=""><sup>[64]</sup></a> VeWorld
+(2022) S. 50</p>
+</div>
+<div id="ftn65">
+<p><a href="#_ftnref65" name="_ftn65" title=""><sup>[65]</sup></a> Mithilfe
+von CSecure wird die digitale Rückverfolgung von klinischen Studien ermöglicht.
+In den verschiedenen Phasen der klinischen Studie für Arzneimittel werden die
+Daten nachvollziehbar, transparent und überprüfbar auf die Blockchain
+hochgeladen, sodass externe Partner Zugriff auf diese haben. (Vgl. Wang, A.
+[2020])</p>
+</div>
+<div id="ftn66">
+<p><a href="#_ftnref66" name="_ftn66" title=""><sup>[66]</sup></a>
+VerifyCar dient als digitaler Ausweis für ein Fahrzeug, mit dem die gesamte Fahrzeuggeschichte
+überwacht, überprüft und mit Dritten geteilt werden kann. Auf der Blockchain
+werden Kilometerstand sowie Informationen zu möglichen Unfällen und
+regelmäßigen Inspektionen unveränderbar gespeichert. Über den aktuellen
+Projektstatus des sich in der Pilotphase befindlichen Projekts ist wenig
+bekannt. (Vgl. BMW [2019])</p>
+</div>
+<div id="ftn67">
+<p><a href="#_ftnref67" name="_ftn67" title=""><sup>[67]</sup></a> Vgl. <span>VeWorld</span> (2022) S. 3</p>
+</div>
+<div id="ftn68">
+<p><a href="#_ftnref68" name="_ftn68" title=""><sup>[68]</sup></a> Vgl. Meinel,
+C. (2020) S. 103; vgl. Fill, H.-G. (2020) S. 50<span><o:p></o:p></span></p>
+</div>
+<div id="ftn69">
+<p><a href="#_ftnref69" name="_ftn69" title=""><sup>[69]</sup></a> Vgl.
+IBM Corporation (2021) S. 5, 9</p>
+</div>
+<div id="ftn70">
+<p><a href="#_ftnref70" name="_ftn70" title=""><sup>[70]</sup></a> Vgl. <span>Valeonti, F. (2021) S. 4</span></p>
+</div>
+<div id="ftn71">
+<p><a href="#_ftnref71" name="_ftn71" title=""><sup>[71]</sup></a> Vgl. <span>Valeonti, F. (2021) S. 4</span>; vgl.
+Holschbach, E. (2022) S. 34</p>
+</div>
+<div id="ftn72">
+<p><a href="#_ftnref72" name="_ftn72" title=""><sup>[72]</sup></a> In
+diesem Zusammenhang ist es wichtig zu erwähnen, dass es relativ einfach ist, die
+Gebühren zu umgehen, da nicht alle Plattformen diese Funktionalität unterstützen.
+(Vgl. Ravenscraft, E. [2021]; Dickens, S. [2021])</p>
+</div>
+<div id="ftn73">
+<p><a href="#_ftnref73" name="_ftn73" title=""><sup>[73]</sup></a> Vgl.
+Ravenscraft, E. (2022)</p>
+</div>
+<div id="ftn74">
+<p><a href="#_ftnref74" name="_ftn74" title=""><sup>[74]</sup></a> Vgl.
+Christie’s (o.D.); vgl. Reyburn (2021); vgl. <span>Valeonti</span>, F. (2021) S. 5</p>
+</div>
+<div id="ftn75">
+<p><a href="#_ftnref75" name="_ftn75" title=""><sup>[75]</sup></a> Vgl.
+Isselmann, J. (2023) S. 26; vgl. Browning, K. (2023); vgl. Lawler, R. (2022);
+vgl. Shimron, L. (2022)</p>
+</div>
+<div id="ftn76">
+<p><a href="#_ftnref76" name="_ftn76" title=""><sup>[76]</sup></a> Die
+Metadatei ist im JSON-Format aufgebaut. Für eine bildliche Darstellung sei auf
+Guadamuz, A. (2021) S. 1371 verwiesen.</p>
+</div>
+<div id="ftn77">
+<p><a href="#_ftnref77" name="_ftn77" title=""><sup>[77]</sup></a> Vgl. <span>Valeonti</span>, F. (2021) S. 5</p>
+</div>
+<div id="ftn78">
+<p><a href="#_ftnref78" name="_ftn78" title=""><sup>[78]</sup></a> Vgl. NonFungible
+(2023)</p>
+</div>
+<div id="ftn79">
+<p><a href="#_ftnref79" name="_ftn79" title=""><sup>[79]</sup></a> Vgl.
+Kurt, L. (2022) S. 81</p>
+</div>
+<div id="ftn80">
+<p><a href="#_ftnref80" name="_ftn80" title=""><sup>[80]</sup></a> Kurt,
+L. (2022) S. 47</p>
+</div>
+<div id="ftn81">
+<p><a href="#_ftnref81" name="_ftn81" title=""><sup>[81]</sup></a> Vgl. Holschbach,
+E. (2022) S. 34</p>
+</div>
+<div id="ftn82">
+<p><a href="#_ftnref82" name="_ftn82" title=""><sup>[82]</sup></a> Vgl.
+Geuter, J. (2022); vgl. Sixt, E. (2017) S. 191</p>
+</div>
+<div id="ftn83">
+<p><a href="#_ftnref83" name="_ftn83" title=""><sup>[83]</sup></a> Vgl.
+Grauer, K. (2022) S. 47 f.</p>
+</div>
+<div id="ftn84">
+<p><a href="#_ftnref84" name="_ftn84" title=""><sup>[84]</sup></a> The DAO
+war die erste Dezentrale Autonome Organisation. „Im Zeitraum vom 30. April bis
+28. Mai 2016 verkaufte The DAO rund 1,15 Mrd. „DAO-Token“ im Wert von etwa 12
+Mio. Ether bzw. USD 150 Mio. The DAO wurde als eine neue Art von
+dezentralisiertem, Anleger-gesteuerten Risikokapitalfond konzipiert. Anleger
+investierten Geld und konnten danach mitbestimmen, welche Investitionen der
+Fond vornehmen sollte. [...] Im Juni 2016 wurde das System gehackt und 30 % der
+Gelder gestohlen“ (Fill, H.-G. [2020] S. 128).</p>
+</div>
+<div id="ftn85">
+<p><a href="#_ftnref85" name="_ftn85" title=""><sup>[85]</sup></a> „Stablecoins
+sind Kryptowährungen, welche die Preisvolatilität im Vergleich zu einer anderen
+Währung – oder einem Währungskorb – minimieren sollen. Am häufigsten wird als
+Referenzwährung der US-Dollar verwendet. Zur Reduktion der Volatilität müssen
+Stablecoins einen Stabilitätsmechanismus einbauen. Nur so können sie eine Preisstabilität
+ähnlich der von Zentralbanken ausgegebenen Währungen aufweisen“ (Kurt, L.
+[2022] S. 65).</p>
+</div>
+<div id="ftn86">
+<p><a href="#_ftnref86" name="_ftn86" title=""><sup>[86]</sup></a> ConstitutionDAO
+versuchte erfolglos eine seltene Kopie der U.S. Konstitution zu ersteigern. Die
+Rückerstattung der über 40 Millionen gesammelten US-Dollar an die Teilnehmer
+sorgte für eine große Kontroversen, da „bei etwa der Hälfte der Spender der
+Großteil ihrer Investition durch Kryptowährungsgebühren zunichte gemacht
+[wurde]“. (Koelber, J. [2021]). (Vgl. Roose, K. [o.D.])</p>
+</div>
+<div id="ftn87">
+<p><a href="#_ftnref87" name="_ftn87" title=""><sup>[87]</sup></a> Vgl. <span> </span>Roose, K. (o.D.)</p>
+</div>
+<div id="ftn88">
+<p><a href="#_ftnref88" name="_ftn88" title=""><sup>[88]</sup></a> Dieses
+Problem betrifft insbesondere Proof-of-Work-Blockchains. Nach einer Schätzung
+von Digiconomist verbrauchte eine Transaktion im BitCoin-Netzwerk im Jahr 2017
+259 kWh, was in etwa dem wöchentlichen Stromverbrauch eines US-Haushalts
+entspricht. Hinzu kommt ein wachsendes E-Müll-Problem. (Vgl. Digiconomist
+[2017]; vgl. Fill, H.-G. [2020] S. 134; vgl. Vries, A. d. [2021])</p>
+</div>
+<div id="ftn89">
+<p><a href="#_ftnref89" name="_ftn89" title=""><sup>[89]</sup></a>
+Konsolidationsmechanismen wie Proof-of-Stake fördern die Konzentration der
+Macht, da die Überprüfung von Transaktionen Validatoren mit einem hohen Einsatz
+in der Blockchain überlassen wird. Für ihren Aufwand erhalten die Validatoren
+wiederrum Coins der Blockchain und damit mehr Macht. Auch in Proof-of-Work
+Kreisen haben (zentralisierte) Mining Fabriken (dezentralisierte) Heim-Miner
+vollständig verdrängt. Im NFT-Bereich lässt sich zudem feststellen, dass einige
+wenige Plattform (OpenSea, Rarible, Mintable etc. pp.) den Markt dominieren. 
+(vgl. Guadamuz, A. [2021] S. 1375, vgl. Rosenberger, P. [2018] S. 92; Oettler,
+M. [2021])</p>
+</div>
+<div id="ftn90">
+<p><a href="#_ftnref90" name="_ftn90" title=""><sup>[90]</sup></a> Die
+Kosten für den Betrieb einer öffentlichen Blockchain ergeben sich aus den
+Aufwendungen für das Erstellen neuer Blöcke durch Mining (bei Proof-of-Work)
+bzw. Minting (bei Proof-of-Stake). Im Bei einer privaten Blockchain ergeben
+sich die Kosten aus dem Betrieb der Nodes.</p>
+</div>
+<div id="ftn91">
+<p><a href="#_ftnref91" name="_ftn91" title=""><sup>[91]</sup></a> Vgl. Holschbach,
+E. (2022) S. 25</p>
+</div>
+<div id="ftn92">
+<p><a href="#_ftnref92" name="_ftn92" title=""><sup>[92]</sup></a> Bray,
+T. (2022)</p>
+</div>
+<div id="ftn93">
+<p><a href="#_ftnref93" name="_ftn93" title=""><sup>[93]</sup></a> Vgl.
+Krugman, P. (2022); vgl. Gibbs, M. (2017) S. 1 f.; vgl. Park. D. (2022) S. 1</p>
+</div>
+<div id="ftn94">
+<p><a href="#_ftnref94" name="_ftn94" title=""><sup>[94]</sup></a> Vgl.
+Bray, T. (2022)</p>
+</div>
+<div id="ftn95">
+<p><a href="#_ftnref95" name="_ftn95" title=""><sup>[95]</sup></a> Siehe dazu
+u.a. Yaga, D. (2018) S. 42 und Werner, J. (2020) S. 24</p>
+</div>
+<div id="ftn96">
+<p><a href="#_ftnref96" name="_ftn96" title=""><sup>[96]</sup></a> Cong,
+W. L (2023) S. 2</p>
+</div>
+<div id="ftn97">
+<p><a href="#_ftnref97" name="_ftn97" title=""><sup>[97]</sup></a> Pure
+Bit war eine Kryptowährungsbörse, die durch ein ICO 30 Millionen US-Dollar
+sammelte. Zwei Monate später verschwand das Unternehmen von der Bildfläche. (Vgl.
+Hou, G. (2022) S. 86)</p>
+</div>
+<div id="ftn98">
+<p><a href="#_ftnref98" name="_ftn98" title=""><sup>[98]</sup></a> „Squid
+ist eine "Play-to-Earn"-Kryptowährung, mit der Käufer angeblich an
+Online-Versionen der Spiele teilnehmen können, die in dem dystopischen
+südkoreanischen Thriller [Squid Game] dargestellt werden“ (Cheng, A. [2021]).</p>
+</div>
+<div id="ftn99">
+<p><a href="#_ftnref99" name="_ftn99" title=""><sup>[99]</sup></a> Vgl.
+Cheng, A. (2021); vgl. Hou, G. (2022) S. 86</p>
+</div>
+<div id="ftn100">
+<p><a href="#_ftnref100" name="_ftn100" title=""><sup>[100]</sup></a>
+Vgl. Cong, W. L. (2023) S. 1</p>
+</div>
+<div id="ftn101">
+<p><a href="#_ftnref101" name="_ftn101" title=""><sup>[101]</sup></a>
+Vgl. Dept. of Justice (2022)<span><o:p></o:p></span></p>
+</div>
+<div id="ftn102">
+<p><a href="#_ftnref102" name="_ftn102" title=""><sup>[102]</sup></a>
+Vgl. Fill, H. (2020) S. 135</p>
+</div>
+<div id="ftn103">
+<p><a href="#_ftnref103" name="_ftn103" title=""><sup>[103]</sup></a>
+Vgl. Jabbar, S. (2021) S. 795; vgl. Holschbach, E. (2022) S. 25</p>
+</div>
+<div id="ftn104">
+<p><a href="#_ftnref104" name="_ftn104" title=""><sup>[104]</sup></a>
+Vgl. Hein, C. (2019) 15 f.</p>
+</div>
+<div id="ftn105">
+<p><a href="#_ftnref105" name="_ftn105" title=""><sup>[105]</sup></a>
+Vgl. Fill, H.-G. (2020) S. 135</p>
+</div>
+<div id="ftn106">
+<p><a href="#_ftnref106" name="_ftn106" title=""><sup>[106]</sup></a>
+Fill, H.-G. (2020) S. 134</p>
+</div>
+<div id="ftn107">
+<p><a href="#_ftnref107" name="_ftn107" title=""><sup>[107]</sup></a>
+„Eine Hard Fork ist eine Änderung an einer Blockchain-Implementierung, die
+nicht rückwärtskompatible ist“ (Yaga, D. [2018] S. 29).</p>
+</div>
+<div id="ftn108">
+<p><a href="#_ftnref108" name="_ftn108" title=""><sup>[108]</sup></a>
+Vgl. Meinel, C. (2020) S. 87</p>
+</div>
+<div id="ftn109">
+<p><a href="#_ftnref109" name="_ftn109" title=""><sup>[109]</sup></a>
+Vgl. Boom, D. V. (2022)</p>
+</div>
+<div id="ftn110">
+<p><a href="#_ftnref110" name="_ftn110" title=""><sup>[110]</sup></a>
+Vgl. Bundesnetzagentur (2019) S. 23; vgl. Fridgen, G. (2019) S. 33</p>
+</div>
+<div id="ftn111">
+<p><a href="#_ftnref111" name="_ftn111" title=""><sup>[111]</sup></a>
+Vgl. Bundesnetzagentur (2019) S. 23; vgl. <span>Fridgen, G. (2019) S. 7, 113</span> </p>
+</div>
+<div id="ftn112">
+<p><a href="#_ftnref112" name="_ftn112" title=""><sup>[112]</sup></a>
+Rosenberger, P. (2018) S. 101</p>
+</div>
+<div id="ftn113">
+<p><a href="#_ftnref113" name="_ftn113" title=""><sup>[113]</sup></a>
+Vgl. Rosenberger, P. (2018) S. 101 f.</p>
+</div>
+<div id="ftn114">
+<p><a href="#_ftnref114" name="_ftn114" title=""><sup>[114]</sup></a>
+Vgl. Olsen, D. (2022) 1:18:23-1:18:42</p>
+</div>
+<div id="ftn115">
+<p><a href="#_ftnref115" name="_ftn115" title=""><sup>[115]</sup></a>
+Für 1 KB werden 640.000 Gas benötigt. 1 Gas kostet zum aktuellen Zeitpunkt 20
+Gwei (oder 0, 000 000 02 Ether). (Vgl. YCharts [2023]; vgl. Palau, A. [2018])</p>
+</div>
+<div id="ftn116">
+<p><a href="#_ftnref116" name="_ftn116" title=""><sup>[116]</sup></a>
+Zum aktuellen Zeitpunkt entspricht 1 Ether 1630 Euro (vgl. Coinbase [2023])</p>
+</div>
+<div id="ftn117">
+<p><a href="#_ftnref117" name="_ftn117" title=""><sup>[117]</sup></a>
+Vgl. Palau, A. (2018)</p>
+</div>
+<div id="ftn118">
+<p><a href="#_ftnref118" name="_ftn118" title=""><sup>[118]</sup></a>
+„Unter normalen Bedingungen bietet ein kleines Trinkgeld den Minern einen
+minimalen Anreiz, eine Transaktion durchzuführen. Für Transaktionen, die vor
+anderen Transaktionen im selben Block bevorzugt ausgeführt werden müssen, ist
+ein höheres Trinkgeld notwendig, um konkurrierende Transaktionen zu überbieten.
+“ (Smith, C. [o.D.]). </p>
+</div>
+<div id="ftn119">
+<p><a href="#_ftnref119" name="_ftn119" title=""><sup>[119]</sup></a>
+„Gas bezieht sich auf die Einheit, die den Rechenaufwand misst, der für die
+Ausführung bestimmter Operationen im Ethereum-Netzwerk erforderlich ist“ (Smith,
+C. [o.D.]). 1 Gas kostet zum aktuellen Zeitpunkt 20 Gwei (oder 0, 000 000 02
+Ether) (vgl. YCharts [2023])</p>
+</div>
+<div id="ftn120">
+<p><a href="#_ftnref120" name="_ftn120" title=""><sup>[120]</sup></a>
+Vgl. Fill, H.-G. (2020) S. 123</p>
+</div>
+<div id="ftn121">
+<p><a href="#_ftnref121" name="_ftn121" title=""><sup>[121]</sup></a>
+Seemann, M. zitiert nach <span>Khubbeeva,
+P. (2023)</span></p>
+</div>
+<div id="ftn122">
+<p><a href="#_ftnref122" name="_ftn122" title=""><sup>[122]</sup></a>
+Phishing beschreibt eine Angriffsmethode, bei der das Opfer seine Daten in einen
+scheinbar legitimen Service (z.B. Website) eingibt. Das Design und Auftreten sind
+in der Regel deckungsgleich zum legitimen Service. (Vgl. Pohlmann, N. [2022] S.
+197)</p>
+</div>
+<div id="ftn123">
+<p><a href="#_ftnref123" name="_ftn123" title=""><sup>[123]</sup></a>
+„Wenn jemand Ihr Fahrrad stiehlt, gehört es nach allgemeiner Auffassung immer
+noch Ihnen. Bei einem NFT ist der "Eigentümer" derjenige, der den
+Token in seiner Wallet hat“ (Ravenscraft, E. [2022]).</p>
+</div>
+<div id="ftn124">
+<p><a href="#_ftnref124" name="_ftn124" title=""><sup>[124]</sup></a>
+Ravenscraft, E. (2022)</p>
+</div>
+<div id="ftn125">
+<p><a href="#_ftnref125" name="_ftn125" title=""><sup>[125]</sup></a>
+Doppelte Ausgaben (engl. double spending) beschreibt die mehrfache Nutzung der
+gleichen Einheit. Vergleichbar ist dieser Angriff mit dem Kopieren von Geldscheinen.
+(Vgl. Meinel, C. [2020] S. 3, 6, 59)</p>
+</div>
+<div id="ftn126">
+<p><a href="#_ftnref126" name="_ftn126" title=""><sup>[126]</sup></a>
+Vgl. Meinel, C. (2020) S. 59 f.; vgl. Sixt, E. (2017) S. 10 </p>
+</div>
+<div id="ftn127">
+<p><a href="#_ftnref127" name="_ftn127" title=""><sup>[127]</sup></a>
+Vgl. Hwang, I. (2022)</p>
+</div>
+<div id="ftn128">
+<p><a href="#_ftnref128" name="_ftn128" title=""><sup>[128]</sup></a>
+Vgl. Guadamuz, A. (2021) S. 1371 - 1373</p>
+</div>
+<div id="ftn129">
+<p><a href="#_ftnref129" name="_ftn129" title=""><sup>[129]</sup></a>
+Vgl. OpenSea (2022)</p>
+</div>
+<div id="ftn130">
+<p><a href="#_ftnref130" name="_ftn130" title=""><sup>[130]</sup></a>
+Vgl. Ravenscraft, E. (2022)</p>
+</div>
+<div id="ftn131">
+<p><a href="#_ftnref131" name="_ftn131" title=""><sup>[131]</sup></a>
+Vgl. Ravenscraft, E. (2022); vgl. Hayward, A: (2022); vgl. CryptoSlam! (2022) </p>
+</div>
+<div id="ftn132">
+<p><a href="#_ftnref132" name="_ftn132" title=""><sup>[132]</sup></a>
+Fill, H.-G. (2020) S. 128</p>
+</div>
+<div id="ftn133">
+<p><a href="#_ftnref133" name="_ftn133" title=""><sup>[133]</sup></a>
+Vgl. Fill, H.-G. (2020) S. 128</p>
+</div>
+<div id="ftn134">
+<p><a href="#_ftnref134" name="_ftn134" title=""><sup>[134]</sup></a>
+Vgl. Fill, H.-G. (2020) S. 124/135; vgl. Rose, K. (o.D.)</p>
+</div>
+<div id="ftn135">
+<p><a href="#_ftnref135" name="_ftn135" title=""><sup>[135]</sup></a>
+Grauer, K. (2022) S. 47 f.</p>
+</div>
+<div id="ftn136">
+<p><a href="#_ftnref136" name="_ftn136" title=""><sup>[136]</sup></a>
+Vgl. Grauer, K. (2022) S. 48</p>
+</div>
+<div id="ftn137">
+<p><a href="#_ftnref137" name="_ftn137" title=""><sup>[137]</sup></a>
+Web 1.0 beschreibt statische Webseiten. Im Fokus des Web 2.0 lag ein „mehr
+dynamsiches, editierbares, nutzer-getriebenes Internet“ (Nield, D. [2021]). Das
+Web 2.0 wird von einer kleinen Anzahl großer Firmen (Meta, Amazon, Google,
+Microsoft, etc. pp.) dominiert. Das Web 3.0 soll sich hingegen durch
+Dezentralität und Demokratie auszeichnen und auf der Blockchain-Technologie
+basieren. (Vgl. Nield, D. [2021]). Allerdings ist es fraglich, ob eine
+Technologie, die nicht einmal in der Lage ist, einfache Bilder zu speichern,
+ein Ersatz für das Web 2.0 darstellen kann.</p>
+</div>
+<div id="ftn138">
+<p><a href="#_ftnref138" name="_ftn138" title=""><sup>[138]</sup></a>
+Vgl. Park, S. (2021) S. 2 ff.; vgl. <span>Semenzin, S. (2022) S. 386 ff.; vgl. Welpe, I. M. (2022) S. 18; vgl.
+Gärtner, P. (2022) S. 18</span></p>
+</div>
+<div id="ftn139">
+<p><a href="#_ftnref139" name="_ftn139" title=""><sup>[139]</sup></a>
+Vgl. Khubbeeva, P. (2023); vgl. Council of the EU<a href="https://www.consilium.europa.eu/en/press/press-releases/2022/06/30/digital-finance-agreement-reached-on-european-crypto-assets-regulation-mica/"></a>
+(2022)</p>
+</div>
+</div>

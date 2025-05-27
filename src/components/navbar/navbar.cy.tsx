@@ -1,10 +1,14 @@
 /// <reference types="cypress" />
 
 import { Navbar } from ".";
-import Home from "@/app/page";
 import { ThemeProvider } from "next-themes";
 
 import "@/app/globals.css";
+import { LandingPage } from "../landingPage";
+import { Profile } from "../profile";
+import { Projects } from "../projects";
+import { Skills } from "../skills";
+import { Assignments } from "../assignments";
 
 const MockNavbarWithTheme = () => {
   return (
@@ -14,12 +18,21 @@ const MockNavbarWithTheme = () => {
   );
 };
 
-const MockLandingPageWithTheme = () => {
+const MockLandingPageWithTheme = async () => {
+  // Cypress component testing does not support server components
+  const component = await Assignments();
+
   return (
     <>
       <ThemeProvider enableSystem={false} attribute='class'>
         <Navbar />
-        <Home />
+        <main className='bg-zinc-100 dark:bg-dark-100 duration-200 [&>section]:scroll-mt-12'>
+          <LandingPage />
+          <Profile />
+          <Projects />
+          <Skills />
+          {component}
+        </main>
       </ThemeProvider>
     </>
   );
@@ -49,14 +62,16 @@ describe("<Navbar />", () => {
     cy.get("html.light").should("exist").and("have.attr", "style", "color-scheme: light;");
   });
 
-  it("should expand the navbar when the scroll position at the top of the page ", () => {
-    cy.mount(<MockLandingPageWithTheme />);
+  it("should expand the navbar when the scroll position at the top of the page ", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
 
     cy.get("nav").invoke("outerHeight").should("be.greaterThan", 90);
   });
 
-  it("should reduce the height of the navbar if scrolling down ", () => {
-    cy.mount(<MockLandingPageWithTheme />);
+  it("should reduce the height of the navbar if scrolling down ", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
 
     cy.scrollTo(0, 100);
     cy.wait(0);
@@ -64,8 +79,7 @@ describe("<Navbar />", () => {
     cy.get("nav").invoke("outerHeight").should("be.lessThan", 60);
   });
 
-  it("should show the menuitems on mobile on menu burger click", () => {
-    cy.viewport(500, 500);
+  it("should show the menuitems on mobile on menu burger click", { viewportHeight: 500, viewportWidth: 500 }, () => {
     cy.mount(<MockNavbarWithTheme />);
     cy.get("button[aria-label='Show navigation']").click();
 
@@ -113,7 +127,7 @@ describe("<Navbar />", () => {
     });
   });
 
-  it("should show the navigation if increasing the viewport from mobile size to desktop size", () => {
+  it("should show the navigation if increasing the viewport from mobile size to desktop size", async () => {
     cy.viewport(500, 500);
     cy.mount(<MockNavbarWithTheme />);
 
@@ -126,30 +140,38 @@ describe("<Navbar />", () => {
     });
   });
 
-  it("should show the navigation minimized if the viewport is decreased from desktop size to mobile size", () => {
+  it(
+    "should show the navigation minimized if the viewport is decreased from desktop size to mobile size",
+    { viewportWidth: 850, viewportHeight: 500 },
+    async () => {
+      const component = await MockLandingPageWithTheme();
+      cy.mount(component);
+
+      cy.viewport(500, 500);
+
+      cy.get("button[aria-label='Show navigation']").should("be.visible");
+    }
+  );
+
+  it(
+    "should keep the navigation visible if the viewport on mobile is changed",
+    { viewportWidth: 400, viewportHeight: 500 },
+    async () => {
+      const component = await MockLandingPageWithTheme();
+      cy.mount(component);
+
+      cy.get("button[aria-label='Show navigation']").click();
+
+      cy.viewport(500, 500);
+
+      cy.get("button[aria-label='Hide navigation']").should("be.visible");
+    }
+  );
+
+  it("should navigate to projects if clicking on Projects in navbar", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
     cy.viewport(850, 500);
-
-    cy.mount(<MockLandingPageWithTheme />);
-
-    cy.viewport(500, 500);
-
-    cy.get("button[aria-label='Show navigation']").should("be.visible");
-  });
-
-  it("should keep the navigation visible if the viewport on mobile is changed", () => {
-    cy.viewport(400, 500);
-    cy.mount(<MockLandingPageWithTheme />);
-
-    cy.get("button[aria-label='Show navigation']").click();
-
-    cy.viewport(500, 500);
-
-    cy.get("button[aria-label='Hide navigation']").should("be.visible");
-  });
-
-  it("should navigate to projects if clicking on Projects in navbar", () => {
-    cy.viewport(850, 500);
-    cy.mount(<MockLandingPageWithTheme />);
 
     // Remove the leading slash and click on Projects in navbar
     cy.get("nav").contains("a", "Projects").removeHrefSlash().click();
@@ -157,9 +179,10 @@ describe("<Navbar />", () => {
     cy.contains("h2", "Projects").should("be.visible");
   });
 
-  it("should navigate to skills if clicking on Skills in the navbar", () => {
+  it("should navigate to skills if clicking on Skills in the navbar", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
     cy.viewport(850, 500);
-    cy.mount(<MockLandingPageWithTheme />);
 
     // Remove the leading slash and click on Skills in navbar
     cy.contains("a", "Skills").removeHrefSlash().click();
@@ -167,16 +190,11 @@ describe("<Navbar />", () => {
     cy.contains("h2", "Skills").should("be.visible");
   });
 
-  it("should scroll to top if clicking on Home in the navbar", () => {
+  it("should scroll to top if clicking on Home in the navbar", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
+
     cy.viewport(850, 500);
-    cy.mount(
-      <>
-        <ThemeProvider enableSystem={false} attribute='class'>
-          <Navbar />
-          <Home />
-        </ThemeProvider>
-      </>
-    );
 
     cy.scrollTo(0, 300, { duration: 0 }).then(() => {
       cy.wait(100);
@@ -192,8 +210,9 @@ describe("<Navbar />", () => {
     });
   });
 
-  it("should minimize the navbar on mobile after item click", () => {
-    cy.mount(<MockLandingPageWithTheme />);
+  it("should minimize the navbar on mobile after item click", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
 
     cy.get("button[aria-label='Show navigation']").click();
 
@@ -202,10 +221,10 @@ describe("<Navbar />", () => {
     cy.get("nav").find("ul").should("not.be.visible");
   });
 
-  it("should keep the navbar items visible on desktop viewport if clicking on item", () => {
+  it("should keep the navbar items visible on desktop viewport if clicking on item", async () => {
+    const component = await MockLandingPageWithTheme();
+    cy.mount(component);
     cy.viewport(850, 500);
-
-    cy.mount(<MockLandingPageWithTheme />);
 
     cy.get("nav").contains("a", "Projects").removeHrefSlash().click();
 

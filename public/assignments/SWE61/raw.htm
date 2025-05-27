@@ -1,0 +1,667 @@
+<div>
+  <a name="_Toc163397895"><h2>1. Einleitung</h2></a>
+  <a name="_Toc163397896"><h3>1.1 Relevanz des Themas</h3></a>
+  <p>
+    <span
+      >Die Benutzerdokumentation ist ein wesentlicher Bestandteil der Softwareentwicklung und ein kritischer Faktor für
+      die Benutzererfahrung und -zufriedenheit. Sie dient als Brücke zwischen der Technologie und ihren Anwendern, indem
+      sie komplexe Prozesse in verständliche Anweisungen übersetzt. Eine effektive Dokumentation ermöglicht es den
+      Benutzern, das volle Potenzial eines Produkts zu erschließen und unterstützt sie dabei, eventuelle Probleme
+      selbstständig zu lösen.<a href="#_ftn1" name="_ftnref1" title=""><sup>[1]</sup></a> Diese Arbeit zeigt anhand
+      eines Praxisbeispiels, wie eine solche Benutzerdokumentation aussehen kann.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397897"><h3>1.2 Ziele der Arbeit</h3></a>
+  <p>
+    <span
+      >Das Hauptziel der vorliegenden Arbeit besteht in der Konzeption einer Benutzerdokumentation. Zwischenziele bilden
+      die Darstellung der Software, die Analyse der Zielgruppe der Benutzerdokumentation sowie die Ermittlung des
+      Flesch-Reading-<span>Ease</span>- und Flesch-<span>Kincaid</span>-Index.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397898"><h3>1.3 Aufbau der Arbeit</h3></a>
+  <p>
+    <span
+      >In den Grundlagen der Arbeit wird zunächst die Software, für die die Benutzerdokumentation erstellt wird,
+      vorgestellt (Kapitel 2.1), bevor eine Zielgruppenanalyse der Benutzerdokumentation durchgeführt wird (Kapitel
+      2.2). Anschließend wird in Kapitel 2.3 die Software in die Softwareprodukttypen nach Lehman eingeordnet. Im
+      Hauptteil wird die Benutzerdokumentation erstellt (Kapitel 3.1) sowie der Flesch-Reading-<span>Ease</span>-Index
+      und Flesch-<span>Kincaid</span>-Index für eine typische Seite der Dokumentation ermittelt (Kapitel 3.2).
+      Abschließend werden in Kapitel 3.3 Verbesserungsmöglichkeiten herausgearbeitet.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397899"><h2>2. Grundlagen</h2></a>
+  <a name="_Toc163397900"><h3>2.1 Darstellung der Software</h3></a>
+  <p>
+    <span><span>Repeatio</span></span
+    ><span>
+      ist eine selbstentwickelte Open-Source<a href="#_ftn2" name="_ftnref2" title=""><sup>[2]</sup></a>
+      Online-Lernplattform, die sich auf die gezielte Vorbereitung auf Prüfungen konzentriert. Obwohl sich die Software
+      derzeit noch in einem aktiven Entwicklungsstadium befindet und daher keine endgültige Version vorliegt, ist sie
+      jetzt schon über die Website </span
+    ><a href="http://www.repeatio.de"><span>www.repeatio.de</span></a
+    ><span>
+      öffentlich zugänglich. Die Plattform bietet Funktionen zur Erstellung und Bearbeitung von Lernmodulen, die
+      unterschiedliche Fragetypen wie Multiple Choice, Multiple Response, Lückentext und Zuordnungsaufgaben
+      unterstützen. Ziel ist es, klassische Lernmethoden wie physische Lernkarten zu ersetzen und stattdessen umfassende
+      Möglichkeiten von interaktiven Lernmöglichkeiten bereitzustellen.<span> <o:p></o:p></span
+    ></span>
+  </p>
+  <p>
+    <span
+      >Besonders positiv an dem Software-System ist neben der Interaktivität, dass Fragen genauso wie in der späteren
+      Prüfung aufgebaut sind. Die Software bietet darüber hinaus die Möglichkeit, Fragen mittels der Merkfunktion
+      abzuspeichern, was ein gezieltes und effektives Lernen ermöglicht.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Während Software wie <span>Anki</span> oder <span>StudySmarter</span><span> </span>nur einfache Aufgaben wie
+      Multiple Choice erlauben, können mit <span>repeatio</span> auch komplexere Zuordnungs- und Multiple Response
+      Aufgaben abgebildet werden.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397901"><h3>2.2 Zielgruppenanalyse</h3></a>
+  <p>
+    <span
+      >Die Benutzerdokumentation richtet sich an fortgeschrittene Nutzer*innen der Website, die Module selbst erstellen,
+      teilen sowie Fragen mit Hilfe von <span>MarkDown</span> gestalten wollen. Die Nutzerbasis der Website besteht zum
+      Großteil aus Personen im Alter von 16 bis 35 Jahre, die sich aktiv auf Prüfungen vorbereitet. Zu dieser
+      Personengruppe zählen insbesondere Schüler*innen, Auszubildende, und Student*innen, aber auch Personen, die
+      sonstige Prüfungen ablegen (z.B. Führerschein). Die geographische Verteilung konzentriert sich zum aktuellen
+      Zeitpunkt auf den deutschsprachigen Raum. Für die Zielgruppe ist die kostenlose Bereitstellung der Software und
+      Dokumentation besonders attraktiv, da sie häufig nur über begrenzte finanzielle Ressourcen verfügt. Die Zielgruppe
+      zeichnet sich zudem durch einen ausgeprägten Lernwillen aus. Die technologische Kompetenz der Nutzer variiert
+      stark. Einige Nutzer sind mit komplexeren Webanwendungen vertraut, während andere Anleitungen benötigen, um die
+      grundlegenden Funktionen der Plattform effektiv zu nutzen. Bisherige persönliche Beobachtungen deuten darauf hin,
+      dass erfahrene Nutzer*innen bei der Erstellung von Inhalten tendenziell Geräte mit größeren Bildschirmen
+      bevorzugen.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Das Ziel der Benutzerdokumentation ist es, eine umfassende und verständliche Informationsressource
+      bereitzustellen, die den Nutzerinnen und Nutzern von <span>repeatio</span> dabei hilft, die Website effektiv zu
+      nutzen. Die Dokumentation soll die Anwender in die Lage versetzen, die Funktionen der Software zu verstehen,
+      erfolgreich zu navigieren und optimal von den gebotenen Lernmöglichkeiten zu profitieren. Dabei geht es nicht nur
+      um die Vermittlung technischer Details, sondern auch um eine praxisnahe Anleitung und Unterstützung bei der
+      Erstellung und Nutzung von Lernmodulen. Der Fokus der Dokumentation liegt insbesondere darauf Leserinnen und
+      Lesern Gestaltungsmöglichkeiten der Fragen näherzubringen.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Für eine effektive Nutzung der Software werden grundlegende Englisch- und Technologiekenntnisse vorausgesetzt.
+      Erste Berührungspunkte mit <span>MarkDown</span>, HTML (Hypertext Markup Language) und CSS sind von Vorteil aber
+      keinesfalls Voraussetzung. <o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397902"><h3>2.3 Softwareprodukttyp</h3></a>
+  <p>
+    <span
+      >Die Software ist am ehesten den P-Typ-Systemen nach Lehman (1980) zuzuordnen.<a
+        href="#_ftn3"
+        name="_ftnref3"
+        title=""
+        ><sup>[3]</sup></a
+      >
+      Größere Anpassungen sind nach Veröffentlichung der Vollversion (Version 1.0) nicht geplant. Lediglich kleinere
+      Punkte wie das Beheben von Sicherheitsprobleme, die z.B. durch die Verwendung von Node.js-Modulen immer wieder
+      auftreten, sollen kontinuierlich behoben werden. <o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Die Software ist kaum von sich ändernden Rahmenbedingungen betroffen, schließlich werden nur selten neue
+      Aufgabentypen erfunden. Zudem besitzt die Software kaum Schnittstellen (APIs) zu anderen Systemen, die eine
+      kontinuierliche Anpassung erforderlich machen.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Würde es sich stattdessen um ein kommerzielles Produkt handeln, müssten eventuell häufiger Anpassungen
+      vorgenommen werden, um den höheren Ansprüchen der Nutzer*innen gerecht zu werden und eine hohe Zufriedenheit zu
+      garantieren.<a href="#_ftn4" name="_ftnref4" title=""><sup>[4]</sup></a> Die Software wäre dann eher den
+      dynamischen Systemen (<span>embedded</span>-type) zuzuordnen.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397903"><h2>3. Hauptteil</h2></a>
+  <a name="_Toc163397904"><h3>3.1 Praxisbeispiel Benutzerdokumentation</h3></a>
+  <p>
+    <span
+      >Für die Erstellung der Online-Benutzerdokumentation wurde <span>Docusaurus</span> verwendet.
+      <span>Docusaurus</span> ist ein Open Source Werkzeug zur Erstellung von statischen Webseiten auf Basis von
+      Technologien wie <span>MarkDown</span> und React. Gegenüber der gedruckten Softwaredokumentation bietet die
+      Online-Dokumentation Vorteile wie die schnelle Aktualisierbarkeit, die leichte Zugänglichkeit, die Möglichkeit zur
+      Verlinkung von Inhalten sowie den Einsatz von Videos oder Animationen.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Die Online-Dokumentation liegt einerseits als Software sowie anderseits in PDF-Form im Anhang dieser Arbeit vor.
+      Um die Online-Benutzerdokumentation lokal zu starten, müssen zunächst alle erforderlichen Abhängigkeiten mit dem
+      Befehl "<span>npm</span> <span>install</span>" heruntergeladen werden. Anschließend kann der lokale Server mit dem
+      Befehl "<span>npm</span> <span>run</span> <span>serve</span>" gestartet werden. Standardmäßig läuft dieser auf dem
+      Port 3000 (</span
+    ><a href="http://localhost:3000"><span>http://localhost:3000</span></a
+    ><span>). Weitere Befehle sind in der README-Datei zu entnehmen.<o:p></o:p></span>
+  </p>
+  <h3>
+    <a name="_Toc163397905">3.2 Flesch-Reading-</a><span><span>Ease</span></span
+    ><span>-Index und Flesch-<span>Kincaid</span>-Index</span>
+  </h3>
+  <p>
+    <span
+      >Der Flesch-Reading-<span>Ease</span>-Index beträgt für die Seite 22 der Dokumentation (Seite XXV in dieser
+      Arbeit) 38,67:<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <!--[if gte msEquation 12]><m:oMathPara><m:oMath><i
+  style='mso-bidi-font-style:normal'><span style='mso-bidi-font-size:12.0pt;
+  line-height:150%;font-family:"Cambria Math",serif'><m:r>REI</m:r><m:r>=206.835-0,846×186,96-1,015×9,85=38,67</m:r></span></i><span
+  style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"Cambria Math",serif'><br>
+  </span></m:oMath></m:oMathPara><!
+    [endif]--><!--[if !msEquation]--><span
+      ><!--[if gte vml 1
+        ]><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width: 295.5pt; height: 15pt">
+          <v:imagedata
+            src="SWE61_Assignment%20-%20Copy-Dateien/image003.png"
+            o:title=""
+            chromakey="white"
+          /> </v:shape><!
+      [endif]--><!--[if !vml]--><img
+        width="394"
+        height="20"
+        src="/assignments/SWE61/image004.png"
+        v:shapes="_x0000_i1025"
+      /><!--[endif]--></span
+    ><!--[endif]--><span
+      >Obwohl der Wert zunächst sehr niedrig erscheint, ist zu beachten, dass der Flesch-Reading-<span>Ease</span>-Index
+      für die englische und nicht für die deutsche Sprache entwickelt wurde.<a href="#_ftn5" name="_ftnref5" title=""
+        ><sup>[5]</sup></a
+      >
+      Nach dem Ansatz von Amstad (1978) beträgt der <span>REI<sub>deutsch</sub></span> 60,78<a
+        href="#_ftn6"
+        name="_ftnref6"
+        title=""
+        ><sup>[6]</sup></a
+      >.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span>Für die gleiche Seite ergibt sich ein Flesch-<span>Kincaid</span>-Index von 10,32:<o:p></o:p></span>
+  </p>
+  <p>
+    <!--[if gte msEquation 12
+      ]><m:oMathPara
+        ><m:oMath
+          ><i style="mso-bidi-font-style: normal"
+            ><span
+              style="
+                mso-bidi-font-size: 12pt;
+                line-height: 150%;
+                font-family: 'Cambria Math', serif;
+                mso-fareast-font-family: 'Times New Roman';
+                mso-fareast-theme-font: minor-fareast;
+              "
+              ><m:r>K</m:r><m:r>-</m:r><m:r>Index</m:r><m:r>=0,39×</m:r></span
+            ></i
+          ><m:f
+            ><m:fPr
+              ><span
+                style="
+                  mso-bidi-font-size: 12pt;
+                  font-family: 'Cambria Math', serif;
+                  mso-ascii-font-family: 'Cambria Math';
+                  mso-fareast-font-family: 'Times New Roman';
+                  mso-fareast-theme-font: minor-fareast;
+                  mso-hansi-font-family: 'Cambria Math';
+                  font-style: italic;
+                  mso-bidi-font-style: normal;
+                "
+                ><m:ctrlPr></m:ctrlPr></span></m:fPr
+            ><m:num
+              ><i style="mso-bidi-font-style: normal"
+                ><span
+                  style="
+                    mso-bidi-font-size: 12pt;
+                    line-height: 150%;
+                    font-family: 'Cambria Math', serif;
+                    mso-fareast-font-family: 'Times New Roman';
+                    mso-fareast-theme-font: minor-fareast;
+                  "
+                  ><m:r>69</m:r></span
+                ></i
+              ></m:num
+            ><m:den
+              ><i style="mso-bidi-font-style: normal"
+                ><span
+                  style="
+                    mso-bidi-font-size: 12pt;
+                    line-height: 150%;
+                    font-family: 'Cambria Math', serif;
+                    mso-fareast-font-family: 'Times New Roman';
+                    mso-fareast-theme-font: minor-fareast;
+                  "
+                  ><m:r>7</m:r></span
+                ></i
+              ></m:den
+            ></m:f
+          ><i style="mso-bidi-font-style: normal"
+            ><span
+              style="
+                mso-bidi-font-size: 12pt;
+                line-height: 150%;
+                font-family: 'Cambria Math', serif;
+                mso-fareast-font-family: 'Times New Roman';
+                mso-fareast-theme-font: minor-fareast;
+              "
+              ><m:r>+11,8×</m:r></span
+            ></i
+          ><m:f
+            ><m:fPr
+              ><span
+                style="
+                  mso-bidi-font-size: 12pt;
+                  font-family: 'Cambria Math', serif;
+                  mso-ascii-font-family: 'Cambria Math';
+                  mso-fareast-font-family: 'Times New Roman';
+                  mso-fareast-theme-font: minor-fareast;
+                  mso-hansi-font-family: 'Cambria Math';
+                  font-style: italic;
+                  mso-bidi-font-style: normal;
+                "
+                ><m:ctrlPr></m:ctrlPr></span></m:fPr
+            ><m:num
+              ><i style="mso-bidi-font-style: normal"
+                ><span
+                  style="
+                    mso-bidi-font-size: 12pt;
+                    line-height: 150%;
+                    font-family: 'Cambria Math', serif;
+                    mso-fareast-font-family: 'Times New Roman';
+                    mso-fareast-theme-font: minor-fareast;
+                  "
+                  ><m:r>129</m:r></span
+                ></i
+              ></m:num
+            ><m:den
+              ><i style="mso-bidi-font-style: normal"
+                ><span
+                  style="
+                    mso-bidi-font-size: 12pt;
+                    line-height: 150%;
+                    font-family: 'Cambria Math', serif;
+                    mso-fareast-font-family: 'Times New Roman';
+                    mso-fareast-theme-font: minor-fareast;
+                  "
+                  ><m:r>69</m:r></span
+                ></i
+              ></m:den
+            ></m:f
+          ><i style="mso-bidi-font-style: normal"
+            ><span
+              style="
+                mso-bidi-font-size: 12pt;
+                line-height: 150%;
+                font-family: 'Cambria Math', serif;
+                mso-fareast-font-family: 'Times New Roman';
+                mso-fareast-theme-font: minor-fareast;
+              "
+              ><m:r>-</m:r><m:r>15,59=10,32</m:r></span
+            ></i
+          ></m:oMath
+        ></m:oMathPara
+      ><!
+    [endif]--><!--[if !msEquation]--><span
+      ><!--[if gte vml 1
+        ]><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width: 278.25pt; height: 28.5pt">
+          <v:imagedata
+            src="SWE61_Assignment%20-%20Copy-Dateien/image005.png"
+            o:title=""
+            chromakey="white"
+          /> </v:shape><!
+      [endif]--><!--[if !vml]--><img
+        width="371"
+        height="38"
+        src="/assignments/SWE61/image006.png"
+        v:shapes="_x0000_i1025"
+      /><!--[endif]--></span
+    ><!--[endif]--><span><o:p></o:p></span>
+  </p>
+  <a name="_Toc163397906"><h3>3.3 Verbesserungsmöglichkeiten</h3></a>
+  <p>
+    <span
+      >Bei der Erstellung dieser Benutzerdokumentation musste aufgrund der begrenzenten Seitenanzahl von 25 Seiten
+      einige Funktionen der Software ausgelassen werden. Hierzu zählen insbesondere Hilfestellungen für Nutzer*innen,
+      die noch nicht mit den Grundfunktionen der Software vertraut sind.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Die hier beschriebene Benutzerdokumentation beschränkt sich aktuell nur auf den<span> </span>deutschsprachigen
+      Raum. Die Software soll aber auch <span>von englischsprachigen Nutzer</span>*innen genutzt werden können. Mit i18n
+      bietet <span>Docusaurus</span> eine Möglichkeit, Übersetzungen in die Dokumentation zu integrieren.<a
+        href="#_ftn7"
+        name="_ftnref7"
+        title=""
+        ><sup>[7]</sup></a
+      ><o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Eine weitere Verbesserungsmöglichkeit besteht in einer integrierten Suchfunktion, welche Nutzerinnen und Nutzer
+      eine schnelle Auffindung von Informationen ermöglicht.<a href="#_ftn8" name="_ftnref8" title=""><sup>[8]</sup></a>
+      Der Ansatz lässt sich durch die Einbindung einer künstlichen Intelligenz (KI), <span>mit der Anwender</span>*innen
+      direkt kommunizieren können, fortführen.<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >Zudem könnten die Vorteile der Online-Dokumentation durch die Verwendung von GIFs oder kurzen Erklärvideos
+      anstelle von Bildern weiter ausgenutzt werden. Darüber hinaus sollte geprüft werden, ob eine direkte Integration
+      der Dokumentation in die Software sinnvoll ist.<o:p></o:p
+    ></span>
+  </p>
+  <a name="_Toc163397907"><h2>4. Schlussbetrachtung</h2></a>
+  <p>
+    Im Fokus dieser Arbeit stand die Konzeption einer Benutzerdokumentation für fortgeschrittene Nutzerinnen und Nutzer
+    der Software <span>repeatio</span>. Dafür wurde zunächst eine Zielgruppenanalyse durchgeführt, sowie die Software
+    als P-System identifiziert. Darauf aufbauend wurde in der Benutzerdokumentation zunächst eine kurze Übersicht über
+    wichtige Themen gegeben, bevor die Fragetypen detailliert vorgestellt sowie das Erstellen und Exportieren von
+    Modulen erläutert wurde. Anschließend wurde aufgezeigt, wie Fragen hinzugefügt und bearbeitet werden können. Der
+    Schwerpunkt der Benutzerdokumentation lag auf dem Fragen-Editor und dessen umfassende Einsatzmöglichkeiten in
+    Verbindung mit <span>MarkDown</span>. Abschließend wurden die verschiedenen Übungsmodi behandelt sowie im FAQ die
+    wichtigsten Fragen beantwortet.
+  </p>
+  <p>
+    Mit der Weiterentwicklung der Software ist die Benutzerdokumentation kontinuierlich anzupassen. Neben neuen
+    Features, sollen aber auch neue häufig auftretende Fragen und Probleme in die Benutzerdokumentation integriert
+    werden.
+  </p>
+  <p>
+    Bei der Analyse der Zielgruppe in Kapitel 2.2 musste auf die persönliche Erfahrung zurückgegriffen werden, da das
+    Projekt keine Cookies zur Analyse des Nutzerverhalten einsetzt. Bei der erstellten Dokumentation handelt es sich um
+    eine externe Benutzerdokumentation.
+    <span
+      >Ein Kritikpunkt an diesem Ansatz ist, dass nach <span>Grünwied</span> (2012) Webanwendungen eigentlich
+      selbsterklärend sein sollten und die Dokumentation direkt in die Software eingebettet sein sollte.<a
+        href="#_ftn9"
+        name="_ftnref9"
+        title=""
+        ><sup>[9]</sup></a
+      >
+      Jedoch würde eine solche direkte Integration die Gefahr, dass nicht fortgeschrittene Nutzer*innen der Software
+      schnell überfordert werden.
+    </span>
+  </p>
+</div>
+<span> </span>
+<div>
+  <a name="_Toc163397908"><h2>I. Literaturverzeichnis</h2></a>
+  <p>
+    <a name="_Toc106974382">[</a><span><span>Anstad</span></span
+    ><span
+      >, T., 1978]<span> </span>Amstad, T. (1978): Wie verständlich sind unsere Zeitungen? Zürich:
+      Studenten-Schreib-Service</span
+    >
+  </p>
+  <p>
+    <span
+      >[Doose, D., <span>o.D</span>.]<span> </span>Doose, D. (<span>o.D</span>.): Softwaredokumentation (MIP401) –
+      Verfahren und Systeme der Softwaredokumentation. Stuttgart: <span>AKAD Bildungsgesellschaft</span> mbh</span
+    >
+  </p>
+  <p>
+    <span
+      >[Eichstädt, T., 2024]<span> </span>Eichstädt, T./Spieker, S. (2024): 52 Stunden Informatik - Was jeder über
+      Informatik wissen sollte, 2. Auflage. Wiesbaden: Springer Fachmedien</span
+    >
+  </p>
+  <p>
+    <span
+      >[Friedrich, D., <span>o.D</span>.]<span> </span>Friedrich, D. (<span>o.D</span>.): Softwaredokumentation und
+      Softwarewartung (MIP403) – Verfahren und Systeme der Softwaredokumentation. Stuttgart:
+      <span>AKAD Bildungsgesellschaft</span> mbh</span
+    >
+  </p>
+  <p>
+    <span
+      >[<span>Grünwied</span>, G., 2012]<span> </span><span>Grünwied</span>, G. (2012): Software-Dokumentation:
+      Grundlagen – Praxis – Lösungen, 3., aktualisierte Auflage. Tübingen: Expert Verlag GmbH</span
+    >
+  </p>
+  <p>
+    <span
+      >[Lehman, M., 1980]<span> </span>Lehman, M. (1980): <span>Programs</span>, Life <span>Cycles</span>, and Laws
+      <span>of</span> Software Evolution. In: Proceedings <span>of</span> <span>the</span> IEEE, 68 (9). New York: IEEE,
+      S. 1060-1076</span
+    >
+  </p>
+  <p>
+    <span
+      >[<span>Meta</span> <span>Platforms</span>, 2024a]<span> </span><span>Meta</span> <span>Platforms</span>/Lorber,
+      S. (2024): i18n – <span>Introduction</span>. <span>Docusaurus</span>, </span
+    ><a href="https://docusaurus.io/docs/i18n/introduction"
+      ><span>https://docusaurus.io/docs/i18n/introduction</span><span></span></a
+    ><span> (Abgerufen am 16.03.2024)</span>
+  </p>
+  <p>
+    <span
+      >[<span>Meta</span> <span>Platforms</span>, 2024b]<span> </span><span>Meta</span> <span>Platforms</span>/Lorber,
+      S. (2024): Search. <span>Docusaurus</span>, </span
+    ><a href="https://docusaurus.io/docs/search"><span>https://docusaurus.io/docs/search</span><span></span></a
+    ><span> (Abgerufen am 19.03.2024)</span>
+  </p>
+  <p>
+    <span
+      >[<span>Theilig</span>, MM., 2021]<span> </span><span>Theilig</span>, MM./Rechenberg, P./<span>Mössenböck</span>,
+      H. (2021): Programmierung. In: Hennecke, M./Skrotzki, B. (Hrsg.): HÜTTE – Das Ingenieurwissen. Berlin:
+      Springer</span
+    >
+  </p>
+  <span></span>
+  <a name="_Toc163397909"><h2>II. Anhang</h2></a>
+  <p>
+    <b
+      ><span>Inhaltsverzeichnis – Anhang<o:p></o:p></span
+    ></b>
+  </p>
+  <p>
+    <span
+      >1. Was ist <span>Repeatio</span>?
+      .....................................................................................................................
+      IV<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >2. Frage Typen
+      ............................................................................................................................
+      VIII<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >3. Module hinzufügen
+      ..................................................................................................................
+      XI<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >4. Module exportieren
+      ...............................................................................................................
+      XIV<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >5. Fragen hinzufügen
+      ...................................................................................................................
+      XV<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >6. Fragen bearbeiten
+      ..................................................................................................................
+      XVI<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >7. Fragen-Editor
+      .........................................................................................................................
+      XVII<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >8. Modi
+      ......................................................................................................................................
+      XXV<o:p></o:p
+    ></span>
+  </p>
+  <p>
+    <span
+      >9. FAQ
+      ......................................................................................................................................
+      XXVII<o:p></o:p
+    ></span>
+  </p>
+</div>
+<div>
+  <!--[if !supportFootnotes]-->
+  <hr align="left" size="1" width="33%" />
+  <!--[endif]-->
+  <div id="ftn1">
+    <p>
+      <a href="#_ftnref1" name="_ftn1" title=""><sup>[1]</sup></a> Vgl. Theilig, MM. (2021) S. 51 f.; vgl. Doose, D.
+      (o.D.) S. 6; vgl. Friedrich, D. (o.D.) S. 55
+    </p>
+  </div>
+  <div id="ftn2">
+    <p>
+      <a href="#_ftnref2" name="_ftn2" title=""><sup>[2]</sup></a> Open Source bezeichnet Software, deren Quellcode
+      öffentlich zugänglich ist und von Dritten eingesehen, genutzt und auch modifiziert werden darf. (Vgl. Eichstädt,
+      T. [2024] S. 266)
+    </p>
+    <p>
+      Der Quellcode des Projekts findet sich auf GitHub:
+      <a href="https://github.com/Rllyyy/repeatio">https://github.com/Rllyyy/repeatio</a><span> <span> </span></span>
+    </p>
+  </div>
+  <div id="ftn3">
+    <p>
+      <a href="#_ftnref3" name="_ftn3" title=""><sup>[3]</sup></a> Vgl. Lehman, M. (1980) S. 1063; vgl. Friedrich, D.
+      (o.D.) S. 15
+    </p>
+  </div>
+  <div id="ftn4">
+    <p>
+      <a href="#_ftnref4" name="_ftn4" title=""><sup>[4]</sup></a> Vgl. Friedrich, D. (o.D) S. 16
+    </p>
+  </div>
+  <div id="ftn5">
+    <p>
+      <a href="#_ftnref5" name="_ftn5" title=""><sup>[5]</sup></a> Vgl. Amstad, T. (1978) zitiert nach Doose, D. (o.D.)
+      S. 65
+    </p>
+  </div>
+  <div id="ftn6">
+    <p>
+      <a href="#_ftnref6" name="_ftn6" title=""><sup>[6]</sup></a>
+      <!--[if gte msEquation 12
+        ]><m:oMath
+          ><m:sSub
+            ><m:sSubPr
+              ><span
+                style="
+                  font-family: 'Cambria Math', serif;
+                  mso-ascii-font-family: 'Cambria Math';
+                  mso-hansi-font-family: 'Cambria Math';
+                  vertical-align: sub;
+                "
+                ><m:ctrlPr></m:ctrlPr></span></m:sSubPr
+            ><m:e
+              ><i style="mso-bidi-font-style: normal"
+                ><sub
+                  ><span style="font-family: 'Cambria Math', serif"><m:r>REI</m:r></span></sub
+                ></i
+              ></m:e
+            ><m:sub
+              ><i style="mso-bidi-font-style: normal"
+                ><sub
+                  ><span style="font-family: 'Cambria Math', serif"><m:r>deutsc</m:r><m:r>h</m:r></span></sub
+                ></i
+              ></m:sub
+            ></m:sSub
+          ><span style="font-family: 'Cambria Math', serif"
+            ><m:r
+              ><m:rPr><m:scr m:val="roman" /><m:sty m:val="p" /></m:rPr>= 180 - 9,85-0,585×186,96=60,78</m:r
+            ></span
+          ></m:oMath
+        ><!
+      [endif]--><!--[if !msEquation]--><span
+        ><!--[if gte vml 1
+          ]><v:shapetype
+            id="_x0000_t75"
+            coordsize="21600,21600"
+            o:spt="75"
+            o:preferrelative="t"
+            path="m@4@5l@4@11@9@11@9@5xe"
+            filled="f"
+            stroked="f"
+          >
+            <v:stroke joinstyle="miter" />
+            <v:formulas>
+              <v:f eqn="if lineDrawn pixelLineWidth 0" />
+              <v:f eqn="sum @0 1 0" />
+              <v:f eqn="sum 0 0 @1" />
+              <v:f eqn="prod @2 1 2" />
+              <v:f eqn="prod @3 21600 pixelWidth" />
+              <v:f eqn="prod @3 21600 pixelHeight" />
+              <v:f eqn="sum @0 0 1" />
+              <v:f eqn="prod @6 1 2" />
+              <v:f eqn="prod @7 21600 pixelWidth" />
+              <v:f eqn="sum @8 21600 0" />
+              <v:f eqn="prod @7 21600 pixelHeight" />
+              <v:f eqn="sum @10 21600 0" />
+            </v:formulas>
+            <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" />
+            <o:lock v:ext="edit" aspectratio="t" /> </v:shapetype
+          ><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width: 225pt; height: 12pt">
+            <v:imagedata
+              src="SWE61_Assignment%20-%20Copy-Dateien/image007.png"
+              o:title=""
+              chromakey="white"
+            /> </v:shape><!
+        [endif]--><!--[if !vml]--><img
+          width="300"
+          height="16"
+          src="/assignments/SWE61/image008.png"
+          v:shapes="_x0000_i1025"
+        /><!--[endif]--></span
+      ><!--[endif]-->
+    </p>
+  </div>
+  <div id="ftn7">
+    <p>
+      <a href="#_ftnref7" name="_ftn7" title=""><sup>[7]</sup></a> Vgl. Meta Platforms (2024a) o.S.
+    </p>
+  </div>
+  <div id="ftn8">
+    <p>
+      <a href="#_ftnref8" name="_ftn8" title=""><sup>[8]</sup></a> Vgl. Meta Platforms (2024b) o.S.
+    </p>
+  </div>
+  <div id="ftn9">
+    <p>
+      <a href="#_ftnref9" name="_ftn9" title=""><sup>[9]</sup></a> Vgl. Grünwied, G. (2012) o.S. zitiert nach Doose, D.
+      (o.D.) S. 10
+    </p>
+  </div>
+</div>

@@ -41,7 +41,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 print:hidden ${
         isSmall && showNavMobile ? "h-[100dvh]" : ""
       } ${
         isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
