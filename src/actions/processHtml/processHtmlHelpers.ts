@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 
-export async function processHtml(content: string): Promise<string> {
+export async function processHtml(content: string, moduleId: string): Promise<string> {
   // Create a DOMParser
   const dom = new JSDOM(content);
   const doc = dom.window.document;
@@ -32,7 +32,7 @@ export async function processHtml(content: string): Promise<string> {
   flattenNestedSupElements(doc);
 
   // Process image sources
-  transformImageSource(doc);
+  transformImageSource(doc, moduleId);
 
   removeAlignFromImageTags(doc);
 
@@ -254,7 +254,7 @@ function flattenNestedSupElements(doc: Document) {
  * Processes image sources
  */
 // Turn the highlighted code is to complex, just turn this Visualisierung%20in%20einer%20Präsentation%20-%20public-Dateien/image003.png into this image003.png by getting the last part of the path
-function transformImageSource(doc: Document) {
+function transformImageSource(doc: Document, moduleId: string) {
   doc.querySelectorAll("img").forEach((img) => {
     const src = img.getAttribute("src");
     if (src) {
@@ -265,7 +265,7 @@ function transformImageSource(doc: Document) {
       console.log(parts, lastPart);
 
       // Set the new source
-      img.setAttribute("src", `${lastPart}`);
+      img.setAttribute("src", `/assignments/${moduleId}/${lastPart}`);
     }
   });
 }

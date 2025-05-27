@@ -31,11 +31,19 @@ export async function submit(previousState: ActionState, formData: FormData) {
     };
   }
 
+  const moduleId = formData.get("moduleId");
+  if (!moduleId || typeof moduleId !== "string" || moduleId === "default") {
+    return {
+      error: "Module ID is required",
+      data: null,
+    };
+  }
+
   return {
     error: null,
     data: {
       fileName: file.name,
-      content: await processHtml(await file.text()),
+      content: await processHtml(await file.text(), moduleId),
     },
   };
 }
