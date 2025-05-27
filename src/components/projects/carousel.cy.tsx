@@ -59,7 +59,7 @@ describe("<Carousel />", () => {
     cy.get("img").should("have.length", 3);
   });
 
-  it.only("should hide the second and third element", () => {
+  it("should hide the second and third element", () => {
     cy.mount(<MockCarousel />);
 
     // Wait for all images to load
