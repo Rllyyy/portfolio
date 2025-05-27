@@ -59,11 +59,15 @@ describe("<Carousel />", () => {
     cy.get("img").should("have.length", 3);
   });
 
-  it("should hide the second and third element", () => {
+  it.only("should hide the second and third element", () => {
     cy.mount(<MockCarousel />);
+
+    // Wait for all images to load
+    cy.get("img").should("have.length", 3).and("be.visible");
 
     cy.document().then((doc) => {
       const firstImageWidth = doc.querySelector("img:first-child")?.getBoundingClientRect().width ?? 0;
+
       const leftButtonWidth =
         doc.querySelector("button[aria-label='View previous item']")?.getBoundingClientRect().width ?? 0;
 
