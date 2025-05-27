@@ -21,7 +21,7 @@ export const Assignments = async () => {
       <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
         <h2 className='self-start text-5xl font-bold'>Academic Assignments</h2>
         <motion.div
-          className={"grid w-full gap-4"}
+          className='grid w-full gap-4'
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(min(450px, 100%), 1fr))",
           }}

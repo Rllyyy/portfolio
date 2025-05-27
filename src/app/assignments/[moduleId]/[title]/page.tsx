@@ -37,8 +37,6 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
     year: "numeric",
   });
 
-  // console.log(`/assignments/${moduleId}/${transformURI(assignment.title)}.pdf`);
-
   return (
     <main className='px-3 space-y-2 mt-28 md:mt-40'>
       <div className='max-w-2xl mx-auto prose dark:prose-invert'>
