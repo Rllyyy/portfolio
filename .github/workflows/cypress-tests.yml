@@ -11,14 +11,14 @@ jobs:
   # Create and save build
   install:
     runs-on: ubuntu-22.04
-    env:
-      BLOB_URL: ${{ secrets.BLOB_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Build project
         uses: cypress-io/github-action@v6
+        env:
+          BLOB_URL: ${{ secrets.BLOB_URL }}
         with:
           # Disable running of tests within install job
           runTests: false
