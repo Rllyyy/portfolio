@@ -18,6 +18,8 @@ jobs:
 
       - name: Build project
         uses: cypress-io/github-action@v6
+        env:
+          BLOB_URL: ${{ secrets.BLOB_URL }}
         with:
           # Disable running of tests within install job
           runTests: false
