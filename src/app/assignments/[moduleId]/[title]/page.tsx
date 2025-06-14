@@ -7,10 +7,32 @@ import type { TAssignment } from "@types";
 
 export const dynamicParams = false;
 
+async function fetchContent(moduleId: string): Promise<string> {
+  if (!process.env.NODE_ENV) {
+    throw new Error("NODE_ENV environment variable is not set");
+  }
+
+  if (process.env.NODE_ENV === "development") {
+    return (await import(`local/assignments/${moduleId}/raw.htm`)).default;
+  } else {
+    if (!process.env.BLOB_URL) {
+      throw new Error("BLOB_URL environment variable is not set");
+    }
+
+    const res = await fetch(`${process.env.BLOB_URL}/assignments/${moduleId}/raw.htm`);
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch content for moduleId ${moduleId}: ${res.status} ${res.statusText}`);
+    }
+
+    return await res.text();
+  }
+}
+
 export default async function Page({ params }: { params: Promise<Pick<TAssignment, "moduleId">> }) {
   const { moduleId } = await params;
 
-  const { default: data } = await import(`public/assignments/${moduleId}/raw.htm`);
+  const data = await fetchContent(moduleId);
 
   if (!data) {
     throw new Error("No data found");
