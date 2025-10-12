@@ -8,7 +8,7 @@ describe("<Assignments />", () => {
   it("should render assignments", async () => {
     const component = await Assignments();
     cy.mount(component);
-    cy.get("article").should("have.length", 13);
+    cy.get("article").should("have.length", 14);
   });
 
   it("should have the correct time value and attribute", async () => {
