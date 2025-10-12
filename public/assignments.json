@@ -1,5 +1,12 @@
 [
   {
+    "title": "Quality 4.0: Untersuchung von Herausforderungen bei der Implementierung von Quality 4.0 in kleinen und mittleren Unternehmen am Beispiel einer Fallstudie aus der Fertigungsindustrie (Exposé)",
+    "text": "Exposé für Bachelorarbeit im Modul BADITT. Quality 4.0 beschreibt die Integration von digitalen Technologien in das Qualitätsmanagement, um Prozesse zu optimieren und die Produktqualität zu verbessern.",
+    "moduleId": "BADITT",
+    "imageDescription": "A man in blue work attire holds a tablet, checking quality data or a production log. Only his hands and forearms are visible. In the background, slightly blurred, is a modern, clean manufacturing hall with a large metallic component or machine ready for inspection. The focus is on the tablet, representing the digital component of quality control in the manufacturing industry.",
+    "date": "15.09.2025"
+  },
+  {
     "title": "Konzeption eines Lastenhefts und Pflichtenhefts für eine betriebsinterne Softwarelösung (Projektbericht)",
     "text": "Ohne adäquate Planungsinstrumente besteht das Risiko, dass Zeitrahmen und Budgets schnell überschritten werden. Um solche Risiken zu minimieren, bieten Lasten- und Pflichtenhefte als bewährte Werkzeuge der Softwareentwicklung einen strukturierten Ansatz.",
     "moduleId": "BADITP",
