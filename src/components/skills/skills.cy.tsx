@@ -16,9 +16,9 @@ const MockSkillsWithTheme = () => {
 };
 
 describe("<Skills />", () => {
-  it("should render 9 skills", () => {
+  it("should render 12 skills", () => {
     cy.mount(<MockSkillsWithTheme />);
-    cy.get("article").should("have.length", 9);
+    cy.get("article").should("have.length", 12);
   });
 
   it("should round the the top corners of the first element and the bottom corners of the last element on mobile", () => {
@@ -62,13 +62,13 @@ describe("<Skills />", () => {
     // Assert that the second element has the more rounded corners at the top right only
     cy.get("article").eq(2).should("have.css", "border-radius", "4px");
 
-    // Assert that the last element  has the more rounded corners at the bottom left only
+    // Assert that the last element  has the more rounded corners at the bottom right only
     cy.get("article")
       .last()
       .should("have.css", "border-top-left-radius", "4px")
       .and("have.css", "border-top-right-radius", "4px")
-      .and("have.css", "border-bottom-left-radius", "12px")
-      .and("have.css", "border-bottom-right-radius", "4px");
+      .and("have.css", "border-bottom-right-radius", "12px")
+      .and("have.css", "border-bottom-left-radius", "4px");
   });
 
   it("should round the correct elements on lg viewport", () => {
@@ -95,13 +95,13 @@ describe("<Skills />", () => {
 
     // Assert that the last element  has the more rounded corners at the bottom left only
     cy.get("article")
-      .eq(6)
+      .eq(9)
       .should("have.css", "border-top-left-radius", "4px")
       .and("have.css", "border-top-right-radius", "4px")
       .and("have.css", "border-bottom-left-radius", "12px")
       .and("have.css", "border-bottom-right-radius", "4px");
 
-    // Assert that the last element  has the more rounded corners at the bottom left only
+    // Assert that the last element  has the more rounded corners at the bottom right only
     cy.get("article")
       .last()
       .should("have.css", "border-top-left-radius", "4px")

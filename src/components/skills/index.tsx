@@ -6,10 +6,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   CSharpIcon,
+  GitHubActionsIcon,
   GitIcon,
   JavaScriptIcon,
   MarkdownIcon,
   NextJsIcon,
+  PrismaIcon,
   ReactIcon,
   TailwindcssIcon,
   TypeScriptIcon,
@@ -98,7 +100,7 @@ export const Skills = () => {
             </div>
           </article>
           {/* Tailwind */}
-          <article className={`${skillsArticleStyle} lg:rounded-bl-xl`}>
+          <article className={`${skillsArticleStyle}`}>
             <TailwindcssIcon />
             <div className={textWrapperStyle}>
               <h3 className={skillHeadingStyle}>Tailwind</h3>
@@ -114,13 +116,46 @@ export const Skills = () => {
             </div>
           </article>
           {/* JavaScript */}
-          <article
-            className={`${skillsArticleStyle} rounded-b-xl md:rounded-bl-xl md:rounded-br lg:rounded-br-xl lg:rounded-bl`}
-          >
+          <article className={`${skillsArticleStyle}`}>
             <JavaScriptIcon />
             <div className={textWrapperStyle}>
               <h3 className={skillHeadingStyle}>JavaScript</h3>
               <p className={skillTextStyle}>Scripting language for browsers</p>
+            </div>
+          </article>
+          {/* GitHub Actions */}
+          <article className={`${skillsArticleStyle}  lg:rounded-bl-xl`}>
+            <GitHubActionsIcon />
+            <div className={textWrapperStyle}>
+              <h3 className={skillHeadingStyle}>GitHub Actions</h3>
+              <p className={skillTextStyle}>Automating Workflows</p>
+            </div>
+          </article>
+          {/* Zod */}
+          <article className={`${skillsArticleStyle} md:rounded-bl-xl lg:rounded-bl`}>
+            <motion.div variants={childVariants}>
+              <Image
+                // https://zod.dev/logo/logo.png
+                src={`/images/zod.png`}
+                alt='Zod Logo'
+                className={`${iconStyle} object-scale-down`}
+                width={70}
+                height={70}
+              />
+            </motion.div>
+            <div className={textWrapperStyle}>
+              <h3 className={skillHeadingStyle}>Zod</h3>
+              <p className={skillTextStyle}>TypeScript schema validation</p>
+            </div>
+          </article>
+          {/* Prisma */}
+          <article
+            className={`${skillsArticleStyle} rounded-b-xl md:rounded-bl md:rounded-br-xl lg:rounded-br-xl lg:rounded-bl`}
+          >
+            <PrismaIcon currentTheme={currentTheme} />
+            <div className={textWrapperStyle}>
+              <h3 className={skillHeadingStyle}>Prisma</h3>
+              <p className={skillTextStyle}>Modern TypeScript ORM</p>
             </div>
           </article>
         </motion.div>

@@ -19,7 +19,7 @@ const items = [
   },
   {
     type: "image",
-    resource: "/images/Internet-Check.png",
+    resource: "/projects/Internet-Check/main.png",
     alt: "Simple UI for software reading Start",
   },
 ];

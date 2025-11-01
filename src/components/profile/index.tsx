@@ -18,7 +18,8 @@ export const Profile = () => {
             I specialize in working with modern web technologies such as TypeScript, React, Tailwind and Next.js.
           </p>
           <p className='mt-3 text-lg text-gray-700 md:mt-4 dark:text-gray-400'>
-            I&apos;ve delivered numerous projects, including{" "}
+            I have worked as a Junior Software Engineer for two years at Forum Energy Technologies and delivered
+            numerous projects, including{" "}
             <Link
               href={{ pathname: "/", hash: "projects" }}
               className='font-medium text-indigo-600 dark:text-indigo-400'
@@ -37,8 +38,8 @@ export const Profile = () => {
             for companies.
           </p>
           <p className='mt-3 text-lg text-gray-700 md:mt-4 dark:text-gray-400'>
-            Currently, I am working as a Junior Software Engineer at Forum Energy Technologies and pursuing a degree in
-            Business Economics with a specialization in Digital Transformation.
+            Currently, I am writing my bachelor&apos;s thesis about the challenges of implementing Quality 4.0 in small
+            and medium-sized enterprises (SMEs).
           </p>
         </div>
       </div>
