@@ -4,6 +4,8 @@ import { Icon } from "@components/icons";
 import { transformURI } from "@utils/transformURI";
 import { AssignmentsSchema } from "@schemas";
 import type { TAssignment } from "@types";
+import path from "path";
+import fs from "fs/promises";
 
 export const dynamicParams = false;
 
@@ -13,7 +15,7 @@ async function fetchContent(moduleId: string): Promise<string> {
   }
 
   if (process.env.NODE_ENV === "development") {
-    return (await import(`local/assignments/${moduleId}/raw.htm`)).default;
+    return await fs.readFile(path.join(process.cwd(), "local", "assignments", moduleId, "raw.htm"), "utf8");
   } else {
     if (!process.env.BLOB_URL) {
       throw new Error("BLOB_URL environment variable is not set");
