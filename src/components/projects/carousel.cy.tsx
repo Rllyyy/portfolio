@@ -9,12 +9,12 @@ import "@/app/globals.css";
 const items = [
   {
     type: "image",
-    resource: "/images/repeatio-question.png",
+    resource: "/projects/repeatio/extended-match.png",
     alt: "Multiple Response Question",
   },
   {
     type: "image",
-    resource: "/images/Teilnahmebescheinigung.png",
+    resource: "/projects/Webinar-Certificates/main.png",
     alt: "Interface for software",
   },
   {
