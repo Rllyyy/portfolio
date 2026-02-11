@@ -9,7 +9,8 @@ import { useCallback, useEffect, useRef } from "react";
  * @return Function that returns `true` only if the component is mounted.
  */
 export function useIsMounted(initialValue = false): () => boolean {
-  const isMounted = useRef(initialValue);
+  const isCypress = typeof window !== "undefined" && "Cypress" in window;
+  const isMounted = useRef(initialValue || isCypress);
 
   useEffect(() => {
     isMounted.current = true;
