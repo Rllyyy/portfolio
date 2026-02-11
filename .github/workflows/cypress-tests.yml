@@ -11,13 +11,13 @@ on:
 jobs:
   # Create and save build
   install:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build project
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         env:
           BLOB_URL: ${{ secrets.BLOB_URL }}
         with:
@@ -26,7 +26,7 @@ jobs:
           build: yarn run build
 
       - name: Save build folder
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build
           if-no-files-found: error
@@ -34,7 +34,7 @@ jobs:
           path: .next
 
   e2e:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: install
 
     strategy:
@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download the build folder
         uses: actions/download-artifact@v4
@@ -73,7 +73,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download the build folder
         uses: actions/download-artifact@v4
@@ -83,7 +83,7 @@ jobs:
 
       - name: Cypress run component tests
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           # Records to Cypress Cloud
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
