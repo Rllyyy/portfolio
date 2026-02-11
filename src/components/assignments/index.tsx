@@ -18,7 +18,7 @@ export const Assignments = async () => {
 
   return (
     <section className='min-h-[75vh] px-4 lg:px-6 py-16 md:py-24 bg-slate-50 dark:bg-dark-100' id='assignments'>
-      <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,_1600px)] m-auto'>
+      <div className='flex flex-col items-center gap-8 md:gap-12 w-[min(100%,1600px)] m-auto'>
         <h2 className='self-start text-5xl font-bold'>Academic Assignments</h2>
         <motion.div
           className='grid w-full gap-4'
@@ -75,7 +75,7 @@ const Card: React.FC<TAssignment> = ({ title, text, imageDescription, moduleId, 
           fill
         />
       </div>
-      <div className='flex flex-col self-stretch flex-grow p-5 gap-y-2'>
+      <div className='flex flex-col self-stretch grow p-5 gap-y-2'>
         <div className='flex flex-row items-center justify-between'>
           <time dateTime={machineDate} className='font-bold text-indigo-600 dark:text-gray-400'>
             {shortDate}

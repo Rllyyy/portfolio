@@ -38,7 +38,7 @@ const MockCarousel: React.FC<IMockCarouselItem> = ({ carouselItems }) => {
                 width={650}
                 height={520}
                 alt={item.alt as string}
-                className='object-contain w-full max-h-full p-[1px]'
+                className='object-contain w-full max-h-full p-px'
                 unoptimized
               />
             );

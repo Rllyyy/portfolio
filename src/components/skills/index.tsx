@@ -33,7 +33,7 @@ export const Skills = () => {
 
   return (
     <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-100 dark:bg-dark-200' id='skills'>
-      <div className='flex flex-col items-center gap-10 w-[min(100%,_1600px)] m-auto'>
+      <div className='flex flex-col items-center gap-10 w-[min(100%,1600px)] m-auto'>
         <h2 className='self-start text-5xl font-bold'>Skills</h2>
         {/* Display the skills */}
         <motion.div

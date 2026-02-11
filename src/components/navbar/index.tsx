@@ -42,14 +42,14 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 print:hidden ${
-        isSmall && showNavMobile ? "h-[100dvh]" : ""
+        isSmall && showNavMobile ? "h-dvh" : ""
       } ${
         isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
       }`}
     >
       <div
         className={`grid content-center w-full grid-cols-[1fr_max-content] px-4 lg:px-6 mx-auto max-w-screen-4xl duration-200 md:grid-cols-[max-content_1fr_max-content] grid-rows-[max-content_1fr] md:grid-rows-[auto] h-full md:h-auto md:gap-x-24 ${
-          isTop ? "py-8 md:py-16" : "py-[10px]"
+          isTop ? "py-8 md:py-16" : "py-2.5"
         }`}
       >
         <Link href={{ pathname: "/" }} className='self-center hover:no-underline'>
@@ -130,7 +130,7 @@ function useScrollYPosition() {
   return useSyncExternalStore(
     subscribe,
     () => global.window?.scrollY === 0,
-    () => undefined
+    () => undefined,
   );
 }
 
@@ -143,7 +143,7 @@ function useIsSmall() {
   return useSyncExternalStore(
     subscribeWindowResize,
     () => global.window?.innerWidth < 768,
-    () => false
+    () => false,
   );
 }
 

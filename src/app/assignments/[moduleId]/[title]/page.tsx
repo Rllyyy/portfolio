@@ -87,7 +87,7 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
         </div>
       </div>
 
-      <div className='relative w-full max-w-full md:max-w-3xl xl:max-w-5xl mx-auto h-56 sm:h-80 md:h-[400px] xl:h-[600px] '>
+      <div className='relative w-full h-56 max-w-full mx-auto md:max-w-3xl xl:max-w-5xl sm:h-80 md:h-100 xl:h-150 '>
         <Image
           src={`/assignments/${moduleId}/image.png`}
           priority
