@@ -21,13 +21,18 @@ import { iconStyle, skillHeadingStyle, skillTextStyle, skillsArticleStyle, textW
 import { useIsMounted } from "@hooks/useIsMounted";
 
 export const Skills = () => {
-  const mounted = useIsMounted();
+  //
+  const [mounted, setMounted] = useState(false);
 
   const { systemTheme, theme } = useTheme();
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  if (!mounted()) return null;
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  // if (!mounted()) return null;
 
   return (
     <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-100 dark:bg-dark-200' id='skills'>
