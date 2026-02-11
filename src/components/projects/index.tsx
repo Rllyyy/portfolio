@@ -11,13 +11,13 @@ export const Projects = () => {
 
   return (
     <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-50 dark:bg-dark-100' id='projects'>
-      <div className='flex flex-col items-center gap-12 md:gap-16 w-[min(100%,_1600px)] m-auto'>
+      <div className='flex flex-col items-center gap-12 md:gap-16 w-[min(100%,1600px)] m-auto'>
         <h2 className='self-start text-5xl font-bold'>Projects</h2>
         <div className='space-y-6 lg:space-y-16'>
           {projects.map((project, index) => {
             return (
               <motion.article
-                className='flex flex-col items-center overflow-clip border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-zinc-800 lg:min-h-[650px] scroll-mt-16 md:scroll-mt-20'
+                className='flex flex-col items-center overflow-clip border border-gray-300 rounded-md lg:rounded-lg lg:flex-row lg:border-none dark:border-zinc-800 lg:min-h-162.5 scroll-mt-16 md:scroll-mt-20'
                 key={project.name}
                 id={project.name.toLowerCase().replaceAll(/\s+/g, "-")} //Fails for special characters if used for url
                 initial={{ opacity: 0, x: index % 2 !== 0 ? "15%" : "-15%" }}
@@ -26,7 +26,7 @@ export const Projects = () => {
                 viewport={{ once: true, amount: viewportAmount }}
               >
                 <div
-                  className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative ${
+                  className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-162.5 h-100 lg:max-h-none relative ${
                     index % 2 !== 0 ? "lg:order-0" : "lg:order-1"
                   }`}
                 >
@@ -41,7 +41,7 @@ export const Projects = () => {
                               fill
                               sizes='(max-width: 768px) 100vw, 700px'
                               alt={item.alt as string}
-                              className='object-contain w-full max-h-full p-[1px]'
+                              className='object-contain w-full max-h-full p-px'
                             />
                           </div>
                         );
@@ -51,7 +51,7 @@ export const Projects = () => {
                     })}
                   </Carousel>
                 </div>
-                <div className='flex flex-col justify-center lg:w-[50%] bg-zinc-100 dark:bg-dark-200 p-6 lg:p-8 flex-grow self-stretch '>
+                <div className='flex flex-col justify-center lg:w-[50%] bg-zinc-100 dark:bg-dark-200 p-6 lg:p-8 grow self-stretch '>
                   <h3 className='text-3xl font-semibold'>{project.name}</h3>
                   <div className='flex flex-wrap gap-2 mt-2' aria-label='Project tech stack'>
                     {project.technologies.map((technology) => {
@@ -69,7 +69,7 @@ export const Projects = () => {
                   <div className='flex items-stretch gap-x-2'>
                     {project.links?.primary && (
                       <a
-                        className='p-1 text-lg font-semibold text-white bg-indigo-600 rounded-lg cursor-pointer hover:no-underline hover:bg-indigo-700 w-[min(50%,_150px)] text-center duration-150 flex items-center justify-center border border-indigo-600 hover:border-indigo-600'
+                        className='p-1 text-lg font-semibold text-white bg-indigo-600 rounded-lg cursor-pointer hover:no-underline hover:bg-indigo-700 w-[min(50%,150px)] text-center duration-150 flex items-center justify-center border border-indigo-600 hover:border-indigo-600'
                         href={project.links?.primary.link}
                         target='_blank'
                         rel='noreferrer'
@@ -102,7 +102,7 @@ const useViewportAmount = () => {
   const value = useSyncExternalStore(
     subscribe,
     () => window.innerHeight,
-    () => 0
+    () => 0,
   );
 
   if (value <= 850) {
@@ -162,14 +162,14 @@ export const Video: React.FC<IVideo> = ({ resource }) => {
   const hasYouTubeConsentLocalStorage: boolean = useSyncExternalStore(
     subscribeToLocalStorage,
     getLocalStorageSnapShot,
-    () => undefined
+    () => undefined,
   );
 
   // Get consent form session storage if the user did not check "Do not show again"
   const hasYouTubeConsentSessionStorage: boolean = useSyncExternalStore(
     subscribeToSessionStorage,
     getSessionStorageSnapShot,
-    () => undefined
+    () => undefined,
   );
 
   if (!hasYouTubeConsentLocalStorage && !hasYouTubeConsentSessionStorage) {
@@ -224,7 +224,7 @@ const YouTubeConsentForm = () => {
 
   return (
     <form
-      className='flex flex-col w-full h-full p-3 bg-gray-900 rounded md:p-6 md:gap-y-2 gap-y-1 md:max-h-[350px] my-auto dark:bg-black'
+      className='flex flex-col w-full h-full p-3 bg-gray-900 rounded md:p-6 md:gap-y-2 gap-y-1 md:max-h-87.5 my-auto dark:bg-black'
       onSubmit={handleSubmit}
     >
       <h3 className='font-bold text-zinc-50 md:text-xl'>Activate external Media</h3>

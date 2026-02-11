@@ -27,7 +27,7 @@ const items = [
 const MockCarousel = () => {
   return (
     <div
-      className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative order-0 `}
+      className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-162.5 h-100 lg:max-h-none relative order-0 `}
     >
       <Carousel>
         {items?.map((item, i) => {
@@ -40,7 +40,7 @@ const MockCarousel = () => {
                 width={650}
                 height={520}
                 alt={item.alt as string}
-                className='object-contain w-full max-h-full p-[1px]'
+                className='object-contain w-full max-h-full p-px'
                 unoptimized
               />
             );

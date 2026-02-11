@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-dark-100: "#0a0a0a";
+  --color-dark-200: "#1A1A1A";
+}
+
+@custom-variant hover (&:hover);
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {

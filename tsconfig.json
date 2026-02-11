@@ -43,6 +43,9 @@
       ],
       "@types": [
         "src/types/index.ts"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
       ]
     },
     "plugins": [
