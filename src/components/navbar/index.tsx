@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect, useSyncExternalStore } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { BurgerIcon, ThemeSwitchIcon, XMarkIcon } from "./icons";
+import { useIsMounted } from "@hooks/useIsMounted";
 
 export function Navbar() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useIsMounted();
   const { systemTheme, theme, setTheme } = useTheme();
   const [showNavMobile, setShowNavMobile] = useState(false);
   const isSmall = useIsSmall();
@@ -35,16 +36,16 @@ export function Navbar() {
     setShowNavMobile(false);
   };
 
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
+  if (!mounted()) return null;
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full md:h-auto duration-200 print:hidden ${
         isSmall && showNavMobile ? "h-dvh" : ""
       } ${
-        isTop ? "bg-zinc-100 dark:bg-dark-100" : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
+        isTop
+          ? "bg-zinc-100 dark:bg-dark-100 border-none"
+          : "bg-zinc-50 dark:bg-black border-b-zinc-300 border-b dark:border-none"
       }`}
     >
       <div
