@@ -25,7 +25,7 @@ interface IMockCarouselItem {
 const MockCarousel: React.FC<IMockCarouselItem> = ({ carouselItems }) => {
   return (
     <div
-      className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-[650px] h-[400px] lg:max-h-none relative order-0 `}
+      className={`grid grid-cols-[max-content_1fr_max-content] grid-rows-[1fr_max-content] place-items-center gap-1 pt-4 pb-2 lg:px-0 lg:p-4 w-full lg:w-[50%]  lg:h-162.5 h-100 lg:max-h-none relative order-0 `}
     >
       <Carousel>
         {carouselItems?.map((item, i) => {
