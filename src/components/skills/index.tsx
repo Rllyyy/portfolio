@@ -18,21 +18,19 @@ import {
   childVariants,
 } from "./icons";
 import { iconStyle, skillHeadingStyle, skillTextStyle, skillsArticleStyle, textWrapperStyle } from "./tailwind-classes";
-import { useIsMounted } from "@hooks/useIsMounted";
 
 export const Skills = () => {
-  // const mounted = useIsMounted();
   const [mounted, setMounted] = useState(false);
 
   const { systemTheme, theme } = useTheme();
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
+  // Using the custom hook useIsMounted does fail on github actions
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-
-  // if (!mounted()) return null;
 
   return (
     <section className='px-4 py-16 lg:px-6 md:py-24 bg-zinc-100 dark:bg-dark-200' id='skills'>

@@ -4,10 +4,8 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { BurgerIcon, ThemeSwitchIcon, XMarkIcon } from "./icons";
-import { useIsMounted } from "@hooks/useIsMounted";
 
 export function Navbar() {
-  // const mounted = useIsMounted();
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const [showNavMobile, setShowNavMobile] = useState(false);
@@ -37,10 +35,11 @@ export function Navbar() {
     setShowNavMobile(false);
   };
 
+  // Using the custom hook useIsMounted does fail on github actions
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  // if (!mounted()) return null;
 
   return (
     <nav
