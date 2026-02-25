@@ -126,7 +126,7 @@ export function Navbar() {
 }
 
 function subscribe(onStoreChange: () => void) {
-  global.window?.addEventListener("scroll", onStoreChange);
+  global.window?.addEventListener("scroll", onStoreChange, { passive: true });
   return () => global.window?.removeEventListener("scroll", onStoreChange);
 }
 

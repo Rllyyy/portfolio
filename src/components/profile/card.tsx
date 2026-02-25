@@ -20,6 +20,7 @@ export function Card() {
             alt='Profile Picture'
             fill
             className='object-cover scale-105 rounded-1/2'
+            sizes='(max-width: 768px) 100vw, 50vw'
           />
         </div>
         <h2 className='text-2xl font-medium'>Niklas Fischer</h2>

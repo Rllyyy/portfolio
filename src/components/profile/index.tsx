@@ -1,12 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import { Card } from "./card";
 
 export const Profile = () => {
   return (
     <section className='px-4 py-20 lg:px-6 md:py-36 bg-zinc-200 dark:bg-gray-900' id='profile'>
-      <div className='grid md:grid-cols-2 w-full max-w-[1200px] mx-auto'>
+      <div className='grid md:grid-cols-2 w-full max-w-300 mx-auto'>
         <Card />
         <div className='h-full pt-8 md:p-10'>
           <h2 className='text-4xl font-semibold md:text-5xl'>About me</h2>

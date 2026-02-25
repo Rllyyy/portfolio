@@ -39,7 +39,7 @@ export const LandingPage = () => {
           transition={{ duration: 0.4, delay: 0.4 }}
         >
           <a
-            className='text-lg md:text-xl font-semibold  text-white bg-indigo-600 rounded-lg cursor-pointer w-full max-w-[160px] text-center hover:no-underline hover:bg-indigo-700 outline-offset-8 outline-indigo-600 h-11 flex items-center justify-center px-2'
+            className='text-lg md:text-xl font-semibold  text-white bg-indigo-600 rounded-lg cursor-pointer w-full max-w-40 text-center hover:no-underline hover:bg-indigo-700 outline-offset-8 outline-indigo-600 h-11 flex items-center justify-center px-2'
             href='#projects'
           >
             View Projects
@@ -54,7 +54,7 @@ export const LandingPage = () => {
         </motion.div>
       </div>
       <motion.div
-        className='relative order-1 w-full md:h-full md:order-2 max-w-[290px] md:max-w-[800px] md:justify-self-start h-[290px]'
+        className='relative order-1 w-full md:h-full md:order-2 max-w-72.5 md:max-w-200 md:justify-self-start h-72.5'
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.1 }}

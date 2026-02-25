@@ -57,7 +57,7 @@ export default function UploadForm({ moduleIds }: UploadFormProps) {
               Download
             </button>
           </div>
-          <pre className='bg-gray-100 p-4 rounded overflow-auto max-h-[500px]'>{state.data.content}</pre>
+          <pre className='bg-gray-100 p-4 rounded overflow-auto max-h-125'>{state.data.content}</pre>
         </div>
       )}
     </>

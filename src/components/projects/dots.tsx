@@ -18,7 +18,7 @@ const table = {
 
 const Dots: React.FC<IDots> = ({ length, activeIndex, setActiveIndex }) => {
   return (
-    <div className='flex items-center justify-center col-span-3 gap-[2px] carousel-dots'>
+    <div className='flex items-center justify-center col-span-3 gap-0.5 carousel-dots'>
       {new Array(length).fill("").map((_, i) => (
         <button
           onClick={() => setActiveIndex(i)}
