@@ -1,11 +1,12 @@
-import Image from "next/image";
-import { getFormattedDate } from "@utils/formatDate";
 import { Icon } from "@components/icons";
-import { transformURI } from "@utils/transformURI";
 import { AssignmentsSchema } from "@schemas";
 import type { TAssignment } from "@types";
-import path from "path";
+import { getFormattedDate } from "@utils/formatDate";
+import { transformURI } from "@utils/transformURI";
 import fs from "fs/promises";
+import type { Metadata } from "next";
+import Image from "next/image";
+import path from "path";
 
 export const dynamicParams = false;
 
@@ -109,12 +110,33 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
   );
 }
 
-export async function generateStaticParams(): Promise<Pick<TAssignment, "moduleId">[]> {
+export async function generateStaticParams() {
   const { default: assignments } = await import("public/assignments.json");
   const validAssignments = AssignmentsSchema.parse(assignments);
 
   return validAssignments.map((assignment) => ({
     moduleId: assignment.moduleId,
     title: transformURI(assignment.title),
+    description: assignment.text,
   }));
+}
+
+type StaticParams = Awaited<ReturnType<typeof generateStaticParams>>[number];
+
+export async function generateMetadata({ params }: { params: Promise<StaticParams> }): Promise<Metadata> {
+  const { moduleId, title, description } = await params;
+
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
+  const canonical = new URL(`/assignments/${moduleId}/${title}`, baseUrl);
+
+  return {
+    alternates: {
+      canonical,
+    },
+    title,
+    description,
+  };
 }
