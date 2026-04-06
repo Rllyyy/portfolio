@@ -4,7 +4,7 @@ import { getFormattedDate } from "@utils/formatDate";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { TAssignment } from "@types";
-import { Variants } from "motion/dist/react";
+import { type Variants } from "motion/react";
 import { MotionComponent } from "./MotionLink";
 import { Icon } from "@components/icons";
 
