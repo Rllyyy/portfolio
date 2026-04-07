@@ -9,7 +9,7 @@ import { MotionComponent } from "./MotionLink";
 import { Icon } from "@components/icons";
 
 async function getAssignments() {
-  const { default: assignments } = await import("public/assignments.json");
+  const { default: assignments } = await import("../../../public/assignments.json");
   return AssignmentsSchema.parse(assignments);
 }
 

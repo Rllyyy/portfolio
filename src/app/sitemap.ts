@@ -5,7 +5,7 @@ import { MetadataRoute } from "next";
 const URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.niklasfischer.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { default: assignments } = await import("public/assignments.json");
+  const { default: assignments } = await import("../../public/assignments.json");
 
   const routes: MetadataRoute.Sitemap = [
     {
@@ -32,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
-      })
+      }),
     ).toISOString(),
     priority: 0.8,
   }));
@@ -44,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
-      })
+      }),
     ).toISOString(),
     priority: 0.5,
   }));

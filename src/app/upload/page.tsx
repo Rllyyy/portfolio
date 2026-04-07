@@ -1,7 +1,7 @@
 import UploadForm from "./form";
 
 export default async function UploadPage() {
-  const { default: assignments } = await import("public/assignments.json");
+  const { default: assignments } = await import("../../../public/assignments.json");
 
   const moduleIds = assignments.map((assignment) => assignment.moduleId);
 

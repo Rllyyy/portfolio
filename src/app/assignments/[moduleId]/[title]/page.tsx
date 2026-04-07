@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
     throw new Error("No data found");
   }
 
-  const { default: assignments } = await import("public/assignments.json");
+  const { default: assignments } = await import("../../../../../public/assignments.json");
   const validAssignments = AssignmentsSchema.parse(assignments);
 
   const assignment = validAssignments.find((assignment) => assignment.moduleId === moduleId);
@@ -111,7 +111,7 @@ export default async function Page({ params }: { params: Promise<Pick<TAssignmen
 }
 
 export async function generateStaticParams() {
-  const { default: assignments } = await import("public/assignments.json");
+  const { default: assignments } = await import("../../../../../public/assignments.json");
   const validAssignments = AssignmentsSchema.parse(assignments);
 
   return validAssignments.map((assignment) => ({
