@@ -895,14 +895,15 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.8.tgz#958b91c991b1867ced318bedea0e215ee050726e"
   integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
 
-"@types/jsdom@^27.0.0":
-  version "27.0.0"
-  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-27.0.0.tgz#b052f414edd10a316a006cde8991a4266fe22038"
-  integrity sha512-NZyFl/PViwKzdEkQg96gtnB8wm+1ljhdDay9ahn4hgb+SfVtPCbm3TlmDUFXTA+MGN3CijicnMhG18SI5H3rFw==
+"@types/jsdom@^28.0.1":
+  version "28.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-28.0.1.tgz#2c014d8c0eca6135233519bff8c49f7aadfeda63"
+  integrity sha512-GJq2QE4TAZ5ajSoCasn5DOFm8u1mI3tIFvM5tIq3W5U/RTB6gsHwc6Yhpl91X9VSDOUVblgXmG+2+sSvFQrdlw==
   dependencies:
     "@types/node" "*"
     "@types/tough-cookie" "*"
     parse5 "^7.0.0"
+    undici-types "^7.21.0"
 
 "@types/json-schema@^7.0.15":
   version "7.0.15"
@@ -4963,6 +4964,11 @@ unbox-primitive@^1.1.0:
     has-bigints "^1.0.2"
     has-symbols "^1.1.0"
     which-boxed-primitive "^1.1.1"
+
+undici-types@^7.21.0:
+  version "7.24.7"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.24.7.tgz#a699975cb7ee836147bdec78746e2aeee786786c"
+  integrity sha512-XA+gOBkzYD3C74sZowtCLTpgtaCdqZhqCvR6y9LXvrKTt/IVU6bz49T4D+BPi475scshCCkb0IklJRw6T1ZlgQ==
 
 undici-types@~7.18.0:
   version "7.18.2"
