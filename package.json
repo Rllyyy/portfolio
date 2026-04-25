@@ -11,7 +11,7 @@
     "test:cypress": "cypress open"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "25.6.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
@@ -37,9 +37,9 @@
     "@tailwindcss/typography": "^0.5.19",
     "@types/jsdom": "^28.0.1",
     "autoprefixer": "^10.5.0",
-    "cypress": "15.14.0",
+    "cypress": "15.14.1",
     "postcss": "^8.5.10",
     "tailwindcss": "^4.1.18",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.5"
   }
 }
