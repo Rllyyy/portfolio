@@ -1118,10 +1118,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-2.0.1.tgz#d7d7bd37af7cfbeea95db5f132ae4889f4d26407"
   integrity sha512-MTQG6V9qQrt1tsDeF+2Uoo5aPjqbVPys1xvnIftXSJYG2SrwXRHnqEvVoYID7BTruDz4lCd2Z7rM1BdkUehk2g==
 
-"@vercel/blob@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@vercel/blob/-/blob-2.6.1.tgz#19730931cebf2da277a506ae4cb86a66f693f1a6"
-  integrity sha512-KTJytw85j1XQBxjN5d6UXI7fIWNQe1jotn4nWN+0hePqLs+Qi1B3jHdQcSKFGF0m2rsy9uhPT6GOXMtHe3qNzg==
+"@vercel/blob@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@vercel/blob/-/blob-2.8.0.tgz#64b68d35ed5eba236f7375157ba1396a07968168"
+  integrity sha512-Nu+HWKpkgovCh/ezlG7wCVwF7RErTzLzZMbGKFBdGBCbTKyK+s5VXPLl+0+TpNEQPH8AVaGzOpIsXUOtkqylCQ==
   dependencies:
     "@vercel/oidc" "^3.6.1"
     async-retry "^1.3.3"
@@ -1775,10 +1775,10 @@ cypress-real-events@^1.15.0:
   resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.15.0.tgz#b84ed97455238139ac3d0c8f803991b30f22fc8a"
   integrity sha512-in98xxTnnM9Z7lZBvvVozm99PBT2eEOjXRG5LKWyYvQnj9mGWXMiPNpfw7e7WiraBFh7XlXIxnE9Cu5o+52kQQ==
 
-cypress@15.20.0:
-  version "15.20.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-15.20.0.tgz#b5fc7787d40ac2b18783915942213c133362cc47"
-  integrity sha512-yrt6z9YERlggq5FReDx+PkbjrNoEQPeM03MQC1GvLlFGItk8ervC0A/7fjzWoWVRRXjsem+Pj3cunknARl/37g==
+cypress@15.20.1:
+  version "15.20.1"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-15.20.1.tgz#60b61b4682523400b55b46ecbe703dd66f26dfab"
+  integrity sha512-7GV3O7vQQG+EVVv9BGs6lCHY49x25jVi/z1+zdjuuq/o3eZeDwmGPJpRYnOWeGvQxTCtkydXWHBPhV8xuGXPLg==
   dependencies:
     "@cypress/request" "^4.0.0"
     "@cypress/xvfb" "^1.2.4"
