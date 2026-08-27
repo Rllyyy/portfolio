@@ -12,7 +12,7 @@
 
 @keyframes card-in {
   from {
-    opacity: 0;
+    opacity: 0.2;
   }
   to {
     opacity: 1;
@@ -36,7 +36,7 @@
 .card {
   @supports (animation-timeline: view()) {
     @media (prefers-reduced-motion: no-preference) {
-      animation: card-in 0.4s ease-out both;
+      animation: card-in 0.3s ease-out both;
       animation-play-state: paused;
       animation-delay: calc(var(--stagger, 0) * 0.15s);
 
