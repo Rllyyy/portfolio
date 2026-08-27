@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Video } from ".";
+import { Video } from "./video";
 import { Carousel } from "./carousel";
 import projects from "./projects.json";
 import Image from "next/image";

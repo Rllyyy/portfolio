@@ -1,0 +1,47 @@
+@keyframes intro-in {
+  from {
+    opacity: 0;
+    translate: 0 0.75rem;
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    scale: 0.96;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro > * {
+    animation: intro-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(0.05s + var(--stagger, 0) * 0.1s);
+  }
+
+  .intro > *:nth-child(2) {
+    --stagger: 1;
+  }
+
+  .intro > *:nth-child(3) {
+    --stagger: 2;
+  }
+
+  .intro > *:nth-child(4) {
+    --stagger: 3;
+  }
+
+  .hero {
+    animation: hero-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.1s;
+  }
+}

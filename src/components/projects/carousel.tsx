@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, Children, useEffect, useCallback, useMemo } from "react";
 import { animate, PanInfo, useMotionValue, ValueAnimationTransition } from "motion/react";
 import useMeasure from "react-use-measure";
