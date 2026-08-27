@@ -1,0 +1,44 @@
+@property --in-view {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: false;
+}
+
+@keyframes set-in-view {
+  to {
+    --in-view: true;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .trigger {
+      animation: set-in-view steps(1, end) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 120px;
+    }
+  }
+}
+
+.card {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: card-in 0.3s ease-out both;
+      animation-delay: 0.1s;
+      animation-play-state: paused;
+
+      @container style(--in-view: true) {
+        animation-play-state: running;
+      }
+    }
+  }
+}

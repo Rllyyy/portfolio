@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 import { Carousel } from "./carousel";
-import { Video } from ".";
+import { Video } from "./video";
 
 import "@/app/globals.css";
 

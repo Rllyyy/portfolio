@@ -1,43 +1,19 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "motion/react";
 import { Icon } from "@components/icons";
+import styles from "./styles.module.css";
 
 export const LandingPage = () => {
   return (
     <section className='md:min-h-[75vh] min-h-[50vh] grid grid-rows-[max-content_1fr] md:grid-rows-1 md:grid-cols-2 gap-y-6 md:gap-x-8 lg:gap-x-28 lg:px-6 px-4 py-10 md:py-32 md:mt-24 mt-20 justify-items-center md:items-center'>
-      <div className='flex flex-col items-start order-2 w-full max-w-4xl space-y-4 md:justify-center justify-self-end md:space-y-8 md:order-1'>
-        <motion.h2
-          className='text-base md:text-xl text-zinc-600 dark:text-zinc-400'
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          Niklas Fischer | Portfolio
-        </motion.h2>
-        <motion.h1
-          className='text-5xl font-semibold md:text-7xl'
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-        >
-          Developing Solutions
-        </motion.h1>
-        <motion.p
-          className='text-base md:text-xl text-zinc-700 dark:text-zinc-300'
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-        >
+      <div
+        className={`${styles.intro} flex flex-col items-start order-2 w-full max-w-4xl space-y-4 md:justify-center justify-self-end md:space-y-8 md:order-1`}
+      >
+        <h2 className='text-base md:text-xl text-zinc-600 dark:text-zinc-400'>Niklas Fischer | Portfolio</h2>
+        <h1 className='text-5xl font-semibold md:text-7xl'>Developing Solutions</h1>
+        <p className='text-base md:text-xl text-zinc-700 dark:text-zinc-300'>
           Hi, I am a <b>Web Developer</b>
-        </motion.p>
-        <motion.div
-          className='flex flex-row flex-wrap w-full gap-x-4 gap-y-2'
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
-        >
+        </p>
+        <div className='flex flex-row flex-wrap w-full gap-x-4 gap-y-2'>
           <a
             className='text-lg md:text-xl font-semibold  text-white bg-indigo-600 rounded-lg cursor-pointer w-full max-w-40 text-center hover:no-underline hover:bg-indigo-700 outline-offset-8 outline-indigo-600 h-11 flex items-center justify-center px-2'
             href='#projects'
@@ -51,13 +27,10 @@ export const LandingPage = () => {
             <Icon.EMail />
             <span>Let&apos;s Talk</span>
           </a>
-        </motion.div>
+        </div>
       </div>
-      <motion.div
-        className='relative order-1 w-full md:h-full md:order-2 max-w-72.5 md:max-w-200 md:justify-self-start h-72.5'
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
+      <div
+        className={`${styles.hero} relative order-1 w-full md:h-full md:order-2 max-w-72.5 md:max-w-200 md:justify-self-start h-72.5`}
       >
         <Image
           src='/hero-image.png'
@@ -67,7 +40,7 @@ export const LandingPage = () => {
           fill
           sizes='(max-width: 768px) 300px, 800px'
         />
-      </motion.div>
+      </div>
     </section>
   );
 };

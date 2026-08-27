@@ -1,18 +1,10 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "motion/react";
 import { Icon } from "../icons";
+import styles from "./styles.module.css";
 
 export function Card() {
   return (
-    <motion.div
-      className='flex flex-col justify-between h-full overflow-hidden rounded-lg shadow-xl '
-      initial={{ opacity: 0.2 }}
-      transition={{ duration: 0.3, delay: 0.1 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-120px" }}
-    >
+    <div className={`${styles.card} flex flex-col justify-between h-full overflow-hidden rounded-lg shadow-xl`}>
       <div className='flex flex-col items-center h-full p-8 bg-gray-300 md:p-12 dark:bg-gray-700 gap-y-6'>
         <div className='relative w-40 h-40 overflow-hidden rounded-full md:w-48 md:h-48'>
           <Image
@@ -63,6 +55,6 @@ export function Card() {
           <Icon.LinkedIn />
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 }

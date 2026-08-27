@@ -1,0 +1,54 @@
+@property --in-view {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: false;
+}
+
+@keyframes set-in-view {
+  to {
+    --in-view: true;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    translate: var(--enter-from) 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.trigger {
+  --enter-from: -15%;
+}
+
+.trigger:nth-child(even) {
+  --enter-from: 15%;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .trigger {
+      animation: set-in-view steps(1, end) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
+
+.card {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: card-in 0.5s ease-out both;
+      animation-play-state: paused;
+      animation-delay: calc(var(--stagger, 0) * 0.15s);
+
+      @container style(--in-view: true) {
+        animation-play-state: running;
+      }
+    }
+  }
+}
