@@ -14,7 +14,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "25.9.5",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.5",
+    "@types/react-dom": "19.2.7",
     "@vercel/analytics": "^2.0.1",
     "@vercel/blob": "^2.8.0",
     "@vercel/speed-insights": "^2.0.0",
@@ -36,9 +36,9 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
     "@types/jsdom": "^28.0.3",
-    "autoprefixer": "^10.5.4",
+    "autoprefixer": "^10.5.5",
     "cypress": "15.21.1",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.28",
     "tailwindcss": "^4.1.18",
     "vitest": "^4.1.11"
   }
